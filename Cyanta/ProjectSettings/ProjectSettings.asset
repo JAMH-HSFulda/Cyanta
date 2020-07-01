@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 20
-  productGUID: 6be8cf86a4cad1c4cbff599cc937c1a2
+  productGUID: 3181f4f83a29d2a42a9f5eab9924a628
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -653,11 +653,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
-    Build: 0
-    Collab: 0
-    ErrorHub: 0
-    Hub: 0
-    UNet: 0
+    UNet: 1
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -675,6 +671,6 @@ PlayerSettings:
   projectName: 
   organizationId: 
   cloudEnabled: 0
-  enableNativePlatformBackendsForNewInputSystem: 0
-  disableOldInputManagerSupport: 0
+  enableNativePlatformBackendsForNewInputSystem: 1
+  disableOldInputManagerSupport: 1
   legacyClampBlendShapeWeights: 0
