@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/InputMaster.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Controls/InputMaster.inputactions'
 
 using System;
 using System.Collections;
@@ -132,7 +132,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""b47ef5a5-2f96-4ff4-806f-bc311d4c7c29"",
-                    ""path"": ""<Mouse>/pointerId"",
+                    ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
