@@ -118,6 +118,17 @@
                 },
                 {
                     "name": "",
+                    "id": "48f84249-5b90-4ee1-aea5-9180a39c2dc7",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "b47ef5a5-2f96-4ff4-806f-bc311d4c7c29",
                     "path": "<Mouse>/delta",
                     "interactions": "",
