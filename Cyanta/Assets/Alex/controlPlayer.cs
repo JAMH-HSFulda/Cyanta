@@ -13,6 +13,7 @@ public class controlPlayer : MonoBehaviour
     CharacterController controller;
     public float speed = 10.0f;
 
+
     float turnSmoothVelocity;
     float turnSmoothTime = 0.1f;
 
@@ -20,10 +21,10 @@ public class controlPlayer : MonoBehaviour
     //-----------------
 
     public Vector2 move;
+    public Transform cam;
 
     //rotation
     public Vector2 look;
-
     
 
 
@@ -161,14 +162,14 @@ public class controlPlayer : MonoBehaviour
     }
 
     void Jump() {
-        // Debug.Log("Jump!");
-        // if ( rb.velocity.y == 0 ) {
-        //     Vector3 jumpVelocity = new Vector3 (0, lowJumpMultiplier, 0);
-        //     rb.velocity += jumpVelocity * Time.deltaTime;
-        // } else if (rb.velocity.y < 0 ) {
-        //      Vector3 jumpVelocity = new Vector3 (0, fallMultiplier, 0);
-        //     rb.velocity += jumpVelocity * Time.deltaTime;
-        // }
+        Debug.Log("Jump!");
+        if ( rb.velocity.y == 0 ) {
+            Vector3 jumpVelocity = new Vector3 (0, lowJumpMultiplier, 0);
+            rb.velocity += jumpVelocity * Time.deltaTime;
+        } else if (rb.velocity.y < 0 ) {
+             Vector3 jumpVelocity = new Vector3 (0, fallMultiplier, 0);
+            rb.velocity += jumpVelocity * Time.deltaTime;
+        }
         // Debug.Log("Jump!");
         // Debug.Log(rb.velocity.y);
         // if (rb.velocity.y > 0) { 
