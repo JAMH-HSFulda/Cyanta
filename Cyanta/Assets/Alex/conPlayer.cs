@@ -6,11 +6,18 @@ public class conPlayer : MonoBehaviour
 {
     InputMaster controls;
     public float speed = 10f;
+    private float padSpeed;
     public float turnSpeed = 2f;
     public float jumpVelocity = 5f;
     public Vector3 gravity = new Vector3(0f, -9.81f, 0f);
+    private float distanceGround;
+    public bool isGround;
+    public float fallMultiplier = 30f;
+    public float lowJumpMultiplier = 20f;
     public Vector2 move;
     Rigidbody rb;
+
+    public Collider collider;
 
     Transform cam;
 
@@ -27,8 +34,12 @@ public class conPlayer : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotation;
+
         cam = Camera.main.transform;
         Physics.gravity= new Vector3(0f, -9.81f, 0f);
+
+        distanceGround = GetComponent<Collider>().bounds.extents.y;
+        distanceGround = 1.0f;
         
     }
 
@@ -36,23 +47,48 @@ public class conPlayer : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        RaycastHit hit;
         float x = move.x;
         float z = move.y;
         Vector3 direction = (cam.right * x) + (cam.forward * z);
         direction.y = 0f;
 
+        if (Mathf.Abs(move.x) < Mathf.Abs(move.y)) {
+            padSpeed = Mathf.Abs(move.y);
+        } else if( Mathf.Abs(move.x) < Mathf.Abs(move.y)) {
+            padSpeed = 1;
+        }
+         else {
+            padSpeed = Mathf.Abs(move.x);
+        }
+
         if (direction.magnitude >= 0.1f) {
-            rb.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), turnSpeed * Time.deltaTime);
+            rb.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(direction), turnSpeed * Time.deltaTime);
             // rb.velocity = transform.forward * speed + gravity ;
-            rb.MovePosition(transform.position + Time.deltaTime * speed *transform.forward);
+            rb.MovePosition(transform.position += speed * Time.deltaTime *transform.forward * padSpeed);
         }  
+
+        if(Physics.Raycast(transform.position,-Vector3.up, out hit, distanceGround+0.1f)) {
+            if (hit.collider.tag == "ground") {
+                isGround = true;
+            }  
+        } else {
+            isGround = false;
+        }
+
+        
     }
 
     void Jump() {
-        rb.velocity = Vector3.up * jumpVelocity;
+        if(isGround) {
+            rb.velocity = Vector3.up * jumpVelocity;
+        }
+        if (rb.velocity.y <= 0) { 
+            rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        } else if (rb.velocity.y > 0) {
+              rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
     }
-
-
 
 
     void OnEnable() {

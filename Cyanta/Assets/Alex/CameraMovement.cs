@@ -22,15 +22,15 @@ public class CameraMovement : MonoBehaviour
 
     Vector2 look;
 
+    void Start() {
+        Screen.lockCursor = true; 
+    }
      void Awake() {
-        controls = new InputMaster();        
+        controls = new InputMaster();
+        
 
         controls.Gameplay.Look.performed += ctx => look = ctx.ReadValue<Vector2>();
         controls.Gameplay.Look.canceled += ctx => look = Vector2.zero;
-    }
-
-    void Start() {
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
 
@@ -47,7 +47,7 @@ public class CameraMovement : MonoBehaviour
         yaw += speedH * look.x;
         pitch -= speedV * look.y;
 
-        pitch = Mathf.Clamp(pitch, 0f, 90f);
+        pitch = Mathf.Clamp(pitch, 0f, 70f);
 
         cam.transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
 
