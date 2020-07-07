@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 20f;
 
-    public Light light;
+    // public Light light;
 
     public Rigidbody rb; 
 
@@ -35,10 +35,6 @@ public class Bullet : MonoBehaviour
 }
 
 //Gun
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class Gun : MonoBehaviour
 {
 

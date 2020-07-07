@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class CameraMovement : MonoBehaviour
 {
@@ -28,6 +27,10 @@ public class CameraMovement : MonoBehaviour
 
         controls.Gameplay.Look.performed += ctx => look = ctx.ReadValue<Vector2>();
         controls.Gameplay.Look.canceled += ctx => look = Vector2.zero;
+    }
+
+    void Start() {
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 

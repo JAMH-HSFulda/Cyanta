@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 public class controlPlayer : MonoBehaviour
 {
     Rigidbody rb;
@@ -25,6 +24,8 @@ public class controlPlayer : MonoBehaviour
 
     //rotation
     public Vector2 look;
+
+    Camera mycam ;
     
 
 
@@ -55,12 +56,12 @@ public class controlPlayer : MonoBehaviour
         playerHight = transform.position.y;
         playerCollider = GetComponent<Collider>();
         controller = GetComponent<CharacterController>();
-        Camera mycam = GetComponent<Camera>();
+        // mycam = GetComponent<Camera>();
         Cursor.lockState = CursorLockMode.Locked;
 
     }
 
-    void FixedUpdate() {
+    void Update() {
         Move();
 
         
@@ -78,12 +79,12 @@ public class controlPlayer : MonoBehaviour
         Vector3 direction = new Vector3(x, 0f, z).normalized;
 
         if (direction.magnitude >= 0.1f) {
-            float targetAngle = Mathf.Atan2(direction.x,direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
+            // float targetAngle = Mathf.Atan2(direction.x,direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+            // float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            // transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
 
-            Vector3 moveDir = Quaternion.Euler(0f,targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDir.normalized * speed * Time.deltaTime);
+            // Vector3 moveDir = Quaternion.Euler(0f,targetAngle, 0f) * Vector3.forward;
+            controller.Move(direction * speed * Time.deltaTime);
         }
 
         // isGrounded = Physics.CheckBox(groundCheck.position, new Vector3(0,-1,0), new Quaternion(1, 1 , 1, 1));
@@ -161,34 +162,34 @@ public class controlPlayer : MonoBehaviour
         
     }
 
-    void Jump() {
-        Debug.Log("Jump!");
-        if ( rb.velocity.y == 0 ) {
-            Vector3 jumpVelocity = new Vector3 (0, lowJumpMultiplier, 0);
-            rb.velocity += jumpVelocity * Time.deltaTime;
-        } else if (rb.velocity.y < 0 ) {
-             Vector3 jumpVelocity = new Vector3 (0, fallMultiplier, 0);
-            rb.velocity += jumpVelocity * Time.deltaTime;
-        }
-        // Debug.Log("Jump!");
-        // Debug.Log(rb.velocity.y);
-        // if (rb.velocity.y > 0) { 
-        //     rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        // } else if (rb.velocity.y == 0) {
-        //       rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-        // }
-    }
+    // void Jump() {
+    //     Debug.Log("Jump!");
+    //     if ( rb.velocity.y == 0 ) {
+    //         Vector3 jumpVelocity = new Vector3 (0, lowJumpMultiplier, 0);
+    //         rb.velocity += jumpVelocity * Time.deltaTime;
+    //     } else if (rb.velocity.y < 0 ) {
+    //          Vector3 jumpVelocity = new Vector3 (0, fallMultiplier, 0);
+    //         rb.velocity += jumpVelocity * Time.deltaTime;
+    //     }
+    //     // Debug.Log("Jump!");
+    //     // Debug.Log(rb.velocity.y);
+    //     // if (rb.velocity.y > 0) { 
+    //     //     rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+    //     // } else if (rb.velocity.y == 0) {
+    //     //       rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+    //     // }
+    // }
         
 
-    void Turn() {
-        if ((look.x < 0.09f && look.x > -0.09f) && (look.y < 0.09f && look.y > -0.09f)) {
-            lookVector = new Vector2(0, 0);
-        } else {
-            lookVector = new Vector2(look.x, look.y);
-        }
+    // void Turn() {
+    //     if ((look.x < 0.09f && look.x > -0.09f) && (look.y < 0.09f && look.y > -0.09f)) {
+    //         lookVector = new Vector2(0, 0);
+    //     } else {
+    //         lookVector = new Vector2(look.x, look.y);
+    //     }
         
 
-    }
+    // }
 
     void OnEnable() {
         controls.Gameplay.Enable();
