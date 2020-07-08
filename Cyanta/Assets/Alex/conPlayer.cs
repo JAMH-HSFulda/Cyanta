@@ -7,13 +7,13 @@ public class conPlayer : MonoBehaviour
     InputMaster controls;
     public float speed = 10f;
     private float padSpeed;
-    public float turnSpeed = 2f;
-    public float jumpVelocity = 5f;
+    private float turnSpeed = 50f;
+    public float jumpVelocity = 10f;
     public Vector3 gravity = new Vector3(0f, -9.81f, 0f);
     private float distanceGround;
     public bool isGround;
-    public float fallMultiplier = 30f;
-    public float lowJumpMultiplier = 20f;
+    public float fallMultiplier = 2f;
+    public float lowJumpMultiplier = 2.5f;
     public Vector2 move;
     Rigidbody rb;
 
@@ -65,8 +65,12 @@ public class conPlayer : MonoBehaviour
         if (direction.magnitude >= 0.1f) {
             rb.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(direction), turnSpeed * Time.deltaTime);
             // rb.velocity = transform.forward * speed + gravity ;
-            rb.MovePosition(transform.position += speed * Time.deltaTime *transform.forward * padSpeed);
+            rb.MovePosition(transform.position + speed * Time.deltaTime *transform.forward * padSpeed);
         }  
+        // else {
+        //     rb.velocity = Vector3.zero;
+        //     rb.angularVelocity = Vector3.zero;
+        // }
 
         if(Physics.Raycast(transform.position,-Vector3.up, out hit, distanceGround+0.1f)) {
             if (hit.collider.tag == "ground") {
@@ -76,6 +80,12 @@ public class conPlayer : MonoBehaviour
             isGround = false;
         }
 
+        if (rb.velocity.y > 0) { 
+            rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        } else if (rb.velocity.y <= 0) {
+              rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
+
         
     }
 
@@ -83,11 +93,7 @@ public class conPlayer : MonoBehaviour
         if(isGround) {
             rb.velocity = Vector3.up * jumpVelocity;
         }
-        if (rb.velocity.y <= 0) { 
-            rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        } else if (rb.velocity.y > 0) {
-              rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-        }
+        
     }
 
 
