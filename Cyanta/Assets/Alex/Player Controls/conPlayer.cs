@@ -7,7 +7,7 @@ public class conPlayer : MonoBehaviour
     InputMaster controls;
     public float speed = 10f;
     private float padSpeed;
-    private float turnSpeed = 50f;
+    private float turnSpeed = 15f;
     public float jumpVelocity = 10f;
     public Vector3 gravity = new Vector3(0f, -9.81f, 0f);
     private float distanceGround;
@@ -16,8 +16,6 @@ public class conPlayer : MonoBehaviour
     public float lowJumpMultiplier = 2.5f;
     public Vector2 move;
     Rigidbody rb;
-
-    public Collider collider;
 
     Transform cam;
 
@@ -65,7 +63,7 @@ public class conPlayer : MonoBehaviour
         if (direction.magnitude >= 0.1f) {
             rb.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(direction), turnSpeed * Time.deltaTime);
             // rb.velocity = transform.forward * speed + gravity ;
-            rb.MovePosition(transform.position + speed * Time.deltaTime *transform.forward * padSpeed);
+            rb.MovePosition(transform.position + speed * Time.deltaTime * transform.forward * padSpeed);
         }  
         // else {
         //     rb.velocity = Vector3.zero;

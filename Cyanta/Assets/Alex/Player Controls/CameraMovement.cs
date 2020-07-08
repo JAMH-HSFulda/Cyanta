@@ -17,13 +17,12 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] private float distanceToTarget = 10;
 
     private Vector3 previousPosition;
-
     InputMaster controls;
 
     Vector2 look;
 
     void Start() {
-        Screen.lockCursor = true; 
+        Cursor.lockState = CursorLockMode.Locked;
     }
      void Awake() {
         controls = new InputMaster();

@@ -30,7 +30,7 @@ public class VoxelRender : MonoBehaviour
     }
 
     void GenerateVoxelMesh(VoxelData data) {
-        data.fillData();
+        //data.fillData();
         vertices = new List<Vector3> ();
         triangles = new List<int> ();
 
