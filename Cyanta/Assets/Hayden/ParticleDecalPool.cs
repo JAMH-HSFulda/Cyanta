@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ParticleDecalPool : MonoBehaviour
 {
-    private int particleIndex;
+    private int particleIndex; //
     public int maxDecals = 100;
 
     public float min = .5f; //for random size
