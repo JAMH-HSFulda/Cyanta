@@ -11,12 +11,12 @@ public class Place_fish : MonoBehaviour {
 
     // Update is called once per frame
     void placeFish () {
-        int random = Random.Range (0, 5);
+        int random = Random.Range (0, 15);
 
         for (int i = 0; i < random; i++) {
             GameObject clone = Instantiate (fish);
             clone.name = "Fish";
-            clone.transform.position = new Vector3 (Random.Range (0, 25), 5, Random.Range (0, 25));
+            clone.transform.position = new Vector3 (Random.Range (0, 30), 5, Random.Range (0, 30));
             clone.AddComponent<Rigidbody> ();
             var rigidbody_sphere = clone.GetComponent<Rigidbody>();
         }
