@@ -26,6 +26,7 @@ public class VoxelRender : MonoBehaviour
         
         GenerateVoxelMesh(new VoxelData());
         UpdateMesh();
+        gameObject.AddComponent<MeshCollider>();
 
     }
 
