@@ -4993,11 +4993,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1921706033891607410}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8cb51f8fc6125d498c63d487db55738, type: 3}
+  m_Script: {fileID: 11500000, guid: c3ae4dedc3ee4de47b2a9b835c2320a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 0.5
-  myMat: {fileID: 2100000, guid: 998932c1e92da2146933b44f26426749, type: 2}
+  scale: 0
+  myMat: {fileID: 0}
   burst: {fileID: 1090217647716384663}
   muzzle: {fileID: 6562378456693188454}
 --- !u!65 &-8575269329816268667
