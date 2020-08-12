@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Alex/InputMaster.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Alex/Player Controls/InputMaster.inputactions'
 
 using System;
 using System.Collections;
