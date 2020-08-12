@@ -11,37 +11,56 @@ public class FirePoint : MonoBehaviour
     public ParticleSystem burst;
     public ParticleSystem muzzle;
 
+    InputMaster controls;
+
     new int name = 0;
 
     //private float yaw = 0f;
     //private float pitch = 0f;
 
     // Update is called once per frame
-    void Update()
-    {
-        //Ray rayOrigin = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //RaycastHit hitInfo;
 
-        //if (Physics.Raycast(rayOrigin, out hitInfo)) {
-        //    if (hitInfo.collider != null) {
-        //        gameObject.transform.rotation = Quaternion.LookRotation(hitInfo.point); 
-        //    }
-        //}
+    void Awake() {
+        controls = new InputMaster();
 
-        //yaw += 5 * Input.GetAxis("Mouse X");
-        //pitch += 2 * Input.GetAxis("Mouse Y");
+        controls.Gameplay.Shoot.performed += ctx => Shoot();
 
-        //transform.eulerAngles = new Vector3(pitch, yaw, 0);
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            burst.Play(true);
-            muzzle.Play(true); // continue at 22:30 https://www.youtube.com/watch?v=xenW67bXTgM 
-            GameObject test =  Instantiate(bullet, firePoint.transform.position, Quaternion.identity);
-            test.name = "Bullet +" + name;
-            name++;
-        }
     }
+
+    void Shoot() {
+        Debug.Log("Shoot!");
+        burst.Play(true);
+        muzzle.Play(true); // continue at 22:30 https://www.youtube.com/watch?v=xenW67bXTgM 
+        GameObject test =  Instantiate(bullet, firePoint.transform.position, Quaternion.identity);
+        test.name = "Bullet +" + name;
+        name++;
+    }
+
+    // void Update()
+    // {
+    //     //Ray rayOrigin = Camera.main.ScreenPointToRay(Input.mousePosition);
+    //     //RaycastHit hitInfo;
+
+    //     //if (Physics.Raycast(rayOrigin, out hitInfo)) {
+    //     //    if (hitInfo.collider != null) {
+    //     //        gameObject.transform.rotation = Quaternion.LookRotation(hitInfo.point); 
+    //     //    }
+    //     //}
+
+    //     //yaw += 5 * Input.GetAxis("Mouse X");
+    //     //pitch += 2 * Input.GetAxis("Mouse Y");
+
+    //     //transform.eulerAngles = new Vector3(pitch, yaw, 0);
+
+    //     if (Input.GetMouseButtonDown(0))
+    //     {
+    //         burst.Play(true);
+    //         muzzle.Play(true); // continue at 22:30 https://www.youtube.com/watch?v=xenW67bXTgM 
+    //         GameObject test =  Instantiate(bullet, firePoint.transform.position, Quaternion.identity);
+    //         test.name = "Bullet +" + name;
+    //         name++;
+    //     }
+    // }
 
 }
 
