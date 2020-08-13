@@ -18,6 +18,7 @@ public class enemyBrain : MonoBehaviour
         gameObject.AddComponent<Rigidbody>();
         rb = this.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotation;
+        rb.useGravity = false;
     }
 
     // Update is called once per frame
