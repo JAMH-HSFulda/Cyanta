@@ -62,5 +62,13 @@ public class FirePoint : MonoBehaviour
     //     }
     // }
 
+    void OnEnable() {
+        controls.Gameplay.Enable();
+    }
+
+    void OnDisable() {
+        controls.Gameplay.Disable();
+    }
+
 }
 
