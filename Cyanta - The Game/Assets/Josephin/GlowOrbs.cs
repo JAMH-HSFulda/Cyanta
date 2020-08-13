@@ -22,7 +22,9 @@ public class GlowOrbs : MonoBehaviour {
             //Orb wird geklont, benannt und random positioniert
             GameObject clone = Instantiate (sphere);
             clone.name = "Glow Orb";
-            clone.transform.position = new Vector3 (Random.Range (0, 25), 0.5f, Random.Range (0, 25));
+            clone.transform.position = new Vector3 (Random.Range (0, 25), 1.25f, Random.Range (0, 25));
+            var sc = clone.GetComponent<SphereCollider> ();
+            sc.isTrigger = true;
             //Hinzufügen eines Partikel systems, welches accessible ist via main
             clone.AddComponent<ParticleSystem> ();
             var ps = clone.GetComponent<ParticleSystem> ();

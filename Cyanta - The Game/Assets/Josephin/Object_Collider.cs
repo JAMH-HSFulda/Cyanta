@@ -32,6 +32,6 @@ public class Object_Collider : MonoBehaviour {
             }
 
         }
-        //Debug.Log (this.name + " kollidiert mit " + other.gameObject.name);
+        
     }
 }

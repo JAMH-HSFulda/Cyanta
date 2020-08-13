@@ -16,7 +16,9 @@ public class Place_fish : MonoBehaviour {
         for (int i = 0; i < random; i++) {
             GameObject clone = Instantiate (fish);
             clone.name = "Fish";
-            clone.transform.position = new Vector3 (Random.Range (0, 30), 5, Random.Range (0, 30));
+            clone.transform.position = new Vector3 (Random.Range (0, 30), 0.55f, Random.Range (0, 30));
+            var rb = clone.GetComponent<Rigidbody> ();
+            rb.useGravity = false;
             //clone.AddComponent<Rigidbody> ();
             //var rigidbody_sphere = clone.GetComponent<Rigidbody>();
         }
