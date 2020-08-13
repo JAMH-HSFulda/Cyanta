@@ -150,11 +150,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 695a52ab357c61b4a8ceda6e0aa0ac59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedH: 2
-  speedV: 2
+  speedH: 0.2
+  speedV: 0.2
   cam: {fileID: 963194227}
-  target: {fileID: 432272012}
-  distanceToTarget: 10
+  target: {fileID: 726277746}
+  distanceToTarget: 3
 --- !u!4 &134654940
 Transform:
   m_ObjectHideFlags: 0
@@ -169,12 +169,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &432272012 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: f0c2e97635a03f841bb8510d116965ce,
-    type: 3}
-  m_PrefabInstance: {fileID: 993239015}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,6 +261,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &726277746 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2984955815261204818, guid: f0c2e97635a03f841bb8510d116965ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 993239015}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +434,31 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 6dc4ec632fc54354797bbc1d88b661f4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c2e97635a03f841bb8510d116965ce, type: 3}
+--- !u!1 &1061917309 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: f0c2e97635a03f841bb8510d116965ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 993239015}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1061917311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061917309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a408c20cc74da6f499d1b0399809c33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  jumpVelocity: 10
+  gravity: {x: 0, y: -9.81, z: 0}
+  isGround: 0
+  fallMultiplier: 2
+  lowJumpMultiplier: 2.5
+  move: {x: 0, y: 0}
 --- !u!1 &1074170397 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7125490990942244096, guid: f0c2e97635a03f841bb8510d116965ce,
