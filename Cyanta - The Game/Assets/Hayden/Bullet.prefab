@@ -4996,8 +4996,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ae4dedc3ee4de47b2a9b835c2320a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPoint: {fileID: -927199367670048503, guid: f0c2e97635a03f841bb8510d116965ce,
+    type: 3}
   scale: 0
-  myMat: {fileID: 0}
+  myMat: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   burst: {fileID: 1090217647716384663}
   muzzle: {fileID: 6562378456693188454}
 --- !u!65 &-8575269329816268667

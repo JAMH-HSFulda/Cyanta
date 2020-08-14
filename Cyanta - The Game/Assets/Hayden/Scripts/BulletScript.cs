@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
+    public GameObject spawnPoint;
+
     public float scale;
     public Material myMat;
 
@@ -14,6 +16,7 @@ public class BulletScript : MonoBehaviour
     float timer = 0;
 
     Boolean move = true;
+    Boolean hit = false;
 
     private Rigidbody rig;
 
@@ -23,16 +26,12 @@ public class BulletScript : MonoBehaviour
         MeshRenderer mR = gameObject.AddComponent<MeshRenderer>();
 
         rig = gameObject.AddComponent<Rigidbody>();
-        rig.useGravity = false;
+        rig.useGravity = true;
         rig.interpolation = RigidbodyInterpolation.Interpolate;
+        rig.collisionDetectionMode = CollisionDetectionMode.Continuous;
 
         scale = 0.7f;
-        gameObject.transform.localScale *= scale;
-
-        //vector3 p0 = new vector3(-.5f, 0, 0); Original
-        //vector3 p1 = new vector3(.5f, 0, 0);
-        //vector3 p2 = new vector3(0.5f, 0, 1);
-        //vector3 p3 = new vector3(0.5f, mathf.sqrt(0.75f), (mathf.sqrt(0.75f) / 3));
+        transform.localScale *= scale;
 
         //Vector3 p0 = new Vector3(-.25f, 0, -.25f); //0,0,0 zentriert //Nach obenschauend
         //Vector3 p1 = new Vector3(.25f, 0, -.25f);
@@ -63,28 +62,24 @@ public class BulletScript : MonoBehaviour
         mesh.RecalculateBounds();
         mesh.Optimize();
 
-        gameObject.transform.localPosition = new Vector3(0, 0, 0);
-        //transform.rotation *= Quaternion.AngleAxis(180, transform.up);
-
         mR.material.color = Color.green; //change for specific material, color,texture?
-        mR.material = myMat;
+        //mR.material = myMat;
 
         gameObject.AddComponent<Light>();
-        gameObject.GetComponent<Light>().range = 10;
-        gameObject.GetComponent<Light>().intensity = 1f;
+        gameObject.GetComponent<Light>().range = 20;
+        gameObject.GetComponent<Light>().intensity = 2f;
         gameObject.GetComponent<Light>().color = Color.cyan;
-
     }
 
     private void Update()
     {
         if(move)
         {
-            gameObject.transform.position += Vector3.forward * .1f;
+            transform.position += transform.forward * .1f;
         }
 
-        timer += Time.deltaTime;
-        if (timer > 3) {
+        timer += Time.deltaTime; //for test purpose
+        if (timer > 3 && hit == false) {
             Destroy(gameObject);
         }
     }
@@ -95,21 +90,24 @@ public class BulletScript : MonoBehaviour
         if (collision.gameObject.tag.Equals("Bullet")) {
             Destroy(gameObject);
         }
-        move = false;
-        rig.constraints = RigidbodyConstraints.FreezeAll;
+        if (!collision.gameObject.tag.Equals("Player"))
+        {
+            hit = true;
+            move = false;
+            rig.constraints = RigidbodyConstraints.FreezeAll;
 
-        Vector3 minus = Vector3.forward;
+            Vector3 minus = Vector3.forward;
 
-        burst.transform.position = collision.transform.position - minus;
-        burst.transform.rotation = collision.transform.rotation;
+            burst.transform.position = transform.position - minus;
+            burst.transform.rotation = transform.rotation;
 
-        muzzle.transform.position = collision.transform.position;
-        muzzle.transform.rotation = collision.transform.rotation;
+            muzzle.transform.position = transform.position;
+            muzzle.transform.rotation = transform.rotation;
 
-        burst.Play(true);
-        muzzle.Play(true);
+            burst.Play(true);
+            muzzle.Play(true);
+        }
         
         //Destroy(gameObject);
     }
 }
-
