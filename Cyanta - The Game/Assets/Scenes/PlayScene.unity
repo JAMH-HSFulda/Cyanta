@@ -1414,6 +1414,23 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &1061917313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061917309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c6cc37cb434f34bb988367c90d8b59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 117179316}
+  Player: {fileID: 1061917309}
+  respawnPoint: {fileID: 0}
+  gameCounter: 0
+  damageOn: 0
 --- !u!136 &1061917314
 CapsuleCollider:
   m_ObjectHideFlags: 0
