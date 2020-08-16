@@ -8,6 +8,8 @@ public class GlowOrbs : MonoBehaviour {
     //damit den Partikeln das passende Material zugeordnet wird...
     //Das gleiche gilt für das Light, dort muss ein Prefab ausgewählt werden
     // - ansonsten leuchten sie nicht!
+    int[] xOrb = {6, 0, 4, 18, 35, 18, 66, 87, 78, 63, 43};
+    int[] zOrb = {2, 9, 23, 9, 2, 23, 2, 2, 14, 17, 17};
 
     void Start () {
         placeOrbs ();
@@ -17,12 +19,12 @@ public class GlowOrbs : MonoBehaviour {
         //Erstellen des OG Orbs
         GameObject sphere = GameObject.CreatePrimitive (PrimitiveType.Sphere);
         //Random Anzahl, welche die anzal von Orbs vorgibt
-        int random = Random.Range (5, 25);
-        for (int z = 0; z < random; z++) {
+        //int random = Random.Range (5, 25);
+        for (int z = 0; z < zOrb.Length; z++) {
             //Orb wird geklont, benannt und random positioniert
             GameObject clone = Instantiate (sphere);
             clone.name = "Glow Orb";
-            clone.transform.position = new Vector3 (Random.Range (0, 25), 1.25f, Random.Range (0, 25));
+            clone.transform.position = new Vector3 (xOrb[z], 1.25f, zOrb[z]);
             var sc = clone.GetComponent<SphereCollider> ();
             sc.isTrigger = true;
             //Hinzufügen eines Partikel systems, welches accessible ist via main
