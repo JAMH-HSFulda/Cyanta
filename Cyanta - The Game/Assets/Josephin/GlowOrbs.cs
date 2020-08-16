@@ -8,8 +8,9 @@ public class GlowOrbs : MonoBehaviour {
     //damit den Partikeln das passende Material zugeordnet wird...
     //Das gleiche gilt für das Light, dort muss ein Prefab ausgewählt werden
     // - ansonsten leuchten sie nicht!
-    int[] xOrb = {6, 0, 4, 18, 35, 18, 66, 87, 78, 63, 43};
-    int[] zOrb = {2, 9, 23, 9, 2, 23, 2, 2, 14, 17, 17};
+    int[] xOrb = { 6, 0, 4, 18, 35, 18, 66, 87, 78, 63, 43 };
+    int[] zOrb = { 2, 9, 23, 9, 2, 23, 2, 2, 14, 17, 17 };
+    public Material material_particles;
 
     void Start () {
         placeOrbs ();
@@ -31,6 +32,9 @@ public class GlowOrbs : MonoBehaviour {
             clone.AddComponent<ParticleSystem> ();
             var ps = clone.GetComponent<ParticleSystem> ();
             var main = ps.main;
+            //var renderer = clone.GetComponent<Renderer> ();
+            //renderer.Material = material_particles;
+
             //random Nummer auswählen für zufällige Farbe
             int random_colour = Random.Range (1, 4);
             if (random_colour == 1) {

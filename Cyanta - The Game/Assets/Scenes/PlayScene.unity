@@ -768,7 +768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
@@ -1298,7 +1298,7 @@ Transform:
   m_GameObject: {fileID: 1555688512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalScale: {x: 3, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1521,7 +1521,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1904690002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1569,3 +1569,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51ae150d728c1345b186710d7ae4ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  material_particles: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
