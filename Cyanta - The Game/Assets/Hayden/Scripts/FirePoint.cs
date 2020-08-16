@@ -25,11 +25,11 @@ public class FirePoint : MonoBehaviour
     void Shoot() {
         burst.Play(true);
         muzzle.Play(true); // continue at 22:30 https://www.youtube.com/watch?v=xenW67bXTgM 
-        GameObject test =  Instantiate(bullet, firePoint.transform.position, Quaternion.identity);
-        test.transform.position = transform.position - transform.forward *0.2f + new Vector3(0, .5f, 0);
-        test.transform.forward = (firePoint.transform.forward * -1);
+        GameObject bulletObject =  Instantiate(bullet, firePoint.transform.position, Quaternion.identity);
+        bulletObject.transform.position = transform.position - transform.forward * 0.2f + new Vector3(0.3f, .5f, 0);
+        bulletObject.transform.forward = (firePoint.transform.forward * -1);
 
-        //test.name = "Bullet +" + name;
+        //bulletObject.name = "Bullet +" + name;
         //name++;
     }
 
