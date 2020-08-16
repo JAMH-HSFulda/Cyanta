@@ -29,16 +29,16 @@ public class DamageNheal : MonoBehaviour
             healthSystem.Damage(1);
         }
         //Kollision mit Munition, Name muss angepasst werden
-        /*if(collisionInfo.name == "Munition") {
+        if(collisionInfo.name == "Fish") {
             healthSystem.Heal(1);
-        }*/      
+        }      
     }
 
     //Methode Zeitabfrage nach Damage
     IEnumerator CoolDown() {
         Debug.Log(damageOn);
         damageOn = true;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         damageOn = false;
     }
 
