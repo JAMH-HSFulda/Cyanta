@@ -1570,3 +1570,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material_particles: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  glow: {fileID: 988775546157383906, guid: 0bbf330bf0c18c14badf9871a007c7d9, type: 3}
