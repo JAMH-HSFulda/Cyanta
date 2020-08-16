@@ -8,8 +8,11 @@ public class GlowOrbs : MonoBehaviour {
     //damit den Partikeln das passende Material zugeordnet wird...
     //Das gleiche gilt für das Light, dort muss ein Prefab ausgewählt werden
     // - ansonsten leuchten sie nicht!
+
+    //Koordinaten der Orbs
     int[] xOrb = { 6, 0, 4, 18, 35, 18, 66, 87, 78, 63, 43 };
     int[] zOrb = { 2, 9, 23, 9, 2, 23, 2, 2, 14, 17, 17 };
+    //Benötigt für die Particle Systems
     public Material material_particles;
     public Light glow;
 
@@ -20,8 +23,7 @@ public class GlowOrbs : MonoBehaviour {
     void placeOrbs () {
         //Erstellen des OG Orbs
         GameObject sphere = GameObject.CreatePrimitive (PrimitiveType.Sphere);
-        //Random Anzahl, welche die anzal von Orbs vorgibt
-        //int random = Random.Range (5, 25);
+        
         for (int z = 0; z < zOrb.Length; z++) {
             //Orb wird geklont, benannt und random positioniert
             GameObject clone = Instantiate (sphere);
@@ -33,6 +35,7 @@ public class GlowOrbs : MonoBehaviour {
             clone.AddComponent<ParticleSystem> ();
             var ps = clone.GetComponent<ParticleSystem> ();
             var main = ps.main;
+            //Zuweisen des Materials
             var renderer = clone.GetComponent<ParticleSystemRenderer> ();
             renderer.material = material_particles;
 
@@ -62,7 +65,7 @@ public class GlowOrbs : MonoBehaviour {
             lights.useRandomDistribution = false;
             lights.sizeAffectsRange = false;
             lights.intensityMultiplier = 0.5f;
-            //Somehow fetch the Prefab of FirelyLight? 
+            //Nutzen des public Prefab Lights für den Glühwürmchen-Effekt 
             lights.light = glow;
         }
         //Zerstören der OG sphere
