@@ -28,7 +28,7 @@ public class BulletScript : MonoBehaviour
         rig = gameObject.AddComponent<Rigidbody>();
         rig.useGravity = true;
         rig.interpolation = RigidbodyInterpolation.Interpolate;
-        rig.collisionDetectionMode = CollisionDetectionMode.Continuous;
+        rig.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
 
         scale = 0.7f;
         transform.localScale *= scale;
