@@ -19,16 +19,19 @@ public class FirePoint : MonoBehaviour
 
     Transform cam;
 
+    Quaternion rotation;
+
 
     void Start() {
         cam = Camera.main.transform;
     }
 
     void Update() {
-        Vector3 direction = (cam.right) + (cam.forward);
-        // Quaternion rotation = Quaternion.LookRotation(gameObject.transform.position, cam.transform.position);
+        Vector3 direction = (cam.position + new Vector3(0f, -0.6f, 0f)) - transform.position ;
+        rotation = Quaternion.LookRotation(direction);
         // transform.rotation = rotation;
-        transform.RotateAround(transform.position, transform.up, Time.deltaTime * 90f);
+        
+        gameObject.transform.rotation = rotation;
     }
 
     void Awake() {
@@ -38,14 +41,15 @@ public class FirePoint : MonoBehaviour
     }
 
     void Shoot() {
+        Debug.Log("Schießen");
         burst.Play(true);
         muzzle.Play(true); // continue at 22:30 https://www.youtube.com/watch?v=xenW67bXTgM 
         GameObject bulletObject =  Instantiate(bullet, firePoint.transform.position, Quaternion.identity);
         bulletObject.transform.parent = gameObject.transform;
-        bulletObject.transform.position = transform.position - transform.forward * 0.2f + new Vector3(1f, 0, 0);
+        bulletObject.transform.position = transform.position - transform.forward * 0.2f;
         bulletObject.transform.forward = (firePoint.transform.forward * -1);
         bulletObject.transform.parent = null;
-        
+        Debug.Log(rotation);
         //bulletObject.name = "Bullet +" + name;
         //name++;
     }

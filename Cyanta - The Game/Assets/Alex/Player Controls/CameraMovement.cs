@@ -5,6 +5,8 @@ public class CameraMovement : MonoBehaviour
 
     public float speedH = 2.0f;
     public float speedV = 2.0f;
+    public float clamp = 60;
+    public float camDown;
 
     private float yaw = 0.0f;
     private float pitch = 0.0f;
@@ -46,9 +48,9 @@ public class CameraMovement : MonoBehaviour
         yaw += speedH * look.x;
         pitch -= speedV * look.y;
 
-        pitch = Mathf.Clamp(pitch, 0f, 70f);
+        pitch = Mathf.Clamp(pitch, 0f, clamp);
 
-        cam.transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
+        cam.transform.eulerAngles = new Vector3(pitch + camDown, yaw, 0.0f);
 
         Vector3 input = new Vector3(look.x, 0 , look.y);
         previousPosition = cam.ScreenToViewportPoint(input);
