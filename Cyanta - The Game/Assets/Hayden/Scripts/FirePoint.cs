@@ -21,17 +21,27 @@ public class FirePoint : MonoBehaviour
 
     Quaternion rotation;
 
+    public float pitch = 0.0f;
+    public float yaw = 0.0f;
+
 
     void Start() {
         cam = Camera.main.transform;
     }
 
     void Update() {
-        Vector3 direction = (cam.position + new Vector3(0f, -0.6f, 0f)) - transform.position ;
+        Vector3 direction = (cam.position + new Vector3(0f, -0.4f, 0f)) - transform.position ;
         rotation = Quaternion.LookRotation(direction);
         // transform.rotation = rotation;
         
         gameObject.transform.rotation = rotation;
+
+        // yaw +=  direction.x;
+        // pitch -=  direction.y;
+
+        // pitch = Mathf.Clamp(pitch, 0f, 0f);
+
+        // gameObject.transform.eulerAngles = new Vector3(pitch , yaw, 0.0f);
     }
 
     void Awake() {
@@ -49,7 +59,6 @@ public class FirePoint : MonoBehaviour
         bulletObject.transform.position = transform.position - transform.forward * 0.2f;
         bulletObject.transform.forward = (firePoint.transform.forward * -1);
         bulletObject.transform.parent = null;
-        Debug.Log(rotation);
         //bulletObject.name = "Bullet +" + name;
         //name++;
     }
