@@ -12,13 +12,14 @@ public class MeshGenerator : MonoBehaviour {
     float minTerrainHeight;
     float maxterrainHeight;
 
-    int xSize = 20;
-    int zSize = 20;
+    int xSize = 40;
+    int zSize = 40;
 
     // Start is called before the first frame update
     void Start () {
         mesh = new Mesh ();
         GetComponent<MeshFilter> ().mesh = mesh;
+        transform.position = new Vector3 (22, -2, 87);
         CreateShape ();
     }
 
@@ -71,7 +72,7 @@ public class MeshGenerator : MonoBehaviour {
 
         for (int i = 0, z = 0; z <= zSize; z++) {
             for (int x = 0; x <= xSize; x++) {
-                float height = Mathf.InverseLerp(minTerrainHeight, maxterrainHeight, vertices[i].y);
+                float height = Mathf.InverseLerp (minTerrainHeight, maxterrainHeight, vertices[i].y);
                 colours[i] = gradient.Evaluate (height);
                 i++;
             }

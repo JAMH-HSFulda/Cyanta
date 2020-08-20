@@ -12,26 +12,14 @@ public class Object_Collider : MonoBehaviour {
             Destroy (other.gameObject);
             //Bei Kontakt mit nem Glow - Orb erhöht sich die Anzahl von X-en bzw. die Schussanzahl verringert sich
             if (Ammo.health < 5) {
-                Ammo.health += 1;
+                Ammo.health -= 1;
             } 
+            //ggf. nach 3x runterfallen, save points
             if (Ammo.health == 5) {
                 SceneManager.LoadScene ("GameOver");
             }
 
-        }
-        if (other.gameObject.name == "Fish" || other.gameObject.name == "Plane") {
-            Debug.Log (this.name + " frisst " + other.gameObject.name);
-            Destroy (other.gameObject);
-            //Wenn Fisch gefressen wurde wird Munition erhöht
-            //HOWEVER es kann kein Fisch auf vorrat gefressen werden 
-            //(Leben bunkern, war n bug den i gefixt habe)
-            if (Ammo.health > 0) {
-                Ammo.health -= 1;
-            } else if (Ammo.health == 0) {
-                Ammo.health = 0;
-            }
-
-        }
+        } 
         
     }
 }
