@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class DamageNheal : MonoBehaviour
@@ -10,7 +11,7 @@ public class DamageNheal : MonoBehaviour
     public GameObject respawnPoint;
     //public Movement movementScript;
     public int gameCounter = 0;
-    
+
     public bool damageOn = false;
 
     //Collision mit Fallen
@@ -54,7 +55,7 @@ public class DamageNheal : MonoBehaviour
         //Empty für den Respawnpunkt
         respawnPoint = new GameObject("respawn");
         respawnPoint.transform.position = new Vector3(51f, 0.2f, 0);
-        
+
     }
 
     void Update() {
@@ -69,6 +70,7 @@ public class DamageNheal : MonoBehaviour
         if(Player.transform.position.y < -5) {
             Respawn();
             gameCounter++;
+            FirePoint.destroyBuellets(); //destroying all bullets once fallen
         }
 
         //if(gameCounter >= 3) {
