@@ -6,14 +6,11 @@ using UnityEngine;
 
 public class FirePoint : MonoBehaviour
 {
-    public GameObject firePoint;
-    public GameObject bullet;
+    public GameObject firePoint, bullet;
 
     public static List<GameObject> bulletList;
     
-
-    public ParticleSystem burst;
-    public ParticleSystem muzzle;
+    public ParticleSystem burst, muzzle;
 
     InputMaster controls;
 
@@ -27,7 +24,6 @@ public class FirePoint : MonoBehaviour
     public float yaw = 0.0f;
 
     public static int shootCount = 0;
-
 
     void Start() {
         cam = Camera.main.transform;
@@ -63,6 +59,7 @@ public class FirePoint : MonoBehaviour
     }
 
     void Shoot() {
+        FindObjectOfType<audiomanager>().Play("Shoot");
         Debug.Log("Schießen");
         burst.Play(true);
         muzzle.Play(true); // playing particlesystems for effects

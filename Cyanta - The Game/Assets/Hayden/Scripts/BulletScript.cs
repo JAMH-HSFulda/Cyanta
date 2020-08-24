@@ -92,6 +92,7 @@ public class BulletScript : MonoBehaviour
         }
         if (!collision.gameObject.tag.Equals("Player"))
         {
+            FindObjectOfType<audiomanager>().Play("Impact");
             hit = true;
             move = false;
             rig.constraints = RigidbodyConstraints.FreezeAll;
