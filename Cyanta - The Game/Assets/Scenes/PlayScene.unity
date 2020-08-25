@@ -2385,8 +2385,8 @@ MonoBehaviour:
   - {fileID: 287108073}
   - {fileID: 195336718}
   - {fileID: 338260438}
-  fullAmmo: {fileID: 21300000, guid: 69cf5b073b7d7784e8cfdb5c90f8e23e, type: 3}
-  emptyAmmo: {fileID: 21300000, guid: b958dc9f7877c6643a96167204b47a55, type: 3}
+  fullAmmo: {fileID: 21300000, guid: b958dc9f7877c6643a96167204b47a55, type: 3}
+  emptyAmmo: {fileID: 21300000, guid: 69cf5b073b7d7784e8cfdb5c90f8e23e, type: 3}
 --- !u!4 &1904690003
 Transform:
   m_ObjectHideFlags: 0
