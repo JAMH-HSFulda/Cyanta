@@ -12,6 +12,8 @@ public class BulletScript : MonoBehaviour
 
     public ParticleSystem burst;
     public ParticleSystem muzzle;
+
+    private new Light light;
     
     float timer = 0;
 
@@ -65,7 +67,7 @@ public class BulletScript : MonoBehaviour
         mR.material.color = Color.green; //change for specific material, color,texture?
         //mR.material = myMat;
 
-        gameObject.AddComponent<Light>();
+        light = gameObject.AddComponent<Light>();
         gameObject.GetComponent<Light>().range = 20;
         gameObject.GetComponent<Light>().intensity = 2f;
         gameObject.GetComponent<Light>().color = Color.cyan;
@@ -97,8 +99,17 @@ public class BulletScript : MonoBehaviour
             move = false;
             rig.constraints = RigidbodyConstraints.FreezeAll;
 
-            Vector3 minus = Vector3.forward;
+            Destroy(light);
 
+            GameObject lightGameObject = new GameObject("The Light");
+            Light lightComp = lightGameObject.AddComponent<Light>();
+            lightComp.color = Color.cyan;
+            lightComp.intensity = 5;
+
+            Vector3 minus = Vector3.forward;
+            
+            lightGameObject.transform.position = transform.position + minus * 2;
+            
             burst.transform.position = transform.position - minus;
             burst.transform.rotation = transform.rotation;
 
