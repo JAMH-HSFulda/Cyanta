@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Ammo : MonoBehaviour {
-    public static int health;
+    //Man hat am Anfang 2 Schuss
+    public static int counter = 2;
     public int numOfHearts;
 
     public Image[] hearts;
@@ -12,14 +13,18 @@ public class Ammo : MonoBehaviour {
     public Sprite emptyAmmo;
 
     void Update () {
-        
+
         for (int i = 0; i < hearts.Length; i++) {
-            if (i < health) {
+            if (i < counter) {
                 hearts[i].sprite = fullAmmo;
             } else {
                 hearts[i].sprite = emptyAmmo;
             }
         }
+        
+        /* if (Input.GetMouseButtonDown(0)) {
+            Debug.Log ("Ein Schuss");
+        } */
 
     }
 }
