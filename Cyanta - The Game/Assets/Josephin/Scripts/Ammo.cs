@@ -21,7 +21,6 @@ public class Ammo : MonoBehaviour {
                 hearts[i].sprite = emptyAmmo;
             }
         }
-        
         /* if (Input.GetMouseButtonDown(0)) {
             Debug.Log ("Ein Schuss");
         } */

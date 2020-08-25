@@ -61,9 +61,10 @@ public class GlowOrbs : MonoBehaviour {
             lights.ratio = 1.0f;
             lights.useRandomDistribution = false;
             lights.sizeAffectsRange = false;
-            lights.intensityMultiplier = 0.6f;
+            lights.intensityMultiplier = 0.5f;
             //Nutzen des public Prefab Lights für den Glühwürmchen-Effekt 
             lights.light = glow;
+            clone.transform.localScale = new Vector3 (0.75f, 0.75f, 0.75f);
         }
         //Zerstören der OG sphere
         Destroy (sphere);
