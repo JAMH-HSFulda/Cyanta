@@ -8,10 +8,10 @@ public class BulletScript : MonoBehaviour
     public GameObject spawnPoint;
 
     public float scale;
-    public Material myMat;
 
     public ParticleSystem burst;
     public ParticleSystem muzzle;
+    public ParticleSystem centerbeam;
 
     private new Light light;
     
@@ -65,7 +65,6 @@ public class BulletScript : MonoBehaviour
         mesh.Optimize();
 
         mR.material.color = Color.green; //change for specific material, color,texture?
-        //mR.material = myMat;
 
         light = gameObject.AddComponent<Light>();
         gameObject.GetComponent<Light>().range = 20;
@@ -101,14 +100,9 @@ public class BulletScript : MonoBehaviour
 
             Destroy(light);
 
-            GameObject lightGameObject = new GameObject("The Light");
-            Light lightComp = lightGameObject.AddComponent<Light>();
-            lightComp.color = Color.cyan;
-            lightComp.intensity = 5;
-
             Vector3 minus = Vector3.forward;
             
-            lightGameObject.transform.position = transform.position + minus * 2;
+            //lightGameObject.transform.position = transform.position + minus * 2;
             
             burst.transform.position = transform.position - minus;
             burst.transform.rotation = transform.rotation;
@@ -116,8 +110,14 @@ public class BulletScript : MonoBehaviour
             muzzle.transform.position = transform.position;
             muzzle.transform.rotation = transform.rotation;
 
+            centerbeam.transform.position = transform.position;
+            centerbeam.transform.rotation = transform.rotation;
+            centerbeam.startColor = Color.cyan;
+
+
             burst.Play(true);
             muzzle.Play(true);
+            centerbeam.Play(true);
         }
         
         //Destroy(gameObject);

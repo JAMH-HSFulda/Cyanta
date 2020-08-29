@@ -207,6 +207,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Levelloader
       objectReference: {fileID: 0}
+    - target: {fileID: 3329382154847460654, guid: c9c6a4923e325284dbf9c0e9f22a6929,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3329382154847460657, guid: c9c6a4923e325284dbf9c0e9f22a6929,
         type: 3}
       propertyPath: m_LocalPosition.x
