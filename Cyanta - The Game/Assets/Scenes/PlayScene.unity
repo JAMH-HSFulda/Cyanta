@@ -536,6 +536,7 @@ MonoBehaviour:
   cam: {fileID: 963194227}
   target: {fileID: 726277746}
   distanceToTarget: 3
+  rotat: 0
 --- !u!4 &134654940
 Transform:
   m_ObjectHideFlags: 0
@@ -1891,13 +1892,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0.7119648, z: 0, w: 0.70221525}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.64, y: 1.67, z: 2.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 90.79, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2354,6 +2355,7 @@ MonoBehaviour:
   healthBar: {fileID: 117179316}
   Player: {fileID: 1061917309}
   respawnPoint: {fileID: 0}
+  cam: {fileID: 963194227}
   gameCounter: 0
   damageOn: 0
 --- !u!136 &1061917314
