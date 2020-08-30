@@ -12,16 +12,17 @@ public class DamageNheal : MonoBehaviour
     //public Movement movementScript;
     public int gameCounter = 0;
 
+    //weil true automatisch zu false wird (Bug?!)
     public bool damageOn = false;
 
     //Collision mit Fallen
-    void OnTriggerStay(Collider collisionInfo){
-        Debug.Log(damageOn);
+    void OnTriggerEnter(Collider collisionInfo){
+        Debug.Log("Damage" + damageOn);
         //Kollision mit Fallen, Name muss angepasst werden
         if(collisionInfo.name == "Trap(Clone)") {
             if(!damageOn) {
                 healthSystem.Damage(1);
-                StartCoroutine("CoolDown");
+                //StartCoroutine("CoolDown");
             }
             
         }
