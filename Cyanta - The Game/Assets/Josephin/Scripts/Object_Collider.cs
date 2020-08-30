@@ -14,11 +14,10 @@ public class Object_Collider : MonoBehaviour {
             if (Ammo.counter < 5) {
                 Ammo.counter += 1;
             }
-            /* //ggf. nach 3x runterfallen, save points
-            if (Ammo.counter == 5) {
-                SceneManager.LoadScene ("GameOver");
-            } */
 
-        } 
+        }
+        if (other.gameObject.name == "Fish") {
+            Destroy (other.gameObject);
+        }
     }
 }
