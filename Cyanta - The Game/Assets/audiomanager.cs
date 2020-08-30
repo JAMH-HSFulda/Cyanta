@@ -38,6 +38,7 @@ public class audiomanager : MonoBehaviour
 
     void Start()
     {
+        Play("BG");
         //Play("Theme"); //for theme music or continous background stuff        
     }
 
