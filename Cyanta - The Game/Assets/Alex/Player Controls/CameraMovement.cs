@@ -60,7 +60,7 @@ public class CameraMovement : MonoBehaviour
         Vector3 direction = previousPosition - newPosition;
 
         float rotationAroundYAxis = -direction.x * 180; 
-        float rotationAroundXAxis = direction.y * 180; 
+        float rotationAroundXAxis = direction.y * 180;
 
         cam.transform.position = target.position;
         
