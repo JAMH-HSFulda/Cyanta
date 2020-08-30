@@ -91,7 +91,7 @@ public class BulletScript : MonoBehaviour
         if (collision.gameObject.tag.Equals("Bullet")) {
             Destroy(gameObject);
         }
-        if (!collision.gameObject.tag.Equals("Player"))
+        if (collision.gameObject.tag.Equals("ground"))
         {
             FindObjectOfType<audiomanager>().Play("Impact");
             hit = true;
@@ -119,6 +119,10 @@ public class BulletScript : MonoBehaviour
             muzzle.Play(true);
             centerbeam.Play(true);
         }
+        if (collision.gameObject.tag.Equals("enemy")) { 
+            //eine int static bei Seal hochzaehlen, wenn int == 2 Destroy(seal)
+        }
+        
         
         //Destroy(gameObject);
     }
