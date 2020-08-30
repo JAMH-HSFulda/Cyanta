@@ -56,6 +56,7 @@ public class DamageNheal : MonoBehaviour
         //Empty für den Respawnpunkt
         respawnPoint = new GameObject("respawn");
         respawnPoint.transform.position = new Vector3(51f, 0.2f, 0);
+        
 
     }
 
@@ -91,5 +92,6 @@ public class DamageNheal : MonoBehaviour
         //transform.rotation = movementScript.targetRotation;
 
         healthSystem.SetHealth(3);        
+        gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 }
