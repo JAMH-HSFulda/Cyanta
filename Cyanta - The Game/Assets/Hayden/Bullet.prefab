@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1921706033712167961
 Transform:
   m_ObjectHideFlags: 0
@@ -185,10 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ae4dedc3ee4de47b2a9b835c2320a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: -927199367670048503, guid: f0c2e97635a03f841bb8510d116965ce,
-    type: 3}
   scale: 0
-  myMat: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   burst: {fileID: 1452574468636569655}
   muzzle: {fileID: 780271856617361589}
   centerbeam: {fileID: 2434125646838731552}
@@ -203,7 +200,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.2, z: 0.25}
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1142268185730490385
 PrefabInstance:
