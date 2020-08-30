@@ -1232,6 +1232,12 @@ MonoBehaviour:
     pitch: 2.5
     loop: 1
     source: {fileID: 0}
+  - name: Name
+    clip: {fileID: 8300000, guid: 981cf22a00bb71542a0b9dae861d1393, type: 3}
+    volume: 0.185
+    pitch: 2.5
+    loop: 1
+    source: {fileID: 0}
   mixerGroup: {fileID: 0}
 --- !u!4 &430397035
 Transform:
@@ -2014,7 +2020,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b9d04bb612b49864c92f916571867f3c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b9d04bb612b49864c92f916571867f3c,
         type: 3}
@@ -2050,6 +2056,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Seal
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b9d04bb612b49864c92f916571867f3c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9d04bb612b49864c92f916571867f3c, type: 3}
