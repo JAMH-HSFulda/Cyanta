@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class BulletScript : MonoBehaviour
 {
@@ -20,8 +21,10 @@ public class BulletScript : MonoBehaviour
 
     private Rigidbody rig;
 
+    public Material materialM;
+
     void Start()
-    { 
+    {
         MeshFilter meshFilter = gameObject.AddComponent<MeshFilter>(); 
         MeshRenderer mR = gameObject.AddComponent<MeshRenderer>();
 
@@ -62,7 +65,7 @@ public class BulletScript : MonoBehaviour
         mesh.RecalculateBounds();
         mesh.Optimize();
 
-        mR.material.color = Color.green; //change for specific material, color,texture?
+        mR.material = materialM; //change for specific material, color,texture?
 
         light = gameObject.AddComponent<Light>();
         gameObject.GetComponent<Light>().range = 16;
