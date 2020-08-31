@@ -9,6 +9,7 @@ public class DamageNheal : MonoBehaviour
     public HealthBar healthBar;
     public GameObject Player;
     public GameObject respawnPoint;
+    public Camera cam;
     //public Movement movementScript;
     public int gameCounter = 0;
 
@@ -56,6 +57,7 @@ public class DamageNheal : MonoBehaviour
         //Empty für den Respawnpunkt
         respawnPoint = new GameObject("respawn");
         respawnPoint.transform.position = new Vector3(51f, 0.2f, 0);
+        
 
     }
 
@@ -91,5 +93,8 @@ public class DamageNheal : MonoBehaviour
         //transform.rotation = movementScript.targetRotation;
 
         healthSystem.SetHealth(3);        
+        gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+        cam.transform.Rotate(new Vector3(0, 1, 0), 1, Space.World);
+        cam.transform.eulerAngles = new Vector3(1, 1, 0);
     }
 }

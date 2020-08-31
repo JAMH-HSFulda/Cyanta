@@ -22,6 +22,7 @@ public class CameraMovement : MonoBehaviour
     InputMaster controls;
 
     Vector2 look;
+    public float rotat;
 
     void Start() {
         Cursor.lockState = CursorLockMode.Locked;
@@ -59,7 +60,7 @@ public class CameraMovement : MonoBehaviour
         Vector3 direction = previousPosition - newPosition;
 
         float rotationAroundYAxis = -direction.x * 180; 
-        float rotationAroundXAxis = direction.y * 180; 
+        float rotationAroundXAxis = direction.y * 180;
 
         cam.transform.position = target.position;
         
@@ -69,6 +70,8 @@ public class CameraMovement : MonoBehaviour
         cam.transform.Translate(new Vector3(0, 0, -distanceToTarget));
 
         previousPosition = newPosition;
+
+        rotat = cam.transform.rotation.eulerAngles.y;
 
         
     }
