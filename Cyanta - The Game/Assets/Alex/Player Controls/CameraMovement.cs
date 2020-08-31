@@ -3,6 +3,7 @@
 public class CameraMovement : MonoBehaviour
 {
 
+    public HealthSystem healthSystem = new HealthSystem(3);
     public float speedH = 2.0f;
     public float speedV = 2.0f;
     public float clamp = 60;
@@ -49,11 +50,13 @@ public class CameraMovement : MonoBehaviour
 
         //Player fällt runter
         if(target.transform.position.y < -5) {
-            var rotationVector = cam.transform.rotation.eulerAngles;
-            rotationVector.y = 0;
             pitch = 10;
             yaw = 0;
-            cam.transform.rotation = Quaternion.Euler(rotationVector);
+        }
+
+        if (healthSystem.GetHealth() <= 0) {
+            pitch = 10;
+            yaw = 0;
         }
 
         yaw += speedH * look.x;

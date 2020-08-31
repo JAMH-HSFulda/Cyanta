@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class FirePoint : MonoBehaviour
 {
+
+    public float y;
     public GameObject firePoint, bullet;
 
     public static List<GameObject> bulletList;
@@ -14,9 +16,10 @@ public class FirePoint : MonoBehaviour
 
     InputMaster controls;
 
-    new int name = 0;
+    float limit = 0;
 
     Transform cam;
+    public Transform player;
 
     Quaternion rotation;
 
@@ -24,6 +27,10 @@ public class FirePoint : MonoBehaviour
     public float yaw = 0.0f;
 
     public static int shootCount = 0;
+
+
+    float speed = 5;
+    float torsoRotation = 0;
 
     void Start() {
         cam = Camera.main.transform;
@@ -34,16 +41,11 @@ public class FirePoint : MonoBehaviour
     {
         Vector3 direction = (cam.position + new Vector3(0f, -0.4f, 0f)) - transform.position;
         rotation = Quaternion.LookRotation(direction);
-        // transform.rotation = rotation;
-
         gameObject.transform.rotation = rotation;
 
-        // yaw +=  direction.x;
-        // pitch -=  direction.y;
-
-        // pitch = Mathf.Clamp(pitch, 0f, 0f);
-
-        // gameObject.transform.eulerAngles = new Vector3(pitch , yaw, 0.0f);
+        limit = Mathf.Clamp(gameObject.transform.localEulerAngles.y, 140, 240);
+        gameObject.transform.rotation = Quaternion.Euler(new Vector3(10, limit + player.transform.eulerAngles.y, 100));
+        y = gameObject.transform.localEulerAngles.y;
     }
 
     void Awake() {
