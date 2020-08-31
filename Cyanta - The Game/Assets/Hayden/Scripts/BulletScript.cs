@@ -67,7 +67,9 @@ public class BulletScript : MonoBehaviour
         light = gameObject.AddComponent<Light>();
         gameObject.GetComponent<Light>().range = 16;
         gameObject.GetComponent<Light>().intensity = 1f;
-        gameObject.GetComponent<Light>().color = new Color(1f, 183f, 217f);
+        gameObject.GetComponent<Light>().color = Color.cyan;
+        gameObject.GetComponent<Light>().shadows = LightShadows.Hard;
+
     }
 
     private void Update()
@@ -110,7 +112,7 @@ public class BulletScript : MonoBehaviour
 
             centerbeam.transform.position = transform.position;
             centerbeam.transform.rotation = transform.rotation;
-            centerbeam.startColor = new Color(1f,183f,217f); //cyan color values #01B7D9
+            centerbeam.startColor = Color.cyan; 
 
 
             burst.Play(true);
