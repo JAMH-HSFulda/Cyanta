@@ -2461,7 +2461,7 @@ MonoBehaviour:
   respawnPoint: {fileID: 0}
   cam: {fileID: 963194227}
   gameCounter: 0
-  damageOn: 0
+  force: 5
 --- !u!136 &1061917314
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2511,7 +2511,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061917309}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 421f1d8663dd6b24ab95f20652ccca48, type: 3}
   m_Name: 

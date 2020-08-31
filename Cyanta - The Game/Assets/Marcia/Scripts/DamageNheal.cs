@@ -14,17 +14,24 @@ public class DamageNheal : MonoBehaviour
     public int gameCounter = 0;
 
     //weil true automatisch zu false wird (Bug?!)
-    public bool damageOn = false;
+    // Überflüssig wegen Knockback
+    //public bool damageOn = false;
+    public float force = 1f;
 
     //Collision mit Fallen
     void OnTriggerEnter(Collider collisionInfo){
-        Debug.Log("Damage" + damageOn);
+        
         //Kollision mit Fallen, Name muss angepasst werden
         if(collisionInfo.gameObject.tag == "Trap") {
-            if(!damageOn) {
-                healthSystem.Damage(1);
+            
+            healthSystem.Damage(1);
+            Vector3 pushDirection = collisionInfo.transform.position - transform.position;
+            pushDirection =- pushDirection.normalized;
+            GetComponent<Rigidbody>().AddForce(pushDirection * force * 100);
+            
+            //if(!damageOn) {
                 //StartCoroutine("CoolDown");
-            }
+            //}
             
         }
         //Kollision mit Gegner, Name muss angepasst werden
@@ -37,13 +44,13 @@ public class DamageNheal : MonoBehaviour
         }      
     }
 
-    //Methode Zeitabfrage nach Damage
-    IEnumerator CoolDown() {
+    //Methode Zeitabfrage nach Damage // Überflüssig wegen Knockback
+    /*IEnumerator CoolDown() {
         Debug.Log(damageOn);
         damageOn = true;
         yield return new WaitForSeconds(1f);
         damageOn = false;
-    }
+    }*/
 
     // Start is called before the first frame update
     void Start()
