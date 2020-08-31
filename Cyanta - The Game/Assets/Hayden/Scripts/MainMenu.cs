@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     public Animator transition;
 
     public float transTime = 1;
+
     public void PlayGame() {
        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }

@@ -367,7 +367,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 943975739}
+      - m_Target: {fileID: 0}
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -424,6 +424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 384252272}
+  - component: {fileID: 384252273}
   m_Layer: 0
   m_Name: Effects
   m_TagString: Untagged
@@ -445,6 +446,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &384252273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384252271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 831d1530085102f4d965c80784a3b682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1921706033891607410, guid: 7579bb553a128204aa15d9c51fd80158, type: 3}
 --- !u!1 &430397033
 GameObject:
   m_ObjectHideFlags: 0
@@ -929,7 +943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &943975738
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1204,7 +1218,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f0c2e97635a03f841bb8510d116965ce,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.10496235
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f0c2e97635a03f841bb8510d116965ce,
         type: 3}
@@ -1214,7 +1228,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f0c2e97635a03f841bb8510d116965ce,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99447626
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f0c2e97635a03f841bb8510d116965ce,
         type: 3}
@@ -1229,7 +1243,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f0c2e97635a03f841bb8510d116965ce,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 12.05
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f0c2e97635a03f841bb8510d116965ce,
         type: 3}
@@ -1850,7 +1864,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 943975739}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
@@ -2393,6 +2407,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734511316}
   m_CullTransparentMesh: 0
+--- !u!1 &1736419241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1736419242}
+  - component: {fileID: 1736419244}
+  - component: {fileID: 1736419243}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1736419242
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736419241}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1866051180}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 12.7, y: 196.2}
+  m_SizeDelta: {x: 1804.3008, y: 687.6749}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1736419243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736419241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0.7372549, b: 0.8509804, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 21746efdddea9c4478859bea6505e42d, type: 3}
+    m_FontSize: 84
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 7
+    m_MaxSize: 103
+    m_Alignment: 1
+    m_AlignByGeometry: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Make your way to the end if the maze.\nBut be aware of the hangry seals,
+    they'll haunt you if you get to close.\nUse your shots wisely or collect some
+    more ammo on the go. \n"
+--- !u!222 &1736419244
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736419241}
+  m_CullTransparentMesh: 0
 --- !u!1 &1866051179
 GameObject:
   m_ObjectHideFlags: 0
@@ -2408,7 +2502,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1866051180
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2421,6 +2515,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1734511317}
+  - {fileID: 1736419242}
   m_Father: {fileID: 1622937762}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
