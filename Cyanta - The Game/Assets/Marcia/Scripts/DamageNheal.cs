@@ -94,7 +94,5 @@ public class DamageNheal : MonoBehaviour
 
         healthSystem.SetHealth(3);        
         gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
-        cam.transform.Rotate(new Vector3(0, 1, 0), 1, Space.World);
-        cam.transform.eulerAngles = new Vector3(1, 1, 0);
     }
 }

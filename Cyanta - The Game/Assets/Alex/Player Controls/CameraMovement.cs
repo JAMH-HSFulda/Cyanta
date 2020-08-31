@@ -12,6 +12,7 @@ public class CameraMovement : MonoBehaviour
     private float pitch = 0.0f;
 
     float xRotation;
+    public int gameCounter = 0;
     //-------------------------------------
 
     [SerializeField] private Camera cam;
@@ -46,12 +47,23 @@ public class CameraMovement : MonoBehaviour
 
     private void Update() {
 
+        //Player fällt runter
+        if(target.transform.position.y < -5) {
+            var rotationVector = cam.transform.rotation.eulerAngles;
+            rotationVector.y = 0;
+            pitch = 10;
+            yaw = 0;
+            cam.transform.rotation = Quaternion.Euler(rotationVector);
+        }
+
         yaw += speedH * look.x;
         pitch -= speedV * look.y;
 
         pitch = Mathf.Clamp(pitch, 0f, clamp);
 
-        cam.transform.eulerAngles = new Vector3(pitch + camDown, yaw, 0.0f);
+        if(look != null) {
+            cam.transform.rotation = Quaternion.Euler(new Vector3(pitch + camDown, yaw, 0.0f));
+        } 
 
         Vector3 input = new Vector3(look.x, 0 , look.y);
         previousPosition = cam.ScreenToViewportPoint(input);
@@ -74,5 +86,11 @@ public class CameraMovement : MonoBehaviour
         rotat = cam.transform.rotation.eulerAngles.y;
 
         
+    }
+
+    public void Respawn() {
+        float yRotation = cam.transform.eulerAngles.y;
+        
+        Debug.Log("MACH WAS!");
     }
 }
