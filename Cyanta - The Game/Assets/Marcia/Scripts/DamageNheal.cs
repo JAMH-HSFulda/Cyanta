@@ -20,7 +20,7 @@ public class DamageNheal : MonoBehaviour
     void OnTriggerEnter(Collider collisionInfo){
         Debug.Log("Damage" + damageOn);
         //Kollision mit Fallen, Name muss angepasst werden
-        if(collisionInfo.name == "Trap(Clone)") {
+        if(collisionInfo.gameObject.tag == "Trap") {
             if(!damageOn) {
                 healthSystem.Damage(1);
                 //StartCoroutine("CoolDown");
