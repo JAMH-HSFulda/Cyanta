@@ -21,7 +21,7 @@ public class BulletScript : MonoBehaviour
     private Rigidbody rig;
 
     void Start()
-    {        
+    { 
         MeshFilter meshFilter = gameObject.AddComponent<MeshFilter>(); 
         MeshRenderer mR = gameObject.AddComponent<MeshRenderer>();
 
@@ -67,7 +67,7 @@ public class BulletScript : MonoBehaviour
         light = gameObject.AddComponent<Light>();
         gameObject.GetComponent<Light>().range = 16;
         gameObject.GetComponent<Light>().intensity = 1f;
-        gameObject.GetComponent<Light>().color = Color.cyan;
+        gameObject.GetComponent<Light>().color = new Color(1f, 183f, 217f);
     }
 
     private void Update()
@@ -80,7 +80,7 @@ public class BulletScript : MonoBehaviour
         }
 
         timer += Time.deltaTime; //for test purpose
-        if (timer > 3 && hit == false) {
+        if (timer > 4 && hit == false) {
             Destroy(gameObject);
         }
     }
@@ -102,8 +102,6 @@ public class BulletScript : MonoBehaviour
 
             Vector3 minus = Vector3.forward;
             
-            //lightGameObject.transform.position = transform.position + minus * 2;
-            
             burst.transform.position = transform.position - minus;
             burst.transform.rotation = transform.rotation;
 
@@ -112,7 +110,7 @@ public class BulletScript : MonoBehaviour
 
             centerbeam.transform.position = transform.position;
             centerbeam.transform.rotation = transform.rotation;
-            centerbeam.startColor = Color.cyan;
+            centerbeam.startColor = new Color(1f,183f,217f); //cyan color values #01B7D9
 
 
             burst.Play(true);

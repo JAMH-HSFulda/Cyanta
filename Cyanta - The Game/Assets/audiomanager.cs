@@ -14,6 +14,8 @@ public class audiomanager : MonoBehaviour
 
     public static audiomanager instance;
 
+    float volume;   
+
     void Awake()
     {
         if (instance == null) 
@@ -51,9 +53,19 @@ public class audiomanager : MonoBehaviour
             return;
         }
 
-        s.source.volume = s.volume;
+        if (s.source.volume < volume)
+        {
+            s.source.volume = s.volume;
+        }
+        else {
+            s.source.volume = volume;
+        }
         s.source.pitch = s.pitch;
 
         s.source.Play();
+    }
+
+    public void newFloat(float newVolume) {
+        volume = newVolume;
     }
 }
