@@ -75,13 +75,11 @@ public class BulletScript : MonoBehaviour
 
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if(move)
         {
-            transform.position += transform.forward * .1f;
-            //float angle = Mathf.Atan2(rig.velocity.x, rig.velocity.y) * Mathf.Rad2Deg;
-            //transform.rotation = Quaternion.AngleAxis(angle, transform.forward); //trying to turn nozzle towards floor, not working yet
+            transform.position += transform.forward * .4f;
         }
 
         timer += Time.deltaTime; //for test purpose
