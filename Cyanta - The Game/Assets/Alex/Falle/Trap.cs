@@ -8,11 +8,24 @@ public class Trap : MonoBehaviour
 
     public Vector3 x0, x1, x2, x3, x4;
 
+    public List<GameObject> pfeilList;
+
+    GameObject copy;
+
+    int i = 0, j = 0;
+
+    private Vector3 tempPos;
+    public float amplitude = 0.01f, frequency = 0.8f, placeX = 30f, placeY = -5f, placeZ = 10f;
+ 
     Rigidbody rb;
     void Start()
     {
+        // gameObject.transform.position = new Vector3(51.22f, -2.5f, 0.14f);
+
+        copy = gameObject;
         MeshFilter meshFilter = gameObject.AddComponent<MeshFilter>();
         MeshRenderer meshRender = gameObject.AddComponent<MeshRenderer>();
+        gameObject.GetComponent<MeshRenderer>().material = new Material(Shader.Find("Diffuse"));
 
         rb = gameObject.AddComponent<Rigidbody>();
         rb.useGravity = false;
@@ -45,11 +58,38 @@ public class Trap : MonoBehaviour
         mesh.RecalculateBounds();
         mesh.Optimize();
 
+
+
+            while (i < 5) {
+                while(j < 4) {
+                    GameObject pfeil = Instantiate(copy, new Vector3(j, 0, i), Quaternion.identity);
+                    // pfeil.transform.parent = gameObject.transform;
+                    pfeil.name = "Spitze" + i;
+                    
+                    pfeilList.Add(pfeil);
+                    
+                    j++;
+                }
+                i++;
+                j = 0;
+            }
+
+        Debug.Log(pfeilList.Count);
+
+        for (int i = 0; i< 20; i++) {
+            pfeilList[i].transform.parent = gameObject.transform;
+            pfeilList[i].transform.position += new Vector3(placeX , placeY, placeZ);
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        for (int k = 1; k < 10;k++) {
+            tempPos = pfeilList[k].transform.position;
+            tempPos.y += Mathf.Sin(Time.time * 4f) * Time.deltaTime * 0.5f;
+            pfeilList[k].transform.position = tempPos;
+        }        
     }
 }

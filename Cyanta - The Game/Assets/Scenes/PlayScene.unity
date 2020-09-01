@@ -1644,6 +1644,12 @@ MonoBehaviour:
   x2: {x: 0, y: 0, z: 0}
   x3: {x: 0, y: 0, z: 0}
   x4: {x: 0, y: 0, z: 0}
+  pfeilList: []
+  amplitude: 0.01
+  frequency: 0.8
+  placeX: 40
+  placeY: -4
+  placeZ: 15
 --- !u!4 &558754014
 Transform:
   m_ObjectHideFlags: 0
@@ -1651,13 +1657,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558754012}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.41, y: 0.7, z: 1.31}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 51.22, y: -2.58, z: 0.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -3642,7 +3648,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079886803}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -18.968628}
+  m_LocalPosition: {x: 0, y: 0, z: 429.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 163221032}
