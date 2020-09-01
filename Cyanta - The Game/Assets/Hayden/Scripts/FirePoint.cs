@@ -44,8 +44,7 @@ public class FirePoint : MonoBehaviour
         gameObject.transform.rotation = rotation;
 
         limit = Mathf.Clamp(gameObject.transform.localEulerAngles.y, 140, 240);
-        gameObject.transform.rotation = Quaternion.Euler(new Vector3(10, limit + player.transform.eulerAngles.y, 100));
-        y = gameObject.transform.localEulerAngles.y;
+        gameObject.transform.rotation = Quaternion.Euler(new Vector3(rotation.x, limit + player.transform.eulerAngles.y, rotation.z));
     }
 
     void Awake() {
