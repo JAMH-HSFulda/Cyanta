@@ -63,7 +63,7 @@ public class DamageNheal : MonoBehaviour
 
         //Empty für den Respawnpunkt
         respawnPoint = new GameObject("respawn");
-        respawnPoint.transform.position = new Vector3(51f, 0.2f, 0);
+        respawnPoint.transform.position = new Vector3(51f, 1f, 0);
         
 
     }
