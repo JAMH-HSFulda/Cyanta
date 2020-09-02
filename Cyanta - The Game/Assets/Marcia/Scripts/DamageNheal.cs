@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DamageNheal : MonoBehaviour
 {
@@ -88,7 +89,6 @@ public class DamageNheal : MonoBehaviour
         //}
 
         healthBar.SetHealth(healthSystem.GetHealth());
-
 
     }
 

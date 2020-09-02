@@ -11,9 +11,9 @@ public class Object_Collider : MonoBehaviour {
             Debug.Log (this.name + " löscht " + other.gameObject.name);
 
             //Sound beim Munition Einsammeln //Marcia
-            FindObjectOfType<audiomanager>().Play("MunitionSammeln");
+            FindObjectOfType<audiomanager> ().Play ("MunitionSammeln");
             //
-            
+
             Destroy (other.gameObject);
             //Bei Kontakt mit nem Glow - Orb erhöht sich die Anzahl von X-en bzw. die Schussanzahl verringert sich
             if (Ammo.counter < 5) {
@@ -25,4 +25,11 @@ public class Object_Collider : MonoBehaviour {
             Destroy (other.gameObject);
         }
     }
+    //Abfragen der Position und dann laden der Scene
+    /* void Update () {
+        if (transform.position.x > 35 && transform.position.y > 85) {
+            Debug.Log ("ANANAS");
+            SceneManager.LoadScene (2); 
+        }
+    } */
 }
