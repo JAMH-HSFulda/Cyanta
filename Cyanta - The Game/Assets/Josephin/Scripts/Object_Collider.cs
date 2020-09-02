@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Object_Collider : MonoBehaviour {
 
+    public ParticleSystem confetti;
+
     void OnTriggerEnter (Collider other) {
         /*Es muss im statement dann bezug auf die GUI/Munitionsanzeige genommen werden und ggf. die Animation gestartet werden*/
         if (other.gameObject.name == "Glow Orb") {
@@ -24,12 +26,12 @@ public class Object_Collider : MonoBehaviour {
         if (other.gameObject.name == "Fish") {
             Destroy (other.gameObject);
         }
-    }
-    //Abfragen der Position und dann laden der Scene
-    /* void Update () {
-        if (transform.position.x > 35 && transform.position.y > 85) {
-            Debug.Log ("ANANAS");
-            SceneManager.LoadScene (2); 
+        if (other.gameObject.name == "Zieltor") {
+            SceneManager.LoadScene (2);
         }
-    } */
+        if (other.gameObject.name == "Finishline") {
+           confetti.GetComponent<ParticleSystem> ().Play();
+        }
+    }
+
 }
