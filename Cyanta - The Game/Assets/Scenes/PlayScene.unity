@@ -1648,8 +1648,8 @@ MonoBehaviour:
   amplitude: 0.01
   frequency: 0.8
   placeX: 40
-  placeY: -4
-  placeZ: 15
+  placeY: -3
+  placeZ: 16
 --- !u!4 &558754014
 Transform:
   m_ObjectHideFlags: 0
