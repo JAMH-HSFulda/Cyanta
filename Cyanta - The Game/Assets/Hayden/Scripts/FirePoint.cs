@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
@@ -45,6 +46,7 @@ public class FirePoint : MonoBehaviour
 
         limit = Mathf.Clamp(gameObject.transform.localEulerAngles.y, 140, 240);
         gameObject.transform.rotation = Quaternion.Euler(new Vector3(rotation.x, limit + player.transform.eulerAngles.y, rotation.z));
+
     }
 
     void Awake() {
@@ -63,14 +65,14 @@ public class FirePoint : MonoBehaviour
         if (Ammo.counter > 0)
         {
             FindObjectOfType<audiomanager>().Play("Shoot");
-            Debug.Log("Schießen");
             burst.Play(true);
             muzzle.Play(true); // playing particlesystems for effects
+
             GameObject bulletObject = Instantiate(bullet, firePoint.transform.position, Quaternion.identity);
-            bulletObject.transform.parent = gameObject.transform;
+            //bulletObject.transform.parent = gameObject.transform;
             bulletObject.transform.position = transform.position - transform.forward * 0.2f;
             bulletObject.transform.forward = (firePoint.transform.forward * -1);
-            bulletObject.transform.parent = null;
+            //bulletObject.transform.parent = null;
             shootCount++;
             bulletList.Add(bulletObject);
             //Ammo.counter--; //für Testzwecke ausgeschaltet
@@ -87,6 +89,5 @@ public class FirePoint : MonoBehaviour
     void OnDisable() {
         controls.Gameplay.Disable();
     }
-
 }
 

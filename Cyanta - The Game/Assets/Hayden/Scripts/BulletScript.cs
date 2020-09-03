@@ -19,6 +19,8 @@ public class BulletScript : MonoBehaviour
     Boolean move = true;
     Boolean hit = false;
 
+    Boolean calledRot = false;
+
     private Rigidbody rig;
 
     public Material materialM;
@@ -75,16 +77,33 @@ public class BulletScript : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if(move)
         {
-            transform.position += transform.forward * .3f;
+            rig.velocity = transform.forward * 15;
+            rig.AddForce(new Vector3(0, -20, 0)); //as gravity alternative
+            //transform.rotation = Quaternion.LookRotation(rig.velocity, Vector3.down*1); //changing rotation to look at floor but not working too well
+            //var downrotation = Quaternion.LookRotation(Vector3.down);
+            //transform.rotation = Quaternion.Slerp(transform.rotation, downrotation, Time.deltaTime*.5f);
+            if (calledRot)
+            {
+                rotate();
+            }
+            //transform.position += transform.forward * .3f;
         }
 
         timer += Time.deltaTime; //for test purpose
         if (timer > 4 && hit == false) {
             Destroy(gameObject);
+        }
+    }
+
+    void rotate() {
+        calledRot = true;
+        var downrotation = Quaternion.LookRotation(Vector3.down);
+        if (move) {
+            transform.rotation = Quaternion.Slerp(transform.rotation, downrotation, Time.deltaTime*1.5f); //testing, go back to above if not useful
         }
     }
 
@@ -120,11 +139,11 @@ public class BulletScript : MonoBehaviour
             muzzle.Play(true);
             centerbeam.Play(true);
         }
+        if (collision.gameObject.tag.Equals("Player")) {
+            return;
+        }
         if (collision.gameObject.tag.Equals("enemy")) { 
             //eine int static bei Seal hochzaehlen, wenn int == 2 Destroy(seal)
         }
-        
-        
-        //Destroy(gameObject);
     }
 }
