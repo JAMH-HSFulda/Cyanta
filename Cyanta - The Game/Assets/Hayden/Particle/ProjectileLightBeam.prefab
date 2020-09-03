@@ -314,7 +314,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0.0024390244
+          time: 0
           value: 1
           inSlope: 0.26705742
           outSlope: 0.26705742
@@ -324,15 +324,15 @@ ParticleSystem:
           outWeight: 0.2176039
         - serializedVersion: 3
           time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
+          value: 0.9896909
+          inSlope: 0.16575848
+          outSlope: 0.16575848
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
+          inWeight: 0.12499982
           outWeight: 0.33333334
         m_PreInfinity: 2
-        m_PostInfinity: 1
+        m_PostInfinity: 2
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2

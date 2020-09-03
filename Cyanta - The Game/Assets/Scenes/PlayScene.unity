@@ -1341,7 +1341,7 @@ MonoBehaviour:
   - name: Impact
     clip: {fileID: 8300000, guid: 8191a692c613b5948bd0fde2baf3cc7b, type: 3}
     volume: 0.804
-    pitch: 2.5
+    pitch: 2.2
     loop: 0
     source: {fileID: 0}
   - name: BG
@@ -1356,7 +1356,6 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  mixerGroup: {fileID: 0}
 --- !u!4 &430397035
 Transform:
   m_ObjectHideFlags: 0

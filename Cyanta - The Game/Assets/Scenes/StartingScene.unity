@@ -491,23 +491,22 @@ MonoBehaviour:
   sounds:
   - name: Shoot
     clip: {fileID: 8300000, guid: 1756e4ea7b7ec884898c4b102cdb723f, type: 3}
-    volume: 1
+    volume: 0.06
     pitch: 2
     loop: 0
     source: {fileID: 0}
   - name: Impact
     clip: {fileID: 8300000, guid: 8191a692c613b5948bd0fde2baf3cc7b, type: 3}
-    volume: 0.804
+    volume: 0.025
     pitch: 2.5
     loop: 0
     source: {fileID: 0}
-  - name: BackG
-    clip: {fileID: 8300000, guid: 3bd8e4448412cc949801df47c1dce3d4, type: 3}
-    volume: 0.705
+  - name: BG
+    clip: {fileID: 8300000, guid: 97ffe0567ca95df488d99f0327562761, type: 3}
+    volume: 0.018
     pitch: 2.5
-    loop: 0
+    loop: 1
     source: {fileID: 0}
-  mixerGroup: {fileID: 0}
 --- !u!4 &430397035
 Transform:
   m_ObjectHideFlags: 0
@@ -1027,7 +1026,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.15606087, g: 0.17241456, b: 0.1981132, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1042,7 +1041,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 100
-  field of view: 70.2
+  field of view: 90
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1054,7 +1053,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -1068,7 +1067,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.12881008, y: 0.99038774, z: 0.035886105, w: -0.035388447}
-  m_LocalPosition: {x: 51.7, y: 0.77, z: 1.88}
+  m_LocalPosition: {x: 51.75, y: 0.71, z: 2.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1086,7 +1085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 0}
+  volumeTrigger: {fileID: 963194228}
   volumeLayer:
     serializedVersion: 2
     m_Bits: 38
@@ -1241,7 +1240,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f0c2e97635a03f841bb8510d116965ce,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.10496235
+      value: 0.186524
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f0c2e97635a03f841bb8510d116965ce,
         type: 3}
@@ -1251,7 +1250,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f0c2e97635a03f841bb8510d116965ce,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99447626
+      value: 0.9824504
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f0c2e97635a03f841bb8510d116965ce,
         type: 3}
@@ -1266,7 +1265,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f0c2e97635a03f841bb8510d116965ce,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 12.05
+      value: 21.5
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f0c2e97635a03f841bb8510d116965ce,
         type: 3}

@@ -9,7 +9,8 @@ public class menueffects : MonoBehaviour
     
     void Start()
     {
-        GameObject bulletInGround = Instantiate(bullet, new Vector3(52, .7f, .4f), Quaternion.identity);
+        FindObjectOfType<audiomanager>().Play("BG");
+        GameObject bulletInGround = Instantiate(bullet, new Vector3(52, .8f, 1.42f), Quaternion.identity);
         bulletInGround.transform.eulerAngles = new Vector3(bulletInGround.transform.eulerAngles.x+65,0,0);
     }
 
