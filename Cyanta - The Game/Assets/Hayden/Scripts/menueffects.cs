@@ -9,8 +9,8 @@ public class menueffects : MonoBehaviour
     
     void Start()
     {
-        GameObject bulletInGround = Instantiate(bullet, new Vector3(52, .6f, .4f), Quaternion.identity);
-        bulletInGround.transform.eulerAngles = new Vector3(bulletInGround.transform.eulerAngles.x+90,0,0);
+        GameObject bulletInGround = Instantiate(bullet, new Vector3(52, .7f, .4f), Quaternion.identity);
+        bulletInGround.transform.eulerAngles = new Vector3(bulletInGround.transform.eulerAngles.x+65,0,0);
     }
 
 }

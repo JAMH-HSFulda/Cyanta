@@ -31,7 +31,7 @@ public class BulletScript : MonoBehaviour
         rig = gameObject.AddComponent<Rigidbody>();
         rig.useGravity = true;
         rig.interpolation = RigidbodyInterpolation.Interpolate;
-        rig.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+        rig.collisionDetectionMode = CollisionDetectionMode.Continuous;
 
         scale = 0.7f;
         transform.localScale *= scale;
@@ -68,7 +68,7 @@ public class BulletScript : MonoBehaviour
         mR.material = materialM; //change for specific material, color,texture?
 
         light = gameObject.AddComponent<Light>();
-        gameObject.GetComponent<Light>().range = 16;
+        gameObject.GetComponent<Light>().range = 12;
         gameObject.GetComponent<Light>().intensity = 1f;
         gameObject.GetComponent<Light>().color = Color.cyan;
         gameObject.GetComponent<Light>().shadows = LightShadows.Hard;
@@ -79,7 +79,7 @@ public class BulletScript : MonoBehaviour
     {
         if(move)
         {
-            transform.position += transform.forward * .4f;
+            transform.position += transform.forward * .3f;
         }
 
         timer += Time.deltaTime; //for test purpose
