@@ -21,8 +21,12 @@ public class ShakeCollider : MonoBehaviour
 
     void OnTriggerEnter (Collider colInfo) {
         if(colInfo.name == "Erdbebentrigger") {
-            StartCoroutine(shakeMaze.shake(1f, 1f));
+            FindObjectOfType<audiomanager>().Play("Erdbeben");
+
+            StartCoroutine(shakeMaze.shake(0.5f, 1f));
+            
             Destroy(erdbebentrigger);
+            
         }
     }
 }

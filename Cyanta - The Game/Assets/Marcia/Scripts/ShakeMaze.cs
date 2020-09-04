@@ -12,8 +12,8 @@ public class ShakeMaze : MonoBehaviour
         float zeit = 0;
 
         while(zeit < dauer) {
-            float x = Random.Range(-0.5f, 0.5f) * staerke;
-            float z = Random.Range(-0.5f, 0.5f) * staerke;
+            float x = Random.Range(-0.2f, 0.2f) * staerke;
+            float z = Random.Range(-0.2f, 0.2f) * staerke;
 
             Vector3 neuePos = new Vector3(x, originalPos.y, z);
             transform.localPosition += neuePos;
