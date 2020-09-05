@@ -3076,6 +3076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shakeMaze: {fileID: 963194231}
   erdbebentrigger: {fileID: 238513820}
+  staerke: 0.02
 --- !u!1 &1308065820
 GameObject:
   m_ObjectHideFlags: 0
@@ -3408,6 +3409,7 @@ GameObject:
   - component: {fileID: 1555688516}
   - component: {fileID: 1555688515}
   - component: {fileID: 1555688514}
+  - component: {fileID: 1555688517}
   m_Layer: 0
   m_Name: Maze
   m_TagString: ground
@@ -3489,6 +3491,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555688512}
   m_Mesh: {fileID: 0}
+--- !u!114 &1555688517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555688512}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33ad84b5794a60542924909d26cc4ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torMesh: {fileID: 0}
+  zieltor: {fileID: 0}
+  vertices: []
+  faces: 
+  normals: []
+  uvs: []
+  counter: 0
 --- !u!1 &1578532946
 GameObject:
   m_ObjectHideFlags: 0

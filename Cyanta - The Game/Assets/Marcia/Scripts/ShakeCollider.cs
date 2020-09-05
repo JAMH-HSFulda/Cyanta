@@ -6,6 +6,7 @@ public class ShakeCollider : MonoBehaviour
 {
     public ShakeMaze shakeMaze;
     public GameObject erdbebentrigger;
+    public float staerke = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class ShakeCollider : MonoBehaviour
         if(colInfo.name == "Erdbebentrigger") {
             FindObjectOfType<audiomanager>().Play("Erdbeben");
 
-            StartCoroutine(shakeMaze.shake(0.5f, 1f));
+            StartCoroutine(shakeMaze.shake(0.5f, staerke));
             
             Destroy(erdbebentrigger);
             
