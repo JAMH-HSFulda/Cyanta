@@ -74,7 +74,6 @@ public class BulletScript : MonoBehaviour
         gameObject.GetComponent<Light>().intensity = 1f;
         gameObject.GetComponent<Light>().color = Color.cyan;
         gameObject.GetComponent<Light>().shadows = LightShadows.Hard;
-
     }
 
     private void Update()
@@ -144,6 +143,10 @@ public class BulletScript : MonoBehaviour
         }
         if (collision.gameObject.tag.Equals("enemy")) { 
             //eine int static bei Seal hochzaehlen, wenn int == 2 Destroy(seal)
+        }
+
+        if (collision.gameObject.tag.Equals("untagged")) {
+            Debug.LogWarning("Ice detected");
         }
     }
 }
