@@ -67,7 +67,6 @@ public class FirePoint : MonoBehaviour
             FindObjectOfType<audiomanager>().Play("Shoot");
             burst.Play(true);
             muzzle.Play(true); // playing particlesystems for effects
-
             GameObject bulletObject = Instantiate(bullet, firePoint.transform.position, Quaternion.identity);
             //bulletObject.transform.parent = gameObject.transform;
             bulletObject.transform.position = transform.position - transform.forward * 0.2f;
@@ -75,10 +74,11 @@ public class FirePoint : MonoBehaviour
             //bulletObject.transform.parent = null;
             shootCount++;
             bulletList.Add(bulletObject);
-            //Ammo.counter--; //für Testzwecke ausgeschaltet
+            Ammo.counter--; //für Testzwecke ausgeschaltet
         }
         else
-        { //Play leere Waffe sound
+        {
+            FindObjectOfType<audiomanager>().Play("emptyg");
         }
     }
 
