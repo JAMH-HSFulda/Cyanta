@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IceSruface : MonoBehaviour
+public class IceSurface : MonoBehaviour
 {
     public PhysicMaterial iceSurface;
     public Material iceMat;
 
-    Mesh mesh;
+    Mesh meshI;
 
     Vector3 a, b, c, d, e, f;
 
@@ -76,18 +76,18 @@ public class IceSruface : MonoBehaviour
         uv.Add(new Vector2(1, 0)); 
         uv.Add(new Vector2(0, 0)); 
 
-        mesh = new Mesh();
+        meshI = new Mesh();
 
-        mesh.vertices = vertices.ToArray();
-        mesh.uv = uv.ToArray();
-        mesh.triangles = triangles.ToArray();
-        mesh.normals = normals.ToArray();
-        mesh.RecalculateNormals();
+        meshI.vertices = vertices.ToArray();
+        meshI.uv = uv.ToArray();
+        meshI.triangles = triangles.ToArray();
+        meshI.normals = normals.ToArray();
+        meshI.RecalculateNormals();
 
-        meshFilter.mesh = mesh;
+        meshFilter.mesh = meshI;
         meshRenderer.material = iceMat;
 
-        mcs.sharedMesh = mesh;
+        mcs.sharedMesh = meshI;
         mcs.material = iceSurface;
 
         transform.position = new Vector3(34.5f, .5f, 10.5f);
