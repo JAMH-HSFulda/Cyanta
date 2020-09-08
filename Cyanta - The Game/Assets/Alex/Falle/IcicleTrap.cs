@@ -7,7 +7,9 @@ public class IcicleTrap : MonoBehaviour
 
     public GameObject icicle, player;
     public List<GameObject> ListIcicle;
+    private Hashtable table;
     public float startHeight = 4f, distanceToPlayer = 5f;
+    private float time;
     
 
     GameObject clone;
@@ -29,18 +31,17 @@ public class IcicleTrap : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        time = Time.deltaTime;
         for (int i = 0; i < ListIcicle.Count;i++) {
             Vector3 direction = ListIcicle[i].transform.position - player.transform.position;
             if (direction.magnitude <= distanceToPlayer) {
                 ListIcicle[i].GetComponent<Rigidbody>().useGravity = true;
+                // table.Add(i, true);
             }
 
             if (ListIcicle[i].transform.position.y <= 0f) {
                 ListIcicle[i].GetComponent<Rigidbody>().constraints =  RigidbodyConstraints.FreezePosition;
-            }
+            }   
         }
-
-        
-        
     }
 }
