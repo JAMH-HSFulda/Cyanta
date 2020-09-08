@@ -1023,7 +1023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 216615133}
-  speed: 5
+  player: {fileID: 8296172668768274158}
 --- !u!65 &216615139
 BoxCollider:
   m_ObjectHideFlags: 0

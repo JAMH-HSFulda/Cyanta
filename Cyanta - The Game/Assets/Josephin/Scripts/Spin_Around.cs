@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Spin_Around : MonoBehaviour {
     public GameObject target;
-    public int speed;
+    public GameObject player;
+    int speed = 15;
 
     Collider m_Collider;
     Vector3 m_Center;
@@ -16,7 +17,9 @@ public class Spin_Around : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-
+        if (player.transform.position.x > 60) {
+            speed = 30;
+        }
         transform.RotateAround (m_Center, Vector3.up, speed * Time.deltaTime);
 
     }
