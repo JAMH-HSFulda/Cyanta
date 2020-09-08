@@ -32,11 +32,11 @@ public class Trap : MonoBehaviour
         
         
 
-        x0 = new Vector3(0.5f, 3, 0.5f);
-        x1 = new Vector3(0, 0, 0);
-        x2 = new Vector3(1, 0, 0);
-        x3 = new Vector3(0, 0, 1);
-        x4 = new Vector3(1, 0, 1);
+        x0 = new Vector3(0.5f, 0, 0.5f);
+        x1 = new Vector3(0, 3, 0);
+        x2 = new Vector3(1, 3, 0);
+        x3 = new Vector3(0, 3, 1);
+        x4 = new Vector3(1, 3, 1);
 
         meshFilter.mesh = new Mesh();
         mesh = meshFilter.sharedMesh;
@@ -57,35 +57,28 @@ public class Trap : MonoBehaviour
         mesh.Optimize();
 
 
-            while (i < 5) {
-                while(j < 4) {
+            while (i < 3) {
+                while(j < 2) {
                     GameObject pfeil = Instantiate(gameObject, new Vector3(j, 0, i), Quaternion.identity);
                     // pfeil.transform.parent = gameObject.transform;
                     pfeil.name = "Spitze" + i + j;
-                    
                     pfeilList.Add(pfeil);
-                    
                     j++;
                 }
                 i++;
                 j = 0;
             }
 
-        Debug.Log(pfeilList.Count);
+        // Debug.Log(pfeilList.Count);
 
         for (int i = pfeilList.Count -1; i >= 0; i--) {
-            Debug.Log(pfeilList[i].name + " Index: " + i);
+            // Debug.Log(pfeilList[i].name + " Index: " + i);
         }
 
-        
-
-        for (int i = 0; i < 8; i++) {
-            pfeilList[i].transform.parent = gameObject.transform;
-            pfeilList[i].transform.position += new Vector3(placeX , placeY, placeZ);
-        }
-        
-        
-       
+        // for (int i = 0; i < 8; i++) {
+        //     pfeilList[i].transform.parent = gameObject.transform;
+        //     pfeilList[i].transform.position += new Vector3(placeX , placeY, placeZ);
+        // }
     }
 
     // Update is called once per frame
