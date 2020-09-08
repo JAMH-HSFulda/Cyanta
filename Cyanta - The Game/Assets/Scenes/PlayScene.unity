@@ -1832,6 +1832,7 @@ MonoBehaviour:
   x3: {x: 0, y: 0, z: 0}
   x4: {x: 0, y: 0, z: 0}
   pfeilList: []
+  mesh: {fileID: 0}
   copy: {fileID: 0}
   amplitude: 0.01
   frequency: 0.8
@@ -2829,7 +2830,7 @@ MonoBehaviour:
   player: {fileID: 8296172668768274158}
   ListIcicle: []
   startHeight: 4
-  distanceToPlayer: 7
+  distanceToPlayer: 4
 --- !u!4 &1315199140
 Transform:
   m_ObjectHideFlags: 0
@@ -3326,7 +3327,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1837025755
 GameObject:
