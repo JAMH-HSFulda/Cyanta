@@ -40,21 +40,6 @@ public class RenderBoxSc : MonoBehaviour
 
     private void Update()
     {
-		//all = FindObjectsOfType<GameObject>();
-		//for (int i = 0; i < all.Length; i++) {
-
-		//	if (all[i].GetComponent<MeshRenderer>() == true)
-		//	{
-		//		if (Vector3.Magnitude(all[i].transform.position) - Vector3.Magnitude(player.transform.position) > 20)
-		//		{
-		//			all[i].GetComponent<MeshRenderer>().enabled = false;
-		//		}
-		//		else
-		//		{
-		//			all[i].GetComponent<MeshRenderer>().enabled = true;
-		//		}
-		//	}
-		//}
 		gameObject.transform.position = new Vector3(player.transform.position.x, 0, player.transform.position.z);
     }
 
