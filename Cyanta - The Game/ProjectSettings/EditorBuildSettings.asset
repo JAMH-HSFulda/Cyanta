@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: dc4b16ded8ab01b45933a641660defa0
+  - enabled: 1
+    path: Assets/Scenes/Turorial 1.unity
+    guid: 6362605f89dd9ec4fb00129917f649ed
   m_configObjects: {}
