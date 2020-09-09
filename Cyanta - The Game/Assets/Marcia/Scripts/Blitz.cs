@@ -34,7 +34,7 @@ public class Blitz : MonoBehaviour
         blitz.transform.localPosition = new Vector3(10, 20, 100);
         blitz.transform.localRotation = Quaternion.Euler(0, 160, 0);
 
-        makeBlitz(3, 3, 3);
+        makeBlitz(2, 3, 2);
         
     }
 
