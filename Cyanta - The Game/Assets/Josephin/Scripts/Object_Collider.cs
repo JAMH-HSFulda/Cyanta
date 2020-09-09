@@ -36,6 +36,10 @@ public class Object_Collider : MonoBehaviour {
         if (other.gameObject.name == "Fish") {
             Destroy (other.gameObject);
         }
+
+        if (other.gameObject.name == "Tut1") {
+            SceneManager.LoadScene (4);
+        }
         if (other.gameObject.name == "Zieltor") {
             SceneManager.LoadScene (2);
         }

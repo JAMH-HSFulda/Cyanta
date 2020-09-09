@@ -8,6 +8,8 @@ public class MeshGenerator : MonoBehaviour {
     int[] triangles;
     Color[] colours;
 
+    public Vector3 position;
+
     public Gradient gradient;
     float hoehe;
     float tiefe;
@@ -19,7 +21,7 @@ public class MeshGenerator : MonoBehaviour {
     void Start () {
         mesh = new Mesh ();
         GetComponent<MeshFilter> ().mesh = mesh;
-        transform.position = new Vector3 (22, -2, 87);
+        transform.position = position;
         CreateShape ();
     }
 
