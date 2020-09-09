@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class reverseNormals : MonoBehaviour
+public class RenderBoxSc : MonoBehaviour
 {
+	public GameObject player;
+	GameObject[] all;
     // Start is called before the first frame update
     void Start()
     {
+		all = FindObjectsOfType<GameObject>();
+
 		MeshFilter filter = GetComponent(typeof(MeshFilter)) as MeshFilter;
 		if (filter != null)
 		{
@@ -29,6 +33,29 @@ public class reverseNormals : MonoBehaviour
 				mesh.SetTriangles(triangles, m);
 			}
 		}
+
+
 	}
+
+
+    private void Update()
+    {
+		//all = FindObjectsOfType<GameObject>();
+		//for (int i = 0; i < all.Length; i++) {
+
+		//	if (all[i].GetComponent<MeshRenderer>() == true)
+		//	{
+		//		if (Vector3.Magnitude(all[i].transform.position) - Vector3.Magnitude(player.transform.position) > 20)
+		//		{
+		//			all[i].GetComponent<MeshRenderer>().enabled = false;
+		//		}
+		//		else
+		//		{
+		//			all[i].GetComponent<MeshRenderer>().enabled = true;
+		//		}
+		//	}
+		//}
+		gameObject.transform.position = new Vector3(player.transform.position.x, 0, player.transform.position.z);
+    }
 
 }

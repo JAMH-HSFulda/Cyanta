@@ -12,11 +12,14 @@ public class VoxelRender : MonoBehaviour
     List<int> triangles;
     public float scale = 1f;
     float adjScale;
+    public Material material;
     
 
     void Awake()
     {
         mesh = GetComponent<MeshFilter>().mesh;
+        gameObject.AddComponent<MeshRenderer>();
+        gameObject.GetComponent<MeshRenderer>().material = material;
         adjScale = scale * 0.5f;
     }
 
