@@ -3071,7 +3071,9 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433323312}
-  m_Text: Jump with SPACE!
+  m_Text: 'You need
+
+    to collect this...'
   m_OffsetZ: 1
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -3132,7 +3134,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433323312}
   m_LocalRotation: {x: -0, y: 0.26425222, z: -0, w: 0.96445364}
-  m_LocalPosition: {x: 3.75, y: 0.1641, z: 11.664}
+  m_LocalPosition: {x: 4.21, y: 0.1641, z: 11.23}
   m_LocalScale: {x: 0.016060606, y: 0.016060606, z: 0.016060606}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4195,9 +4197,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137026802}
-  m_Text: 'Walk with WASD!
-
-    Try it..'
+  m_Text: Light?
   m_OffsetZ: 1
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -4258,7 +4258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137026802}
   m_LocalRotation: {x: 0, y: -0.26425174, z: 0, w: 0.96445376}
-  m_LocalPosition: {x: -9.56, y: 0.077622, z: 8.2699}
+  m_LocalPosition: {x: -6.04, y: -0.29, z: 9.35}
   m_LocalScale: {x: 0.016884228, y: 0.016884228, z: 0.016884228}
   m_Children: []
   m_Father: {fileID: 0}
