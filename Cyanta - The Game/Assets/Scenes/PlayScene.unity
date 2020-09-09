@@ -2830,7 +2830,7 @@ MonoBehaviour:
   player: {fileID: 8296172668768274158}
   ListIcicle: []
   startHeight: 4
-  distanceToPlayer: 7
+  distanceToPlayer: 4
 --- !u!4 &1315199140
 Transform:
   m_ObjectHideFlags: 0

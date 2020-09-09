@@ -28,9 +28,9 @@ public class Trap : MonoBehaviour
 
         mesh = new Mesh();
 
-        MeshCollider col = gameObject.AddComponent<MeshCollider>();
+        // MeshCollider col = gameObject.AddComponent<MeshCollider>();
         
-        gameObject.AddComponent<BoxCollider>();
+        
 
         rb = gameObject.AddComponent<Rigidbody>();
         
@@ -62,6 +62,10 @@ public class Trap : MonoBehaviour
         mesh.RecalculateNormals();
         // mesh.RecalculateBounds();
         mesh.Optimize();
+        gameObject.AddComponent<BoxCollider>();
+        Collider col = gameObject.GetComponent<Collider>();
+        col.isTrigger = true;
+        rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
 
         // MeshCollider meshCollider = gameObject.AddComponent<MeshCollider>();
         // meshCollider.sharedMesh = mesh;

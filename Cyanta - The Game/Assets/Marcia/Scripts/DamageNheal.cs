@@ -101,5 +101,6 @@ public class DamageNheal : MonoBehaviour
 
         healthSystem.SetHealth(3);        
         gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+        gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
 }
