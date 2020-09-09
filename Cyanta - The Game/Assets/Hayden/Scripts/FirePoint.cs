@@ -74,7 +74,7 @@ public class FirePoint : MonoBehaviour
             //bulletObject.transform.parent = null;
             shootCount++;
             bulletList.Add(bulletObject);
-            //Ammo.counter--; //für Testzwecke ausgeschaltet
+            Ammo.counter--; //für Testzwecke ausgeschaltet
         }
         else
         {

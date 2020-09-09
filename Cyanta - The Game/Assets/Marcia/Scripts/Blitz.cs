@@ -16,6 +16,7 @@ public class Blitz : MonoBehaviour
     public Material material;
     public bool visible = false;
     //public int counter = 0;
+    public GameObject BlitzEmpty;
 
     // Start is called before the first frame update
     void Start()
@@ -31,10 +32,13 @@ public class Blitz : MonoBehaviour
         //rend.enabled = visible;
         Debug.Log("visib" + visible);
 
-        blitz.transform.localPosition = new Vector3(10, 20, 100);
-        blitz.transform.localRotation = Quaternion.Euler(0, 160, 0);
+        //blitz.transform.localPosition = new Vector3(-2, 10, 5);
+        blitz.transform.localRotation = Quaternion.Euler(0, 180, 0);
 
-        makeBlitz(2, 3, 2);
+        makeBlitz(0.5f, 1.2f, 0.5f);
+
+        blitz.transform.parent = BlitzEmpty.transform;
+        blitz.transform.position = BlitzEmpty.transform.position + new Vector3(-2, 5, 10);
         
     }
 
