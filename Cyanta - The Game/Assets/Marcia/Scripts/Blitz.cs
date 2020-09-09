@@ -33,7 +33,7 @@ public class Blitz : MonoBehaviour
         Debug.Log("visib" + visible);
 
         //blitz.transform.localPosition = new Vector3(-2, 10, 5);
-        blitz.transform.localRotation = Quaternion.Euler(0, 160, 0);
+        blitz.transform.localRotation = Quaternion.Euler(0, 180, 0);
 
         makeBlitz(0.5f, 1.2f, 0.5f);
 
