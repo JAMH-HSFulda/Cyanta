@@ -1046,7 +1046,7 @@ GameObject:
   - component: {fileID: 221041762}
   - component: {fileID: 221041763}
   m_Layer: 0
-  m_Name: Tut1
+  m_Name: Tut2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

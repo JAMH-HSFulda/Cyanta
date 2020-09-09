@@ -1081,7 +1081,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.7318916, y: 5.8902664, z: 0.97143364}
-  m_Center: {x: 2.1340542, y: -0.9451332, z: 5.1392813}
+  m_Center: {x: 2.1340542, y: -0.9451332, z: 4.34}
 --- !u!1 &238513820
 GameObject:
   m_ObjectHideFlags: 0
@@ -2805,6 +2805,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa3017c9a8c8914ba380bea5826839f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bazooka: {fileID: 0}
+  deaths: 0
+  deathText: {fileID: 0}
+  skull: {fileID: 0}
   confetti: {fileID: 2067864907}
 --- !u!114 &1061917317
 MonoBehaviour:
@@ -3356,6 +3360,7 @@ MonoBehaviour:
   uvs: []
   material: {fileID: 2100000, guid: 6a96d0cf1d340be41a74e8640837472d, type: 2}
   visible: 0
+  BlitzEmpty: {fileID: 0}
 --- !u!1 &1536597407
 GameObject:
   m_ObjectHideFlags: 0
