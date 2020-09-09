@@ -10,6 +10,7 @@ public class Trap : MonoBehaviour
 
     public List<GameObject> pfeilList;
 
+    public Mesh mesh;
 
 
     public GameObject copy;
@@ -25,11 +26,14 @@ public class Trap : MonoBehaviour
 
         MeshFilter meshFilter = gameObject.AddComponent<MeshFilter>();
 
-        Mesh mesh = new Mesh();
-        MeshCollider meshCollider = gameObject.AddComponent<MeshCollider>();
-        meshCollider.sharedMesh = mesh;
+        mesh = new Mesh();
+
+        // MeshCollider col = gameObject.AddComponent<MeshCollider>();
+        
+        
 
         rb = gameObject.AddComponent<Rigidbody>();
+        
         rb.useGravity = false;
         
         
@@ -54,9 +58,17 @@ public class Trap : MonoBehaviour
             4,2,3
         };
 
+        mesh.name = "Zapfen";
         mesh.RecalculateNormals();
         // mesh.RecalculateBounds();
         mesh.Optimize();
+        gameObject.AddComponent<BoxCollider>();
+        Collider col = gameObject.GetComponent<Collider>();
+        col.isTrigger = true;
+        rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+
+        // MeshCollider meshCollider = gameObject.AddComponent<MeshCollider>();
+        // meshCollider.sharedMesh = mesh;
 
 
             // while (i < 3) {

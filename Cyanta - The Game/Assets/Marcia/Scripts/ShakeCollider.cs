@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShakeCollider : MonoBehaviour
 {
+    public Blitz blitz;
     public ShakeMaze shakeMaze;
     public GameObject erdbebentrigger;
     public float staerke = 1f;
@@ -22,6 +23,8 @@ public class ShakeCollider : MonoBehaviour
 
     void OnTriggerEnter (Collider colInfo) {
         if(colInfo.name == "Erdbebentrigger") {
+            StartCoroutine(blitz.visibility());
+
             FindObjectOfType<audiomanager>().Play("Erdbeben");
 
             StartCoroutine(shakeMaze.shake(0.5f, staerke));
@@ -30,4 +33,6 @@ public class ShakeCollider : MonoBehaviour
             
         }
     }
+
+    
 }
