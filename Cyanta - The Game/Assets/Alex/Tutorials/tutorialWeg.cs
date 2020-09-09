@@ -57,7 +57,7 @@ public class tutorialWeg : MonoBehaviour
         rb.useGravity = false;
         rb.constraints = RigidbodyConstraints.FreezeAll;
 
-        gameObject.transform.position = new Vector3(-1.5f, -1.0f ,-1);
+        gameObject.transform.position = new Vector3(-1.5f, -3.0f ,-1);
     }
 
     // Update is called once per frame
