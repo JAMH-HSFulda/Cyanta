@@ -773,10 +773,10 @@ RectTransform:
   m_Father: {fileID: 475900529}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1549, y: 146.4}
-  m_SizeDelta: {x: 269.39465, y: 53.801453}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 79, y: -191}
+  m_SizeDelta: {x: 171.8, y: 35.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &163221033
 MonoBehaviour:
@@ -818,13 +818,13 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 0}
-  m_FillRect: {fileID: 0}
+  m_FillRect: {fileID: 2079886804}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 0
+  m_MaxValue: 5
+  m_WholeNumbers: 1
+  m_Value: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2724,6 +2724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa3017c9a8c8914ba380bea5826839f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bazooka: {fileID: 163221033}
   deaths: 0
   deathText: {fileID: 117239699}
   skull: {fileID: 695048412}
@@ -2773,7 +2774,7 @@ Transform:
   m_LocalScale: {x: 1.3954787, y: 1.3865588, z: 1.5747288}
   m_Children: []
   m_Father: {fileID: 5006512735763707133}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1262987844
 Light:
@@ -3211,7 +3212,7 @@ GameObject:
   - component: {fileID: 1536597410}
   - component: {fileID: 1536597409}
   m_Layer: 5
-  m_Name: Border (1)
+  m_Name: Bazooka_Form
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3831,7 +3832,6 @@ MonoBehaviour:
   material_particles: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   myMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   glow: {fileID: 988775546157383906, guid: 0bbf330bf0c18c14badf9871a007c7d9, type: 3}
-  player: {fileID: 8296172668768274158}
 --- !u!82 &1904690005
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3966,16 +3966,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079886803}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 429.1}
+  m_LocalPosition: {x: 0, y: 0, z: 421}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 163221032}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27.45, y: 7.15}
-  m_SizeDelta: {x: 167.45752, y: 39.502594}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 80.1, y: 15.9}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2079886805
 MonoBehaviour:

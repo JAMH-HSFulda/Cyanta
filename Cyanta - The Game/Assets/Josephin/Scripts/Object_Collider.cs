@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Object_Collider : MonoBehaviour {
 
+    public Slider bazooka;
     public int deaths = 0;
     public Text deathText;
     public Image skull;
@@ -15,12 +16,15 @@ public class Object_Collider : MonoBehaviour {
         //Death Counter und Anzahl werden am Anfang nicht angezeigt, est wenn man runtergefallen ist!
         skull.enabled = false;
         deathText.enabled = false;
+        bazooka.value = Ammo.counter;
     }
 
     void OnTriggerEnter (Collider other) {
         /*Es muss im statement dann bezug auf die GUI/Munitionsanzeige genommen werden und ggf. die Animation gestartet werden*/
         if (other.gameObject.name == "Glow Orb") {
             Debug.Log (this.name + " löscht " + other.gameObject.name);
+
+            /* bazooka.value++; */
 
             //Sound beim Munition Einsammeln //Marcia
             FindObjectOfType<audiomanager> ().Play ("MunitionSammeln");
@@ -60,5 +64,9 @@ public class Object_Collider : MonoBehaviour {
 
             //Vielleicht noch nen kleinen "Schrei" abspielen, wenn der Pinguin fällt?
         }
+    }
+
+    void Update () {
+        bazooka.value = Ammo.counter;
     }
 }

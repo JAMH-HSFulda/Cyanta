@@ -14,26 +14,26 @@ public class Munition : MonoBehaviour {
     Mesh mesh;
     Vector3[] vertices;
     int[] triangles;
-
-    public GameObject player;
-    int speed = 15;
+    
     Vector3 m_Center;
 
     // Start is called before the first frame update
     void Start () {
-        buildmesh ();
-        updateMesh ();
+        buildOktaeder ();
+        updateOktaeder ();
         placeOrbs ();
     }
 
     // Update is called once per frame
-    void buildmesh () {
+    void buildOktaeder () {
+        //Erstellen des GO mit benötigten Componenten
         okta = new GameObject ("Glow Orb");
         okta.transform.localScale = new Vector3 (0.5f, 0.5f, 0.5f);
         Renderer renderer = okta.AddComponent<MeshRenderer> ();
         renderer.material = myMaterial;
         okta.AddComponent<MeshFilter> ();
         mesh = okta.GetComponent<MeshFilter> ().mesh;
+        //Anpassen vom Collider, sodass die Drehung ohne Probleme stattfindet
         CapsuleCollider mc_okta = okta.AddComponent<CapsuleCollider> ();
         mc_okta.isTrigger = true;
         mc_okta.center = new Vector3 (0.5f, 0, 0.5f);
@@ -45,7 +45,7 @@ public class Munition : MonoBehaviour {
         Rigidbody rb_okta = okta.AddComponent<Rigidbody> ();
         rb_okta.useGravity = false;
 
-        //Rauskopiert vom OG Skript
+        //Rauskopiert vom OG Skript, dient dem Hinzufügen des Partikelsystems
         okta.AddComponent<ParticleSystem> ();
         var ps = okta.GetComponent<ParticleSystem> ();
 
@@ -53,6 +53,7 @@ public class Munition : MonoBehaviour {
         var ps_renderer = okta.GetComponent<ParticleSystemRenderer> ();
         ps_renderer.material = material_particles;
 
+        //Zuweisen der Partikelfarben durch ausgewählten Gradient
         var main = ps.main;
         var randomColors = new ParticleSystem.MinMaxGradient(colour_particles);
         randomColors.mode = ParticleSystemGradientMode.RandomColor;
@@ -78,6 +79,7 @@ public class Munition : MonoBehaviour {
         main.startSpeed = 0.2f;
         main.startSize = new ParticleSystem.MinMaxCurve (0.1f, 0.1f);;
         main.maxParticles = 10;
+
         //Einstellungen im Abschnitt "Lights"
         var lights = ps.lights;
         lights.enabled = true;
@@ -152,7 +154,7 @@ public class Munition : MonoBehaviour {
             } */
         }
     }
-    void updateMesh () {
+    void updateOktaeder () {
         mesh.Clear ();
         mesh.vertices = vertices;
         mesh.triangles = triangles;
