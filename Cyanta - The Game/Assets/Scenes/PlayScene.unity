@@ -2673,6 +2673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0538dc7539e49b4eb7284b2c3822e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blitz: {fileID: 1486949087}
   shakeMaze: {fileID: 963194231}
   erdbebentrigger: {fileID: 238513820}
   staerke: 0.02
@@ -3022,6 +3023,7 @@ MonoBehaviour:
   normals: []
   uvs: []
   material: {fileID: 2100000, guid: 6a96d0cf1d340be41a74e8640837472d, type: 2}
+  visible: 0
 --- !u!1 &1536597407
 GameObject:
   m_ObjectHideFlags: 0
