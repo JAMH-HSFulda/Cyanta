@@ -40,7 +40,7 @@ public class RenderBoxSc : MonoBehaviour
 
     private void Update()
     {
-		gameObject.transform.position = new Vector3(player.transform.position.x, 0, player.transform.position.z);
+		gameObject.transform.position = new Vector3(player.transform.position.x, 3, player.transform.position.z);
     }
 
 }

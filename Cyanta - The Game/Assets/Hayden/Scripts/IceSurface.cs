@@ -23,8 +23,8 @@ public class IceSurface : MonoBehaviour
         MeshRenderer meshRenderer = gameObject.AddComponent<MeshRenderer>();
         MeshCollider mcs = gameObject.AddComponent<MeshCollider>();
 
-        a = new Vector3(0, 1f, 0);
-        b = new Vector3(0, 1f, 1);
+        a = new Vector3(0, .7f, 0);
+        b = new Vector3(0, .7f, 1);
         c = new Vector3(1, 0, 0);
         d = new Vector3(1, 0, 1);
         
@@ -91,11 +91,11 @@ public class IceSurface : MonoBehaviour
         mcs.sharedMesh = meshI;
         mcs.material = iceSurface;
 
-        transform.position = new Vector3(34.5f, .5f, 10.5f);
-        transform.localScale = new Vector3(3, 1, 3);
+        transform.position = new Vector3(34.5f, .5f, 22.5f);
+        transform.localScale = new Vector3(2, 1, 2);
         transform.Rotate(0, 90, 0 , Space.Self);
 
-        GameObject ice2 = Instantiate(gameObject, new Vector3(43.5f, 0.5f, 28.5f), Quaternion.identity);
-        GameObject ice3 = Instantiate(gameObject, new Vector3(61.5f, 0.5f, 52.5f), Quaternion.identity);
+        GameObject ice2 = Instantiate(gameObject, new Vector3(31.5f, 0.2f, 32f), Quaternion.identity);
+        GameObject ice3 = Instantiate(gameObject, new Vector3(49.3f, -.2f, 55.5f), Quaternion.identity);
     }
 }
