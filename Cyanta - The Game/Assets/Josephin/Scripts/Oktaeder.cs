@@ -1,8 +1,11 @@
-﻿using System.Collections;
+﻿//This Script was fused with the "GlowOrbs" Script and is not in use anymore
+
+/* using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Oktaeder : MonoBehaviour {
+    GameObject okta;
     Mesh mesh;
     Vector3[] vertices;
     int[] triangles;
@@ -13,9 +16,22 @@ public class Oktaeder : MonoBehaviour {
     }
 
     void buildmesh () {
-        mesh = new Mesh ();
-        GetComponent<MeshFilter> ().mesh = mesh;
-        vertices = new Vector3[] {
+        okta = new GameObject ("Oktaeder");
+        Renderer renderer = okta.AddComponent<MeshRenderer> ();
+        renderer.material = new Material (Shader.Find ("Specular"));
+        okta.AddComponent<MeshFilter> ();
+        mesh = okta.GetComponent<MeshFilter> ().mesh;
+        CapsuleCollider mc_okta = okta.AddComponent<CapsuleCollider> ();
+        mc_okta.isTrigger = true;
+        mc_okta.center = new Vector3(0.5f, 0, 0.5f);
+        mc_okta.height = 2;
+        mc_okta.radius = 0.55f;
+        Rigidbody rb_okta = okta.AddComponent<Rigidbody> ();
+        rb_okta.useGravity = false;
+        
+        /* mesh = new Mesh ();
+        GetComponent<MeshFilter> ().mesh = mesh; */
+        /* vertices = new Vector3[] {
             new Vector3 (0, 0, 0), //unten links
             new Vector3 (0.5f, 1, 0.5f), //oben
             new Vector3 (1, 0, 0), //unten rechts
@@ -59,4 +75,4 @@ public class Oktaeder : MonoBehaviour {
         mesh.RecalculateNormals ();
     }
 
-}
+} */

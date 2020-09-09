@@ -10,6 +10,7 @@ public class GlowOrbs : MonoBehaviour {
     //Benötigt für die Particle Systems
     public Material material_particles;
     public Light glow;
+    
 
     void Start () {
         placeOrbs ();
