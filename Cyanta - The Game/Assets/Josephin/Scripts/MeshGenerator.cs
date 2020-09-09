@@ -9,8 +9,8 @@ public class MeshGenerator : MonoBehaviour {
     Color[] colours;
 
     public Gradient gradient;
-    float minTerrainHeight;
-    float maxterrainHeight;
+    float hoehe;
+    float tiefe;
 
     int xSize = 40;
     int zSize = 40;
@@ -37,11 +37,11 @@ public class MeshGenerator : MonoBehaviour {
                 float y = Mathf.PerlinNoise (x * .3f, z * .3f) * 2f;
                 vertices[i] = new Vector3 (x, y, z);
 
-                if (y > maxterrainHeight) {
-                    maxterrainHeight = y;
+                if (y > tiefe) {
+                    tiefe = y;
                 }
-                if (y < minTerrainHeight) {
-                    minTerrainHeight = y;
+                if (y < hoehe) {
+                    hoehe = y;
                 }
                 i++;
             }
@@ -72,14 +72,13 @@ public class MeshGenerator : MonoBehaviour {
 
         for (int i = 0, z = 0; z <= zSize; z++) {
             for (int x = 0; x <= xSize; x++) {
-                float height = Mathf.InverseLerp (minTerrainHeight, maxterrainHeight, vertices[i].y);
+                float height = Mathf.InverseLerp (hoehe, tiefe, vertices[i].y);
                 colours[i] = gradient.Evaluate (height);
                 i++;
             }
         }
     }
     void UpdateMesh () {
-        //mesh.Clear ();
 
         mesh.vertices = vertices;
         mesh.triangles = triangles;

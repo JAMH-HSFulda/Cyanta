@@ -77,6 +77,7 @@ public class IceSurface : MonoBehaviour
         uv.Add(new Vector2(0, 0)); 
 
         meshI = new Mesh();
+        meshI.name = "ice";
 
         meshI.vertices = vertices.ToArray();
         meshI.uv = uv.ToArray();

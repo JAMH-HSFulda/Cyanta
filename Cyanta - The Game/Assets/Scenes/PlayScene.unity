@@ -916,127 +916,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &216615133
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 216615135}
-  - component: {fileID: 216615134}
-  - component: {fileID: 216615137}
-  - component: {fileID: 216615136}
-  - component: {fileID: 216615138}
-  - component: {fileID: 216615139}
-  m_Layer: 0
-  m_Name: Oktaeder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &216615134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216615133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc83de0c867b2f947937aa7298e530ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &216615135
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216615133}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.5, y: 6.0879865, z: 86}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &216615136
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216615133}
-  m_Mesh: {fileID: 0}
---- !u!23 &216615137
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216615133}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 0de4eaa56237bbb47b83e8eca242b3f6, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!114 &216615138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216615133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee6dfeb2e84415c4e8a35269d1e92726, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 216615133}
-  player: {fileID: 8296172668768274158}
---- !u!65 &216615139
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216615133}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0.5, y: 0, z: 0.5}
 --- !u!1 &221041761
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,7 +1233,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &410336958
 GameObject:
@@ -2877,7 +2756,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1326353898 stripped
 GameObject:
@@ -3033,7 +2912,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1486949087
 MonoBehaviour:
@@ -3393,7 +3272,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1837025755
 GameObject:
@@ -3599,8 +3478,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1904690003}
   - component: {fileID: 1904690002}
-  - component: {fileID: 1904690004}
   - component: {fileID: 1904690005}
+  - component: {fileID: 1904690004}
   m_Layer: 0
   m_Name: Munition
   m_TagString: Bullet
@@ -3652,11 +3531,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 1904690001}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b51ae150d728c1345b186710d7ae4ab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 1938152d67b5a464ea939b5340f75adb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material_particles: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 3}
+  colour_particles:
+    serializedVersion: 2
+    key0: {r: 0.9811321, g: 0, b: 0, a: 1}
+    key1: {r: 0.09825563, g: 0.29738256, b: 0.9056604, a: 1}
+    key2: {r: 1, g: 0, b: 0.75332737, a: 0}
+    key3: {r: 0.97641194, g: 1, b: 0, a: 0}
+    key4: {r: 0.13995194, g: 0.8018868, b: 0.34609118, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 1130
+    ctime1: 16354
+    ctime2: 31281
+    ctime3: 50192
+    ctime4: 62740
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 3925
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 5
+    m_NumAlphaKeys: 2
+  material_particles: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  myMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   glow: {fileID: 988775546157383906, guid: 0bbf330bf0c18c14badf9871a007c7d9, type: 3}
+  player: {fileID: 8296172668768274158}
 --- !u!82 &1904690005
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3679,7 +3589,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1.5
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: -0.66
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
