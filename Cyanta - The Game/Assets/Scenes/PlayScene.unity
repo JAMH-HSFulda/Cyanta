@@ -1832,6 +1832,7 @@ MonoBehaviour:
   x3: {x: 0, y: 0, z: 0}
   x4: {x: 0, y: 0, z: 0}
   pfeilList: []
+  mesh: {fileID: 0}
   copy: {fileID: 0}
   amplitude: 0.01
   frequency: 0.8
@@ -2034,7 +2035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
@@ -2969,6 +2970,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1468544411}
   m_CullTransparentMesh: 0
+--- !u!1 &1486949085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1486949086}
+  - component: {fileID: 1486949087}
+  m_Layer: 0
+  m_Name: BlitzEmpty
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1486949086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486949085}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1486949087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486949085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4626f90706873404690cb55568d6b3d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 0}
+  blitz: {fileID: 1486949085}
+  vertices: []
+  faces: 
+  normals: []
+  uvs: []
 --- !u!1 &1536597407
 GameObject:
   m_ObjectHideFlags: 0
@@ -3055,7 +3105,6 @@ GameObject:
   - component: {fileID: 1555688516}
   - component: {fileID: 1555688515}
   - component: {fileID: 1555688514}
-  - component: {fileID: 1555688517}
   m_Layer: 0
   m_Name: Maze
   m_TagString: ground
@@ -3108,7 +3157,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: da66f5665b2b13a41811ef230805f34f, type: 2}
+  - {fileID: 2100000, guid: 0cad55eff7b8300488ad3a277a5f2f81, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3137,25 +3186,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555688512}
   m_Mesh: {fileID: 0}
---- !u!114 &1555688517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1555688512}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33ad84b5794a60542924909d26cc4ca0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  torMesh: {fileID: 0}
-  zieltor: {fileID: 0}
-  vertices: []
-  faces: 
-  normals: []
-  uvs: []
-  counter: 0
 --- !u!1 &1578532946
 GameObject:
   m_ObjectHideFlags: 0
@@ -3326,7 +3356,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1837025755
 GameObject:
