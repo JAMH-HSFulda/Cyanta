@@ -13,6 +13,7 @@ public class Blitz : MonoBehaviour
     public List<Vector2> uvs;
     private MeshRenderer rend;
     private MeshFilter filter;
+    public Material material;
     //public int counter = 0;
 
     // Start is called before the first frame update
@@ -21,7 +22,7 @@ public class Blitz : MonoBehaviour
   
         blitz = new GameObject("Blitz");
         rend = blitz.AddComponent<MeshRenderer>();
-        Material material = Resources.Load("Blitz", typeof(Material)) as Material;
+        
         rend.material = material;
         blitz.AddComponent<MeshFilter>();
 
@@ -32,7 +33,7 @@ public class Blitz : MonoBehaviour
         blitz.transform.localPosition = new Vector3(10, 10, 100);
         blitz.transform.localRotation = Quaternion.Euler(0, 160, 0);
 
-        makeBlitz(3, 3, 3);
+        makeBlitz(0, 0, 0);
         
     }
 
@@ -44,19 +45,19 @@ public class Blitz : MonoBehaviour
 
     public void makeBlitz (float x, float y, float z) {
         //Vertices
-        Vector3 a = new Vector3(- 1 * x, + 1 * y, z);
-        Vector3 b = new Vector3(+ 1 * x, + 1 * y, z);
-        Vector3 c = new Vector3(- 2 * x, - 1 * y, z);
-        Vector3 d = new Vector3(x, - 1 * y, z);
+        Vector3 a = new Vector3(x - 1, y + 1, z);
+        Vector3 b = new Vector3(x + 1, y + 1, z);
+        Vector3 c = new Vector3(x - 2, y - 1, z);
+        Vector3 d = new Vector3(x, y - 1, z);
 
-        Vector3 e = new Vector3(- 0.5f * x, - 0.5f * y, z);
-        Vector3 f = new Vector3(+ 1.5f * x, - 0.5f * y, z);
-        Vector3 g = new Vector3(- 1.5f * x, - 2.5f * y, z);
-        Vector3 h = new Vector3(+ 0.5f * x, - 2.5f * y, z);
+        Vector3 e = new Vector3(x - 0.5f, y - 0.5f, z);
+        Vector3 f = new Vector3(x + 1.5f, y - 0.5f, z);
+        Vector3 g = new Vector3(x - 1.5f, y - 2.5f, z);
+        Vector3 h = new Vector3(x + 0.5f, y - 2.5f, z);
 
-        Vector3 i = new Vector3(x, - 2 * y, z);
-        Vector3 j = new Vector3(+ 2 * x, - 2 * y, z);
-        Vector3 k = new Vector3(- 1 * x, - 4 * y, z);
+        Vector3 i = new Vector3(x, y - 2, z);
+        Vector3 j = new Vector3(x + 2, y - 2, z);
+        Vector3 k = new Vector3(x - 1, y - 4, z);
 
         Vector3 normal = getNormals(a, b, c);
 
