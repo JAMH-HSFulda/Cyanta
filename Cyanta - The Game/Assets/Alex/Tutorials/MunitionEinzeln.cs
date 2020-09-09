@@ -125,7 +125,7 @@ public class MunitionEinzeln : MonoBehaviour {
             3
         };
 
-        okta.AddComponent<Spin_Around> ();
+        //okta.AddComponent<Spin_Around> ();
 
     }
     void placeOrbs () {

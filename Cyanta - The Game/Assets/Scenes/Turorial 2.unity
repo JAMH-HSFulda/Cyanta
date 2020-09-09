@@ -1282,24 +1282,24 @@ MonoBehaviour:
   position: {x: -0.3, y: -1.5, z: 6}
   colour_particles:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
+    key0: {r: 0.9811321, g: 0, b: 0, a: 1}
+    key1: {r: 0.09825563, g: 0.29738256, b: 0.9056604, a: 1}
+    key2: {r: 1, g: 0, b: 0.75332737, a: 0}
+    key3: {r: 0.97641194, g: 1, b: 0, a: 0}
+    key4: {r: 0.13995194, g: 0.8018868, b: 0.34609118, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
+    ctime0: 1130
+    ctime1: 16354
+    ctime2: 31281
+    ctime3: 50192
+    ctime4: 62740
     ctime5: 0
     ctime6: 0
     ctime7: 0
     atime0: 0
-    atime1: 65535
+    atime1: 3925
     atime2: 0
     atime3: 0
     atime4: 0
@@ -1307,7 +1307,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_NumColorKeys: 2
+    m_NumColorKeys: 5
     m_NumAlphaKeys: 2
   material_particles: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   myMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
