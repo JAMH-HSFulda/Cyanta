@@ -5,23 +5,29 @@ using UnityEngine;
 public class ShakeMaze : MonoBehaviour
 {
     Vector3 originalPos;
+    public float shakeLength = 0.7f;
+    public float shakeTimer;
+    public float shakeAmount = 0.2f;
+    public float shakeSpeed = 2;
+    public bool isShaking = false;
+    public Transform cameraTrans;
+    
 
-    public IEnumerator shake (float dauer, float staerke) {
-        originalPos = transform.localPosition;
-
-        float zeit = 0;
-
-        while(zeit < dauer) {
-            float x = Random.Range(-1f, 1f) * staerke;
-            float z = Random.Range(-1f, 1f) * staerke;
-
-            Vector3 neuePos = new Vector3(x, originalPos.y, z);
-            transform.localPosition += neuePos;
-            zeit += Time.deltaTime;
-
-            yield return null;
-        }
-
-        transform.localPosition = originalPos;
+    public void Start () {
+        shakeTimer = shakeLength;
+        
     }
+
+    public void shake() {
+        originalPos = cameraTrans.localPosition;
+        if (shakeTimer > 0) {
+            cameraTrans.localPosition = Vector3.Lerp(cameraTrans.localPosition, originalPos + Random.insideUnitSphere * shakeAmount, shakeSpeed);
+            shakeTimer -= Time.deltaTime;
+        } else {
+            cameraTrans.position = originalPos;
+            shakeTimer = 0;
+            isShaking = false;
+        }
+    }
+
 }

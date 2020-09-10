@@ -18,16 +18,20 @@ public class ShakeCollider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(shakeMaze.isShaking == true) {
+            shakeMaze.shake();
+        }
     }
 
     void OnTriggerEnter (Collider colInfo) {
         if(colInfo.name == "Erdbebentrigger") {
             StartCoroutine(blitz.visibility());
+            
+            shakeMaze.isShaking = true;
 
             FindObjectOfType<audiomanager>().Play("Erdbeben");
 
-            StartCoroutine(shakeMaze.shake(0.5f, staerke));
+            //StartCoroutine(shakeMaze.shake(0.5f, staerke));
             
             Destroy(erdbebentrigger);
             

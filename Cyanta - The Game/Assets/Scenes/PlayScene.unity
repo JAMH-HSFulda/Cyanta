@@ -2556,6 +2556,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f355cb7e7c35f10489a15accbee69951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shakeLength: 0.7
+  shakeTimer: 0
+  shakeAmount: 0.1
+  shakeSpeed: 2
+  isShaking: 0
+  cameraTrans: {fileID: 963194228}
 --- !u!1001 &981930081
 PrefabInstance:
   m_ObjectHideFlags: 0
