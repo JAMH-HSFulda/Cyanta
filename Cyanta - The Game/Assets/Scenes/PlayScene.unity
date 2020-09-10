@@ -2280,14 +2280,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f93c4f3a86499bf41af45be47833f95f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationBazooka: {x: 0, y: 0, z: 0, w: 0}
   y: 0
   firePoint: {fileID: 919132149277745424}
   bullet: {fileID: 1921706033891607410, guid: 7579bb553a128204aa15d9c51fd80158, type: 3}
   burst: {fileID: 5891420711925741755, guid: 1be502c8c4b6aa24c8bb39db8f31d785, type: 3}
   muzzle: {fileID: 7402224245964438259, guid: 6e517bd162b5009429b1502d0d192e32, type: 3}
   player: {fileID: 5006512735763707133}
-  pitch: 0
-  yaw: 0
 --- !u!1 &932934570
 GameObject:
   m_ObjectHideFlags: 0
@@ -2730,6 +2729,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa3017c9a8c8914ba380bea5826839f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxMunition: 15
+  muniProGloworb: 3
   bazooka: {fileID: 163221033}
   deaths: 0
   deathText: {fileID: 117239699}
