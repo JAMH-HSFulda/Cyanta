@@ -18,7 +18,7 @@ public class FirePoint : MonoBehaviour
 
     InputMaster controls;
 
-    float limit = 0;
+    float limitZ, limitY, limitX;
 
     Transform cam;
     public Transform player;
@@ -38,13 +38,14 @@ public class FirePoint : MonoBehaviour
     void Update()
     {
         Vector3 direction = (cam.position + new Vector3(0f, -0.0f, 0f)) - transform.position;
-
         rotation = Quaternion.LookRotation(direction);
         gameObject.transform.rotation = rotation;
 
-        limit = Mathf.Clamp(gameObject.transform.localEulerAngles.y, 140, 240);
-        rotationBazooka = Quaternion.Euler(new Vector3(direction.x, limit + player.transform.eulerAngles.y, rotation.z));
-        gameObject.transform.rotation = rotationBazooka;
+        limitY = Mathf.Clamp(gameObject.transform.localEulerAngles.y, 140, 240);
+        limitX = Mathf.Clamp(gameObject.transform.localEulerAngles.x, -70, 8);
+        limitZ = Mathf.Clamp(gameObject.transform.localEulerAngles.z, 0, 0);
+        gameObject.transform.rotation = Quaternion.Euler(new Vector3(limitX + gameObject.transform.eulerAngles.x, limitY + player.transform.eulerAngles.y, limitZ)); //limit + player.transform.eulerAngles.y // + player.transform.eulerAngles.y
+
     }
 
     void Awake() {
