@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Object_Collider : MonoBehaviour {
 
+    public int maxMunition = 15, muniProGloworb = 3;
     public Slider bazooka;
     public int deaths = 0;
     public Text deathText;
@@ -32,8 +33,8 @@ public class Object_Collider : MonoBehaviour {
 
             Destroy (other.gameObject);
             //Bei Kontakt mit nem Glow - Orb erhöht sich die Anzahl von X-en bzw. die Schussanzahl verringert sich
-            if (Ammo.counter < 5) {
-                Ammo.counter += 1;
+            if (Ammo.counter < maxMunition) {
+                Ammo.counter += muniProGloworb;
             }
 
         }

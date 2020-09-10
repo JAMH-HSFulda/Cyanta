@@ -8,6 +8,7 @@ using UnityEngine;
 public class FirePoint : MonoBehaviour
 {
 
+    public Quaternion rotationBazooka;
     public float y;
     public GameObject firePoint, bullet;
 
@@ -24,11 +25,7 @@ public class FirePoint : MonoBehaviour
 
     Quaternion rotation;
 
-    public float pitch = 0.0f;
-    public float yaw = 0.0f;
-
     public static int shootCount = 0;
-
 
     float speed = 5;
     float torsoRotation = 0;
@@ -40,13 +37,14 @@ public class FirePoint : MonoBehaviour
 
     void Update()
     {
-        Vector3 direction = (cam.position + new Vector3(0f, -0.4f, 0f)) - transform.position;
+        Vector3 direction = (cam.position + new Vector3(0f, -0.0f, 0f)) - transform.position;
+
         rotation = Quaternion.LookRotation(direction);
         gameObject.transform.rotation = rotation;
 
         limit = Mathf.Clamp(gameObject.transform.localEulerAngles.y, 140, 240);
-        gameObject.transform.rotation = Quaternion.Euler(new Vector3(rotation.x, limit + player.transform.eulerAngles.y, rotation.z));
-
+        rotationBazooka = Quaternion.Euler(new Vector3(direction.x, limit + player.transform.eulerAngles.y, rotation.z));
+        gameObject.transform.rotation = rotationBazooka;
     }
 
     void Awake() {
