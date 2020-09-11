@@ -1280,7 +1280,6 @@ GameObject:
   - component: {fileID: 811102649594872086}
   - component: {fileID: 3217094907787998684}
   - component: {fileID: 4279826367967069823}
-  - component: {fileID: 4009776752305132552}
   m_Layer: 0
   m_Name: Bazooka
   m_TagString: Player
@@ -1369,25 +1368,6 @@ MonoBehaviour:
   burst: {fileID: 5891420711925741755, guid: 1be502c8c4b6aa24c8bb39db8f31d785, type: 3}
   muzzle: {fileID: 7402224245964438259, guid: 6e517bd162b5009429b1502d0d192e32, type: 3}
   player: {fileID: 9087784289251688932}
---- !u!95 &4009776752305132552
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4009776752305132553}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9ddc7486f11a0c344ab185c4249de583, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4087873064952397641
 GameObject:
   m_ObjectHideFlags: 0
