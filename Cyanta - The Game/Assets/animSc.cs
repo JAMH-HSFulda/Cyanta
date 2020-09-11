@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class animSc : MonoBehaviour
 {
-    Animation anim;
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animation>();    
+        anim = GetComponent<Animator>();    
     }
 
     // Update is called once per frame
     void Update()
     {
-        anim.Play("idle");
         if (Input.GetKeyDown("space")) {
-            anim.Play("jump");
+            anim.SetTrigger("jumps");
         }
         
     }

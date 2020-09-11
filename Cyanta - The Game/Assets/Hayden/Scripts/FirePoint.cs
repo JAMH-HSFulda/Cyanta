@@ -65,7 +65,6 @@ public class FirePoint : MonoBehaviour
     void Shoot() {
         if (Ammo.counter > 0)
         {
-            anim.SetTrigger("shoots");
             FindObjectOfType<audiomanager>().Play("Shoot");
             burst.Play(true);
             muzzle.Play(true); // playing particlesystems for effects
