@@ -8,6 +8,7 @@ public class Object_Collider : MonoBehaviour {
 
     public int maxMunition = 15, muniProGloworb = 3;
     public Slider bazooka;
+    public Text display_counterAmmo;
     public int deaths = 0;
     public Text deathText;
     public Image skull;
@@ -18,6 +19,7 @@ public class Object_Collider : MonoBehaviour {
         skull.enabled = false;
         deathText.enabled = false;
         bazooka.value = Ammo.counter;
+
     }
 
     void OnTriggerEnter (Collider other) {
@@ -59,6 +61,11 @@ public class Object_Collider : MonoBehaviour {
 
             deathText.text = deaths.ToString ();
 
+            /* Munition.placeOrbs (); */
+            if (Ammo.counter < 11) {
+                Ammo.counter = 12;
+            }
+
             if (deaths == 3) {
                 SceneManager.LoadScene (2);
             }
@@ -69,5 +76,6 @@ public class Object_Collider : MonoBehaviour {
 
     void Update () {
         bazooka.value = Ammo.counter;
+        display_counterAmmo.text = bazooka.value.ToString ();
     }
 }
