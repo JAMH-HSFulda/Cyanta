@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class FirePoint : MonoBehaviour
 {
+    private Animator anim;
 
     public Quaternion rotationBazooka;
     public float y;
@@ -33,6 +34,7 @@ public class FirePoint : MonoBehaviour
     void Start() {
         cam = Camera.main.transform;
         bulletList = new List<GameObject>();
+        anim = gameObject.GetComponent<Animator>();
     }
 
     void Update()
@@ -63,6 +65,7 @@ public class FirePoint : MonoBehaviour
     void Shoot() {
         if (Ammo.counter > 0)
         {
+            anim.SetTrigger("shoots");
             FindObjectOfType<audiomanager>().Play("Shoot");
             burst.Play(true);
             muzzle.Play(true); // playing particlesystems for effects
