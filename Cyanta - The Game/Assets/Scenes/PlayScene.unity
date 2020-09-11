@@ -4065,7 +4065,7 @@ Transform:
   - {fileID: 1131276130642422915}
   m_Father: {fileID: 5006512735763707133}
   m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 3.3950162, y: 180, z: 90.00001}
+  m_LocalEulerAnglesHint: {x: 0.09771991, y: 180, z: 90.00001}
 --- !u!1 &665701676122053450
 GameObject:
   m_ObjectHideFlags: 0
@@ -4188,6 +4188,7 @@ GameObject:
   - component: {fileID: 3469287837468734479}
   - component: {fileID: 1711813855823839429}
   - component: {fileID: 898904934}
+  - component: {fileID: 919132149277745425}
   m_Layer: 0
   m_Name: Bazooka
   m_TagString: Player
@@ -4195,6 +4196,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &919132149277745425
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149277745424}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9ddc7486f11a0c344ab185c4249de583, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!23 &1130627639096178804
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4801,12 +4821,12 @@ Animation:
   m_GameObject: {fileID: 8296172668768274158}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 51b8939a7ec648f41a72e3561f47a083, type: 2}
+  m_Animation: {fileID: 0}
   m_Animations:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 7400000, guid: 2c5872a4ca0562a458ab190a59e21359, type: 2}
-  - {fileID: 7400000, guid: 51b8939a7ec648f41a72e3561f47a083, type: 2}
+  - {fileID: 0}
   - {fileID: 7400000, guid: 612ef8f91b3ee8c4086daffc6f17239f, type: 2}
   - {fileID: 7400000, guid: ff76d94eb9daf5e46b851742642ed598, type: 2}
   - {fileID: 7400000, guid: 62260974196c53d409689e901e1225cf, type: 2}
