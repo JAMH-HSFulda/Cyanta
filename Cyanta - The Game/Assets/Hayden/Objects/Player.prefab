@@ -1600,7 +1600,6 @@ GameObject:
   - component: {fileID: 4279826367813035928}
   - component: {fileID: 4279826367813035933}
   - component: {fileID: 4279826367813035932}
-  - component: {fileID: 6411524043406974181}
   - component: {fileID: 3123456237485382060}
   m_Layer: 0
   m_Name: Player
@@ -1715,6 +1714,7 @@ MonoBehaviour:
   maxMunition: 15
   muniProGloworb: 3
   bazooka: {fileID: 0}
+  display_counterAmmo: {fileID: 0}
   deaths: 0
   deathText: {fileID: 0}
   skull: {fileID: 0}
@@ -1735,25 +1735,6 @@ MonoBehaviour:
   shakeMaze: {fileID: 0}
   erdbebentrigger: {fileID: 0}
   staerke: 0.02
---- !u!95 &6411524043406974181
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5207588823276450807}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!111 &3123456237485382060
 Animation:
   m_ObjectHideFlags: 0
@@ -1766,6 +1747,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 4962b21a81d1f26408644af3c7bd2dca, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 4962b21a81d1f26408644af3c7bd2dca, type: 2}
+  - {fileID: 7400000, guid: 51b8939a7ec648f41a72e3561f47a083, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
