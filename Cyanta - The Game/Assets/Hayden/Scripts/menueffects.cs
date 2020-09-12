@@ -36,12 +36,10 @@ public class menueffects : MonoBehaviour
 
     void Update()
     {
-        // Set the alpha according to the current time and the time the object has spawned
         if (fade.a < 1)
         {
-            SetAlpha((Time.time - spawnTime) * .08f);
+            SetAlpha((Time.time - spawnTime) * .1f);
         }
-
     }
 
     void SetAlpha(float alpha)
