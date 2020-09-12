@@ -305,9 +305,9 @@ MonoBehaviour:
   slider: {fileID: 117179315}
   gradient:
     serializedVersion: 2
-    key0: {r: 0, g: 0, b: 1, a: 1}
-    key1: {r: 0.05490196, g: 0.6627451, b: 1, a: 1}
-    key2: {r: 0, g: 1, b: 1, a: 0}
+    key0: {r: 0.6132076, g: 0, b: 0.006004145, a: 1}
+    key1: {r: 0.8113208, g: 0.12510562, b: 0, a: 1}
+    key2: {r: 1, g: 0.20423354, b: 0, a: 0}
     key3: {r: 0, g: 1, b: 1, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
@@ -897,7 +897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &410336959
 BoxCollider:
   m_ObjectHideFlags: 0
