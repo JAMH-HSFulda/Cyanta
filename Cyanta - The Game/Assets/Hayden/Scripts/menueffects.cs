@@ -37,9 +37,9 @@ public class menueffects : MonoBehaviour
     void Update()
     {
         // Set the alpha according to the current time and the time the object has spawned
-        if (fade3.a < 1)
+        if (fade.a < 1)
         {
-            SetAlpha((Time.time - spawnTime) * .1f);
+            SetAlpha((Time.time - spawnTime) * .08f);
         }
 
     }
@@ -47,8 +47,8 @@ public class menueffects : MonoBehaviour
     void SetAlpha(float alpha)
     {        
         fade.a = Mathf.Clamp(alpha, 0, 1);
-        fade2.a = Mathf.Clamp(alpha*.5f, 0, 1);
-        fade3.a = Mathf.Clamp(alpha*.3f, 0, 1);
+        fade2.a = Mathf.Clamp(alpha*.7f, 0, 1);
+        fade3.a = Mathf.Clamp(alpha*.5f, 0, 1);
 
         startb.color = fade;
         goalb.color = fade2;
