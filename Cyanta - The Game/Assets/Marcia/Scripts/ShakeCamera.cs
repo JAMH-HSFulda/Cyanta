@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShakeMaze : MonoBehaviour
+public class ShakeCamera : MonoBehaviour
 {
     Vector3 originalPos;
     public float shakeLength = 0.7f;
@@ -20,7 +20,9 @@ public class ShakeMaze : MonoBehaviour
 
     public void shake() {
         originalPos = cameraTrans.localPosition;
+        
         if (shakeTimer > 0) {
+            Debug.Log("Camera is shaking");
             cameraTrans.localPosition = Vector3.Lerp(cameraTrans.localPosition, originalPos + Random.insideUnitSphere * shakeAmount, shakeSpeed);
             shakeTimer -= Time.deltaTime;
         } else {
@@ -29,5 +31,4 @@ public class ShakeMaze : MonoBehaviour
             isShaking = false;
         }
     }
-
 }

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShakeCollider : MonoBehaviour
+public class ColliderCameraShake : MonoBehaviour
 {
-    public Blitz blitz;
-    public ShakeMaze shakeMaze;
+  public Blitz blitz;
+    public ShakeCamera shakeCamera;
     public GameObject erdbebentrigger;
     public float staerke = 1f;
 
@@ -18,8 +18,8 @@ public class ShakeCollider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(shakeMaze.isShaking == true) {
-            shakeMaze.shake();
+        if(shakeCamera.isShaking == true) {
+            shakeCamera.shake();
         }
     }
 
@@ -27,13 +27,13 @@ public class ShakeCollider : MonoBehaviour
         if(colInfo.name == "Erdbebentrigger") {
             StartCoroutine(blitz.visibility());
             
-            shakeMaze.isShaking = true;
+            shakeCamera.isShaking = true;
 
             FindObjectOfType<audiomanager>().Play("Erdbeben");
-
-            //StartCoroutine(shakeMaze.shake(0.5f, staerke));
             
             Destroy(erdbebentrigger);
+
+            //StartCoroutine(shakeMaze.shake(0.5f, staerke));
             
         }
     }
