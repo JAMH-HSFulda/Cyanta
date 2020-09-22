@@ -21,8 +21,7 @@ public class Trap : MonoBehaviour
     Rigidbody rb;
     void Start()
     {
-        MeshRenderer meshRender = gameObject.AddComponent<MeshRenderer>();
-        GetComponent<MeshRenderer>().material = new Material(Shader.Find("Diffuse"));
+        
 
         gameObject.AddComponent<MeshFilter>();
         MeshFilter meshFilter = gameObject.GetComponent<MeshFilter>();

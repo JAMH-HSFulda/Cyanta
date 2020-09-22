@@ -23,6 +23,8 @@ public class IcicleTrap : MonoBehaviour
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 3; j++)  {
                 clone = Instantiate(icicle, new Vector3(i + icicle.transform.position.x , icicle.transform.position.y + startHeight, j + icicle.transform.position.z), icicle.transform.rotation);
+                // MeshRenderer meshRender = clone.AddComponent<MeshRenderer>();
+                clone.GetComponent<MeshRenderer>().material = new Material(Shader.Find("Diffuse"));
                 clone.AddComponent<Rigidbody>();
                 clone.GetComponent<Rigidbody>().useGravity = false;
                 clone.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
