@@ -22,8 +22,8 @@ public class IceSurface : MonoBehaviour
         gameObject.AddComponent<MeshFilter>();
         MeshFilter meshFilter = gameObject.GetComponent<MeshFilter>();
         MeshRenderer meshRenderer = gameObject.AddComponent<MeshRenderer>();
-        MeshCollider mcs = gameObject.AddComponent<MeshCollider>();
-
+        gameObject.AddComponent<MeshCollider>();
+        MeshCollider mcs =  gameObject.GetComponent<MeshCollider>();
         a = new Vector3(0, .7f, 0);
         b = new Vector3(0, .7f, 1);
         c = new Vector3(1, 0, 0);
