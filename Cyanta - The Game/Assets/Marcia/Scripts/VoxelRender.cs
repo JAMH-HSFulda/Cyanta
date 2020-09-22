@@ -18,8 +18,8 @@ public class VoxelRender : MonoBehaviour
     void Awake()
     {
         mesh = GetComponent<MeshFilter>().mesh;
-        gameObject.AddComponent<MeshRenderer>();
-        gameObject.GetComponent<MeshRenderer>().material = material;
+        // gameObject.AddComponent<MeshRenderer>();
+        // gameObject.GetComponent<MeshRenderer>().material = material;
         adjScale = scale * 0.5f;
     }
 

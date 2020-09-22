@@ -11,6 +11,8 @@ public class IcicleTrap : MonoBehaviour
     public float startHeight = 4f, distanceToPlayer = 5f;
     public float time;
 
+    Rigidbody rb;
+
     public bool[] boolArray;    
 
     GameObject clone;
@@ -21,6 +23,10 @@ public class IcicleTrap : MonoBehaviour
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 3; j++)  {
                 clone = Instantiate(icicle, new Vector3(i + icicle.transform.position.x , icicle.transform.position.y + startHeight, j + icicle.transform.position.z), icicle.transform.rotation);
+                clone.AddComponent<Rigidbody>();
+                clone.GetComponent<Rigidbody>().useGravity = false;
+                clone.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+                
                 clone.transform.parent = gameObject.transform;
                 ListIcicle.Add(clone);
             }

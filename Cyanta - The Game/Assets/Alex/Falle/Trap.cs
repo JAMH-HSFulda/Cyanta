@@ -24,18 +24,18 @@ public class Trap : MonoBehaviour
         MeshRenderer meshRender = gameObject.AddComponent<MeshRenderer>();
         GetComponent<MeshRenderer>().material = new Material(Shader.Find("Diffuse"));
 
-        MeshFilter meshFilter = gameObject.AddComponent<MeshFilter>();
-
+        gameObject.AddComponent<MeshFilter>();
+        MeshFilter meshFilter = gameObject.GetComponent<MeshFilter>();
         mesh = new Mesh();
 
         // MeshCollider col = gameObject.AddComponent<MeshCollider>();
         
         
 
-        rb = gameObject.AddComponent<Rigidbody>();
-        
-        rb.useGravity = false;
-        
+        // rb = gameObject.AddComponent<Rigidbody>();
+        // rb.useGravity = false;
+        meshFilter.mesh = new Mesh();
+        mesh = meshFilter.sharedMesh;
         
 
         x0 = new Vector3(0.5f, 0, 0.5f);
@@ -44,8 +44,7 @@ public class Trap : MonoBehaviour
         x3 = new Vector3(0, 3, 1);
         x4 = new Vector3(1, 3, 1);
 
-        meshFilter.mesh = new Mesh();
-        mesh = meshFilter.sharedMesh;
+        
 
         mesh.Clear();
         mesh.vertices = new Vector3[] { x0, x1, x2, x3, x4 };
@@ -65,7 +64,7 @@ public class Trap : MonoBehaviour
         gameObject.AddComponent<BoxCollider>();
         Collider col = gameObject.GetComponent<Collider>();
         col.isTrigger = true;
-        rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+        // rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
 
         // MeshCollider meshCollider = gameObject.AddComponent<MeshCollider>();
         // meshCollider.sharedMesh = mesh;

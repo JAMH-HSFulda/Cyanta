@@ -15,7 +15,7 @@ public class enemyBrain : MonoBehaviour
     public float rotSpeed = 3f;
     void Start()
     {
-        gameObject.AddComponent<Rigidbody>();
+        // gameObject.AddComponent<Rigidbody>();
         rb = this.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotation;
         rb.useGravity = false;

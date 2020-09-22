@@ -19,7 +19,8 @@ public class IceSurface : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MeshFilter meshFilter = gameObject.AddComponent<MeshFilter>();
+        gameObject.AddComponent<MeshFilter>();
+        MeshFilter meshFilter = gameObject.GetComponent<MeshFilter>();
         MeshRenderer meshRenderer = gameObject.AddComponent<MeshRenderer>();
         MeshCollider mcs = gameObject.AddComponent<MeshCollider>();
 
