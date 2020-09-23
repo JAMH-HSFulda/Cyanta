@@ -21,11 +21,9 @@ public class Trap : MonoBehaviour
     Rigidbody rb;
     void Start()
     {
-        
-
         gameObject.AddComponent<MeshFilter>();
         MeshFilter meshFilter = gameObject.GetComponent<MeshFilter>();
-        mesh = new Mesh();
+        // mesh = new Mesh();
 
         // MeshCollider col = gameObject.AddComponent<MeshCollider>();
         
