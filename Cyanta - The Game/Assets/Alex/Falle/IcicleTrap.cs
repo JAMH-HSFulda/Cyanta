@@ -29,6 +29,9 @@ public class IcicleTrap : MonoBehaviour
                 clone.AddComponent<Rigidbody>();
                 clone.GetComponent<Rigidbody>().useGravity = false;
                 clone.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+                clone.AddComponent<BoxCollider>();
+                clone.GetComponent<BoxCollider>().size = new Vector3(clone.GetComponent<MeshFilter>().mesh.bounds.extents.x,clone.transform.lossyScale.y, GetComponent<MeshFilter>().mesh.bounds.extents.z);
+                clone.GetComponent<Collider>().isTrigger = true;
                 
                 clone.transform.parent = gameObject.transform;
                 ListIcicle.Add(clone);

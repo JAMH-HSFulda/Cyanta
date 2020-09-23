@@ -22,7 +22,6 @@ public class Trap : MonoBehaviour
     void Start()
     {
         gameObject.AddComponent<MeshFilter>();
-        MeshFilter meshFilter = gameObject.GetComponent<MeshFilter>();
         // mesh = new Mesh();
 
         // MeshCollider col = gameObject.AddComponent<MeshCollider>();
@@ -31,15 +30,17 @@ public class Trap : MonoBehaviour
 
         // rb = gameObject.AddComponent<Rigidbody>();
         // rb.useGravity = false;
-        meshFilter.mesh = new Mesh();
-        mesh = meshFilter.sharedMesh;
+        gameObject.GetComponent<MeshFilter>().mesh = new Mesh();
+        mesh = gameObject.GetComponent<MeshFilter>().sharedMesh;
         
+        float hoehe = Random.Range(1.0f, 3.0f);
+        // float hoehe = Random.Range(1.0f, 3.0f);
 
-        x0 = new Vector3(0.5f, 0, 0.5f);
-        x1 = new Vector3(0, 3, 0);
-        x2 = new Vector3(1, 3, 0);
-        x3 = new Vector3(0, 3, 1);
-        x4 = new Vector3(1, 3, 1);
+        x0 = new Vector3(0.5f, 0 + hoehe, 0.5f);
+        x1 = new Vector3(0, 5, 0);
+        x2 = new Vector3(1, 5, 0);
+        x3 = new Vector3(0, 5, 1);
+        x4 = new Vector3(1, 5, 1);
 
         
 
@@ -58,9 +59,7 @@ public class Trap : MonoBehaviour
         mesh.RecalculateNormals();
         // mesh.RecalculateBounds();
         mesh.Optimize();
-        gameObject.AddComponent<BoxCollider>();
-        Collider col = gameObject.GetComponent<Collider>();
-        col.isTrigger = true;
+        
         // rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
 
         // MeshCollider meshCollider = gameObject.AddComponent<MeshCollider>();
