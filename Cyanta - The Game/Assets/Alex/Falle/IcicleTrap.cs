@@ -28,9 +28,13 @@ public class IcicleTrap : MonoBehaviour
                 clone.AddComponent<BoxCollider>();
                 clone.AddComponent<Rigidbody>();
                 clone.AddComponent<MeshRenderer>();
+
+                clone.GetComponent<BoxCollider>().center = new Vector3(0.5f, 3.8f, 0.5f);
                 clone.GetComponent<BoxCollider>().isTrigger = true;
                 clone.GetComponent<MeshRenderer>().material = new Material(Shader.Find("Diffuse"));
-                // clone.GetComponent<BoxCollider>().size = new Vector3(gameObject.GetComponent<MeshFilter>().mesh.bounds.extents.x,gameObject.transform.lossyScale.y, GetComponent<MeshFilter>().mesh.bounds.extents.z);
+                // Bounds bounds = clone.GetComponent<MeshFilter>().mesh.bounds;
+                float yHeight = clone.GetComponent<MeshFilter>().sharedMesh.bounds.size.y;
+                clone.GetComponent<BoxCollider>().size = new Vector3(1, yHeight, 1);
                 clone.GetComponent<Rigidbody>().useGravity = false;
                 clone.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
                 
@@ -61,7 +65,7 @@ public class IcicleTrap : MonoBehaviour
                 
             }
 
-            if (ListIcicle[i].transform.position.y <= 0f) {
+            if (ListIcicle[i].transform.position.y <= -2f) {
                 ListIcicle[i].GetComponent<Rigidbody>().constraints =  RigidbodyConstraints.FreezePosition;
                 boolArray[i] = true;
             } 
