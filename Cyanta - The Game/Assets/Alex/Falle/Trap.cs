@@ -21,17 +21,19 @@ public class Trap : MonoBehaviour
     Rigidbody rb;
     void Start()
     {
-        gameObject.AddComponent<MeshFilter>();
-        // mesh = new Mesh();
+        mesh = new Mesh();
+        gameObject.GetComponent<MeshFilter>().mesh = mesh;
+        
+        // gameObject.AddComponent<MeshRenderer>();
+        
+        
+        
 
         // MeshCollider col = gameObject.AddComponent<MeshCollider>();
-        
-        
-
         // rb = gameObject.AddComponent<Rigidbody>();
         // rb.useGravity = false;
-        gameObject.GetComponent<MeshFilter>().mesh = new Mesh();
-        mesh = gameObject.GetComponent<MeshFilter>().sharedMesh;
+        gameObject.GetComponent<MeshFilter>().mesh = mesh;
+        // mesh = gameObject.GetComponent<MeshFilter>().sharedMesh;
         
         float hoehe = Random.Range(1.0f, 3.0f);
         // float hoehe = Random.Range(1.0f, 3.0f);
