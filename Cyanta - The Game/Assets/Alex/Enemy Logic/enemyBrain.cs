@@ -35,4 +35,11 @@ public class enemyBrain : MonoBehaviour
         }
         
     }
+
+    void OnTriggerEnter (Collider other) {
+        if (other.gameObject.tag == "Bullet") {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+    }
 }

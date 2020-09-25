@@ -23,16 +23,6 @@ public class Trap : MonoBehaviour
     {
         mesh = new Mesh();
         gameObject.GetComponent<MeshFilter>().mesh = mesh;
-        
-        // gameObject.AddComponent<MeshRenderer>();
-        
-        
-        
-
-        // MeshCollider col = gameObject.AddComponent<MeshCollider>();
-        // rb = gameObject.AddComponent<Rigidbody>();
-        // rb.useGravity = false;
-        gameObject.GetComponent<MeshFilter>().mesh = mesh;
         // mesh = gameObject.GetComponent<MeshFilter>().sharedMesh;
         
         float hoehe = Random.Range(1.0f, 3.0f);
@@ -61,35 +51,7 @@ public class Trap : MonoBehaviour
         mesh.RecalculateNormals();
         // mesh.RecalculateBounds();
         mesh.Optimize();
-        
-        // rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
 
-        // MeshCollider meshCollider = gameObject.AddComponent<MeshCollider>();
-        // meshCollider.sharedMesh = mesh;
-
-
-            // while (i < 3) {
-            //     while(j < 2) {
-            //         copy = Instantiate(gameObject, new Vector3(j, 0, i), Quaternion.identity);
-            //         // copy.transform.parent = gameObject.transform;
-            //         copy.name = "Spitze" + i + j;
-            //         // pfeilList.Add(copy);
-            //         j++;
-            //     }
-            //     i++;
-            //     j = 0;
-            // }
-
-        // Debug.Log(pfeilList.Count);
-
-        // for (int i = pfeilList.Count -1; i >= 0; i--) {
-        //     // Debug.Log(pfeilList[i].name + " Index: " + i);
-        // }
-
-        // for (int i = 0; i < 8; i++) {
-        //     pfeilList[i].transform.parent = gameObject.transform;
-        //     pfeilList[i].transform.position += new Vector3(placeX , placeY, placeZ);
-        // }
     }
 
     // Update is called once per frame

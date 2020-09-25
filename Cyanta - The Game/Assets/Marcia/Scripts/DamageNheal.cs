@@ -24,7 +24,7 @@ public class DamageNheal : MonoBehaviour
     void OnTriggerEnter(Collider collisionInfo){
         
         //Kollision mit Fallen, Name muss angepasst werden
-        if(collisionInfo.gameObject.tag == "Trap") {
+        if(collisionInfo.gameObject.tag == "Trap" || collisionInfo.gameObject.tag == "enemy" ) {
             
             healthSystem.Damage(1);
             Vector3 pushDirection = collisionInfo.transform.position - transform.position;
@@ -36,6 +36,7 @@ public class DamageNheal : MonoBehaviour
             //}
             
         }
+
         //Kollision mit Gegner, Name muss angepasst werden
         if(collisionInfo.name == "Gegner") {
             healthSystem.Damage(1);
