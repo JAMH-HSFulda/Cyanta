@@ -16,14 +16,23 @@ public class IceSurface : MonoBehaviour
     public List<Vector2> uv = new List<Vector2>();
     public List<int> triangles = new List<int>();
 
+    GameObject ramp;
+
+    List<Vector3> positions = new List<Vector3>();
+
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.AddComponent<MeshFilter>();
-        MeshFilter meshFilter = gameObject.GetComponent<MeshFilter>();
-        MeshRenderer meshRenderer = gameObject.AddComponent<MeshRenderer>();
-        gameObject.AddComponent<MeshCollider>();
-        MeshCollider mcs =  gameObject.GetComponent<MeshCollider>();
+        positions.Add(new Vector3(31.5f, 0.2f, 32f));
+        positions.Add(new Vector3(31.5f, 0.2f, 32f));
+        positions.Add(new Vector3(34.5f, .5f, 22.5f));
+
+        ramp = new GameObject();
+        ramp.AddComponent<MeshFilter>();
+        MeshFilter meshFilter = ramp.GetComponent<MeshFilter>();
+        MeshRenderer meshRenderer = ramp.AddComponent<MeshRenderer>();
+        ramp.AddComponent<MeshCollider>();
+        MeshCollider mcs =  ramp.GetComponent<MeshCollider>();
         a = new Vector3(0, .7f, 0);
         b = new Vector3(0, .7f, 1);
         c = new Vector3(1, 0, 0);
@@ -96,7 +105,10 @@ public class IceSurface : MonoBehaviour
         transform.localScale = new Vector3(2, 1, 2);
         transform.Rotate(0, 90, 0 , Space.Self);
 
-        GameObject ice2 = Instantiate(gameObject, new Vector3(31.5f, 0.2f, 32f), Quaternion.identity);
-        GameObject ice3 = Instantiate(gameObject, new Vector3(49.3f, -.2f, 55.5f), Quaternion.identity);
+        for (int i = 0; i < positions.Count; i++)
+        {
+            GameObject tmp = Instantiate(ramp, positions[i], Quaternion.identity);
+            tmp.name = "IceRamp" + i;
+        }
     }
 }

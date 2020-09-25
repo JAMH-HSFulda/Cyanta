@@ -28,9 +28,6 @@ public class FirePoint : MonoBehaviour
 
     public static int shootCount = 0;
 
-    float speed = 5;
-    float torsoRotation = 0;
-
     void Start() {
         cam = Camera.main.transform;
         bulletList = new List<GameObject>();

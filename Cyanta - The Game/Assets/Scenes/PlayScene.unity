@@ -1995,6 +1995,28 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8861831917386902285, guid: b9d04bb612b49864c92f916571867f3c,
+        type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8861831917386902285, guid: b9d04bb612b49864c92f916571867f3c,
+        type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: -623603649343465320, guid: e52de22af3270f4409ba715232c23630,
+        type: 3}
+    - target: {fileID: -8861831917386902285, guid: b9d04bb612b49864c92f916571867f3c,
+        type: 3}
+      propertyPath: m_Animations.Array.data[0]
+      value: 
+      objectReference: {fileID: -623603649343465320, guid: e52de22af3270f4409ba715232c23630,
+        type: 3}
+    - target: {fileID: -8861831917386902285, guid: b9d04bb612b49864c92f916571867f3c,
+        type: 3}
+      propertyPath: m_AnimatePhysics
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b9d04bb612b49864c92f916571867f3c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2678,12 +2700,14 @@ Animation:
   m_GameObject: {fileID: 1326353898}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: -623603649343465320, guid: b9d04bb612b49864c92f916571867f3c,
+  m_Animation: {fileID: 1875651514951070993, guid: b9d04bb612b49864c92f916571867f3c,
     type: 3}
-  m_Animations: []
-  m_WrapMode: 0
+  m_Animations:
+  - {fileID: 1875651514951070993, guid: b9d04bb612b49864c92f916571867f3c, type: 3}
+  - {fileID: 1875651514951070993, guid: b9d04bb612b49864c92f916571867f3c, type: 3}
+  m_WrapMode: 2
   m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
+  m_AnimatePhysics: 1
   m_CullingType: 0
 --- !u!114 &1326353900
 MonoBehaviour:
@@ -3399,6 +3423,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CM vcam3
       objectReference: {fileID: 0}
+    - target: {fileID: 1883307147464415391, guid: 672258298caadd44295499e932d6ce93,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 672258298caadd44295499e932d6ce93, type: 3}
 --- !u!1001 &2559239345202778205
@@ -3467,6 +3496,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CM vcam5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559239346791966126, guid: 05be36bb03142684ab73c8f74a5949c9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05be36bb03142684ab73c8f74a5949c9, type: 3}
@@ -3581,6 +3615,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Timeline
+      objectReference: {fileID: 0}
+    - target: {fileID: 2767836192831457401, guid: 127618c256fe7904f8f38ffb5c81d0cd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127618c256fe7904f8f38ffb5c81d0cd, type: 3}
@@ -3740,6 +3779,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CM vcam4
       objectReference: {fileID: 0}
+    - target: {fileID: 3440335420783355062, guid: 291b164c2027abf40bf0f2d9a4da00db,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 291b164c2027abf40bf0f2d9a4da00db, type: 3}
 --- !u!1001 &5326389534651007670
@@ -3822,6 +3866,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CM vcam1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5495754570335952233, guid: fcf37d7e04a167d47899e1e4e93d35e5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5495754570335952237, guid: fcf37d7e04a167d47899e1e4e93d35e5,
         type: 3}
@@ -3966,6 +4015,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Point Light
       objectReference: {fileID: 0}
+    - target: {fileID: 6998094288961454885, guid: 16b1488df9bfefa44ad27140f99dd06d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6998094288961454891, guid: 16b1488df9bfefa44ad27140f99dd06d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3974,12 +4028,12 @@ PrefabInstance:
     - target: {fileID: 6998094288961454891, guid: 16b1488df9bfefa44ad27140f99dd06d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.264
+      value: 3.788
       objectReference: {fileID: 0}
     - target: {fileID: 6998094288961454891, guid: 16b1488df9bfefa44ad27140f99dd06d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.943
+      value: 4.71
       objectReference: {fileID: 0}
     - target: {fileID: 6998094288961454891, guid: 16b1488df9bfefa44ad27140f99dd06d,
         type: 3}
@@ -4089,6 +4143,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CM vcam4 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348321538300570242, guid: 48725ae5dc64eb34aace4d6df2dc91e6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48725ae5dc64eb34aace4d6df2dc91e6, type: 3}
@@ -4233,6 +4292,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CM vcamSEAL2
       objectReference: {fileID: 0}
+    - target: {fileID: 8473949466034264687, guid: 07d3b6e058a8a6849847d8738ac1a38e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07d3b6e058a8a6849847d8738ac1a38e, type: 3}
 --- !u!1001 &9013240251716904477
@@ -4246,6 +4310,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CM vcamSEAL1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9013240252084671984, guid: 803bd599d2f34524c85a70eb3b93a1cd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9013240252084671986, guid: 803bd599d2f34524c85a70eb3b93a1cd,
         type: 3}

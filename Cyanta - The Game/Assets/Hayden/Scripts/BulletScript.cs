@@ -144,7 +144,6 @@ public class BulletScript : MonoBehaviour
         if (collision.gameObject.tag.Equals("enemy")) { 
             Destroy(collision.gameObject);
             Destroy(gameObject);
-            //eine int static bei Seal hochzaehlen, wenn int == 2 Destroy(seal)
         }
 
         if (collision.gameObject.tag.Equals("untagged")) {
