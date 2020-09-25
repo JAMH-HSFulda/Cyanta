@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Object_Collider : MonoBehaviour {
 
     public int maxMunition = 15, muniProGloworb = 3;
+    public int StartMunition = 3;
     public Slider bazooka;
     public Text display_counterAmmo;
     public int deaths = 0;
@@ -18,7 +19,10 @@ public class Object_Collider : MonoBehaviour {
         //Death Counter und Anzahl werden am Anfang nicht angezeigt, est wenn man runtergefallen ist!
         skull.enabled = false;
         deathText.enabled = false;
+        Ammo.counter = StartMunition;
         bazooka.value = Ammo.counter;
+
+        
 
     }
 
@@ -38,7 +42,6 @@ public class Object_Collider : MonoBehaviour {
             if (Ammo.counter < maxMunition) {
                 Ammo.counter += muniProGloworb;
             }
-
         }
         if (other.gameObject.name == "Fish") {
             Destroy (other.gameObject);

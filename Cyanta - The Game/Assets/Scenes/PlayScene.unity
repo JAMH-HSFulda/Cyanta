@@ -2191,6 +2191,11 @@ PrefabInstance:
       propertyPath: confetti
       value: 
       objectReference: {fileID: 1250134292}
+    - target: {fileID: 4279826367813035933, guid: cc1781ce258f9eb4795a0772a15cc3b3,
+        type: 3}
+      propertyPath: StartMunition
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4279826367967069823, guid: cc1781ce258f9eb4795a0772a15cc3b3,
         type: 3}
       propertyPath: firePoint

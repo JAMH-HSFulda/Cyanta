@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MunitionEinzeln : MonoBehaviour {
     int[] xOrb = {1};
-    int[] zOrb = {2};
+    int[] zOrb = {1};
 
     public Vector3 position;
 
@@ -133,9 +133,11 @@ public class MunitionEinzeln : MonoBehaviour {
             GameObject clone = Instantiate (okta);
             clone.name = "Glow Orb";
             clone.transform.position = position;
+            
 
             var ps = clone.GetComponent<ParticleSystem> ();
             var main = ps.main;
+            Destroy(okta);
 
             /* int random_colour = Random.Range (1, 4);
             if (random_colour == 1) {

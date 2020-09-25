@@ -3324,8 +3324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3c6cc37cb434f34bb988367c90d8b59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
-  Player: {fileID: 8296172668768274158}
+  healthBar: {fileID: 498713344}
+  player: {fileID: 8296172668768274158}
   setRespawnPoint: {fileID: 1916499336}
   cam: {fileID: 963194227}
   gameCounter: 0
@@ -3374,11 +3374,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxMunition: 15
   muniProGloworb: 3
-  bazooka: {fileID: 0}
-  display_counterAmmo: {fileID: 0}
+  StartMunition: 0
+  bazooka: {fileID: 937221870}
+  display_counterAmmo: {fileID: 764571827}
   deaths: 0
-  deathText: {fileID: 0}
-  skull: {fileID: 0}
+  deathText: {fileID: 473317119}
+  skull: {fileID: 130673032}
   confetti: {fileID: 2067864907}
 --- !u!114 &1061917317
 MonoBehaviour:

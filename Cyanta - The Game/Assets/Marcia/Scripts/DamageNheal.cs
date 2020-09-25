@@ -8,7 +8,7 @@ public class DamageNheal : MonoBehaviour
 {
     public HealthSystem healthSystem = new HealthSystem(3);
     public HealthBar healthBar;
-    public GameObject Player;
+    public GameObject player;
     private GameObject respawnPoint;
     public GameObject setRespawnPoint;
     public Camera cam;
@@ -70,7 +70,7 @@ public class DamageNheal : MonoBehaviour
 
     }
 
-    void Update() {
+    void FixedUpdate() {
 
         //Health gleich 0 --> Spieler stirbt
         if (healthSystem.GetHealth() <= 0) {
@@ -79,7 +79,7 @@ public class DamageNheal : MonoBehaviour
         }
 
         //Player fällt runter
-        if(Player.transform.position.y < -5) {
+        if(player.transform.position.y < -5.0f) {
             Respawn();
             gameCounter++;
             FirePoint.destroyBuellets(); //destroying all bullets once fallen
@@ -96,7 +96,7 @@ public class DamageNheal : MonoBehaviour
     //Respawn, was passiert, wenn Player stirbt
     public void Respawn() {
         
-        transform.position = respawnPoint.transform.position;
+        gameObject.transform.position = respawnPoint.transform.position;
         //movementScript.targetRotation = respawnPoint.transform.rotation;
         //transform.rotation = movementScript.targetRotation;
 
