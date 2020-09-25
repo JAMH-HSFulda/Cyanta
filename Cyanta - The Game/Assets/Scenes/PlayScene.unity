@@ -2156,6 +2156,11 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 4279826367813035928, guid: cc1781ce258f9eb4795a0772a15cc3b3,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1224760569}
     - target: {fileID: 4279826367813035932, guid: cc1781ce258f9eb4795a0772a15cc3b3,
         type: 3}
       propertyPath: erdbebentrigger
