@@ -19,13 +19,20 @@ public class IceSurface : MonoBehaviour
     GameObject ramp;
 
     List<Vector3> positions = new List<Vector3>();
+    List<Quaternion> rotation = new List<Quaternion>();
 
     // Start is called before the first frame update
     void Start()
     {
-        positions.Add(new Vector3(31.5f, 0.2f, 32f));
-        positions.Add(new Vector3(31.5f, 0.2f, 32f));
+        positions.Add(new Vector3(40.5f, 0.2f, 41.5f));
+        positions.Add(new Vector3(50f, 0.2f, 60.5f));
         positions.Add(new Vector3(34.5f, .5f, 22.5f));
+       
+        rotation.Add(new Quaternion(0, 0, 0, 1));
+        rotation.Add(new Quaternion(0, 0, 0, 1));
+        rotation.Add(new Quaternion(0, 90, 0, 1));
+
+       
 
         ramp = new GameObject();
         ramp.AddComponent<MeshFilter>();
@@ -101,14 +108,13 @@ public class IceSurface : MonoBehaviour
         mcs.sharedMesh = meshI;
         mcs.material = iceSurface;
 
-        transform.position = new Vector3(34.5f, .5f, 22.5f);
-        transform.localScale = new Vector3(2, 1, 2);
-        transform.Rotate(0, 90, 0 , Space.Self);
 
         for (int i = 0; i < positions.Count; i++)
         {
-            GameObject tmp = Instantiate(ramp, positions[i], Quaternion.identity);
+            GameObject tmp = Instantiate(ramp, positions[i], rotation[i]);
+            tmp.transform.localScale = new Vector3(2, 1, 2);
             tmp.name = "IceRamp" + i;
+            tmp.isStatic = true;
         }
     }
 }
