@@ -39,8 +39,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4260722956773547988}
-  - component: {fileID: 5688556618980860495}
   - component: {fileID: 9105034052477087227}
+  - component: {fileID: -9159135838338173430}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Untagged
@@ -66,21 +66,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &5688556618980860495
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971221902141959623}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!54 &9105034052477087227
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -97,6 +82,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-9159135838338173430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971221902141959623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c5e74e2db1d3b6418aae20a7743ebd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 3
+  player: {fileID: 0}
+  speed_magnet: 5
+  speed_up: 0.4
+  height: 1
 --- !u!1 &1290223838796699010
 GameObject:
   m_ObjectHideFlags: 0
