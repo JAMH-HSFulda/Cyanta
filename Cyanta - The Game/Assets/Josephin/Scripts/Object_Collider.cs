@@ -45,10 +45,10 @@ public class Object_Collider : MonoBehaviour {
         }
 
         if (other.gameObject.name == "Tut1") {
-            SceneManager.LoadScene (4);
+            SceneManager.LoadScene (2);
         }
         if (other.gameObject.name == "Zieltor") {
-            SceneManager.LoadScene (2);
+            SceneManager.LoadScene (5);
         }
         if (other.gameObject.name == "Finishline") {
             confetti.GetComponent<ParticleSystem> ().Play ();

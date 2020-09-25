@@ -53,7 +53,9 @@ public class tutorialWeg : MonoBehaviour
         // mesh.RecalculateBounds();
         mesh.Optimize();
         gameObject.AddComponent<BoxCollider>();
-        Collider col = gameObject.GetComponent<Collider>();
+        
+        BoxCollider col = gameObject.GetComponent<BoxCollider>();
+        col.size = new Vector3(3, 1.2f, length);
         rb.useGravity = false;
         rb.constraints = RigidbodyConstraints.FreezeAll;
 
