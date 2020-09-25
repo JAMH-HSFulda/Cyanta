@@ -24,14 +24,20 @@ public class IcicleTrap : MonoBehaviour
             for (int j = 0; j < 3; j++)  {
                 clone = Instantiate(icicle, new Vector3(i + icicle.transform.position.x , icicle.transform.position.y + startHeight, j + icicle.transform.position.z), icicle.transform.rotation);
                 // MeshRenderer meshRender = clone.AddComponent<MeshRenderer>();
-                clone.AddComponent<MeshRenderer>();
-                clone.GetComponent<MeshRenderer>().material = new Material(Shader.Find("Diffuse"));
+                
+                clone.AddComponent<BoxCollider>();
                 clone.AddComponent<Rigidbody>();
+                clone.AddComponent<MeshRenderer>();
+
+                clone.GetComponent<BoxCollider>().center = new Vector3(0.5f, 3.8f, 0.5f);
+                clone.GetComponent<BoxCollider>().isTrigger = true;
+                clone.GetComponent<MeshRenderer>().material = new Material(Shader.Find("Diffuse"));
+                // Bounds bounds = clone.GetComponent<MeshFilter>().mesh.bounds;
+                float yHeight = clone.GetComponent<MeshFilter>().sharedMesh.bounds.size.y;
+                clone.GetComponent<BoxCollider>().size = new Vector3(1, yHeight, 1);
                 clone.GetComponent<Rigidbody>().useGravity = false;
                 clone.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
-                clone.AddComponent<BoxCollider>();
-                clone.GetComponent<BoxCollider>().size = new Vector3(clone.GetComponent<MeshFilter>().mesh.bounds.extents.x,clone.transform.lossyScale.y, GetComponent<MeshFilter>().mesh.bounds.extents.z);
-                clone.GetComponent<Collider>().isTrigger = true;
+                
                 
                 clone.transform.parent = gameObject.transform;
                 ListIcicle.Add(clone);
@@ -59,7 +65,7 @@ public class IcicleTrap : MonoBehaviour
                 
             }
 
-            if (ListIcicle[i].transform.position.y <= 0f) {
+            if (ListIcicle[i].transform.position.y <= -2f) {
                 ListIcicle[i].GetComponent<Rigidbody>().constraints =  RigidbodyConstraints.FreezePosition;
                 boolArray[i] = true;
             } 
