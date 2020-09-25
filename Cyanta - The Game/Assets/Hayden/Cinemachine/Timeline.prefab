@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2767836192831457401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2767836192831457398}
+  - component: {fileID: 2767836192831457399}
+  - component: {fileID: 2767836192831457400}
+  m_Layer: 0
+  m_Name: Timeline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2767836192831457398
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2767836192831457401}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &2767836192831457399
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2767836192831457401}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 3e190c6465a377549ab2c866d71b0ccc, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 2814091084624610931, guid: 3e190c6465a377549ab2c866d71b0ccc, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References:
+    - ce1dd539d6729c347a1aafd642095c79: {fileID: 0}
+    - 85bc90138ede1824984b60b31dba3ae6: {fileID: 0}
+    - fc40638899c53bb4c80cff7612d6202d: {fileID: 0}
+    - f087e3b744a41544987015074ee97551: {fileID: 0}
+    - bbf782ffd1dff374e85fd28b680ae9ab: {fileID: 0}
+    - 9ec97157d714738409c1589488a1befe: {fileID: 0}
+    - cee009c9d7b916a4abe5ac701b9c3f2f: {fileID: 0}
+    - e817800bd9fc8d544b4a0883469094cf: {fileID: 0}
+    - 22396fcac21a52c4c9471e08ff4945fb: {fileID: 0}
+    - 842293614f6b0d847ae146a0107a032e: {fileID: 0}
+    - 2780542789d18454d88367891f66a163: {fileID: 0}
+--- !u!95 &2767836192831457400
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2767836192831457401}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
