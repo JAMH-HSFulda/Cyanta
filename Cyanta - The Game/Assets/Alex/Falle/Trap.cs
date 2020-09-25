@@ -22,6 +22,7 @@ public class Trap : MonoBehaviour
     void Start()
     {
         mesh = new Mesh();
+        gameObject.AddComponent<MeshFilter>();
         gameObject.GetComponent<MeshFilter>().mesh = mesh;
         
         // gameObject.AddComponent<MeshRenderer>();
