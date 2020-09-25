@@ -2551,6 +2551,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1315199140}
   - component: {fileID: 1315199139}
+  - component: {fileID: 1315199141}
   m_Layer: 0
   m_Name: Icicle
   m_TagString: Untagged
@@ -2591,6 +2592,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1315199141
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315199138}
+  m_Mesh: {fileID: 0}
 --- !u!1 &1326353898 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b9d04bb612b49864c92f916571867f3c,
