@@ -5,10 +5,10 @@ using UnityEngine;
 public class ShakeCamera : MonoBehaviour
 {
     Vector3 originalPos;
-    public float shakeLength = 0.7f;
+    public float shakeLength = 0.5f;
     public float shakeTimer;
-    public float shakeAmount = 0.2f;
-    public float shakeSpeed = 2;
+    public float shakeAmount = 0.1f;
+    public float shakeSpeed = 1.5f;
     public bool isShaking = false;
     public Transform cameraTrans;
     
