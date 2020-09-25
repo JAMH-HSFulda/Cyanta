@@ -31,8 +31,8 @@ public class IceSurface : MonoBehaviour
         rotation.Add(new Quaternion(0, 0, 0, 1));
         rotation.Add(new Quaternion(0, 90, 0, 1));
 
-        ramp = new GameObject();
-        ramp.AddComponent<MeshFilter>();
+        ramp = new GameObject(); //new gameobject so error of "Meshrenderer already attatched" with instantiate doesn't appear
+        ramp.AddComponent<MeshFilter>(); //giving the ramp all the components that shall have been given to this gameobject 
         MeshFilter meshFilter = ramp.GetComponent<MeshFilter>();
         MeshRenderer meshRenderer = ramp.AddComponent<MeshRenderer>();
         ramp.AddComponent<MeshCollider>();
@@ -72,11 +72,11 @@ public class IceSurface : MonoBehaviour
         triangles.Add(1);
         triangles.Add(0);
 
-        triangles.Add(5);
+        triangles.Add(5); //bottom of mesh doesn't need triangles since it is not shown anyways. 
         triangles.Add(1);
         triangles.Add(4);
                 
-        normals.Add(Vector3.up);
+        normals.Add(Vector3.up); //so its visible to the outside
         normals.Add(Vector3.up);
         normals.Add(Vector3.up);
         normals.Add(Vector3.up);

@@ -8,9 +8,7 @@ public class BulletScript : MonoBehaviour
 {
     public float scale;
 
-    public ParticleSystem burst;
-    public ParticleSystem muzzle;
-    public ParticleSystem centerbeam;
+    public ParticleSystem burst, muzzle, centerbeam;
 
     private new Light light;
     
@@ -67,7 +65,7 @@ public class BulletScript : MonoBehaviour
         mesh.RecalculateBounds();
         mesh.Optimize();
 
-        mR.material = materialM; //change for specific material, color,texture?
+        mR.material = materialM; 
 
         light = gameObject.AddComponent<Light>();
         gameObject.GetComponent<Light>().range = 12;
@@ -92,8 +90,8 @@ public class BulletScript : MonoBehaviour
             //transform.position += transform.forward * .3f;
         }
 
-        timer += Time.deltaTime; //for test purpose
-        if (timer > 4 && hit == false) {
+        timer += Time.deltaTime; 
+        if (timer > 5 && hit == false) { //if bullet has not hit anything destroy to save resources
             Destroy(gameObject);
         }
     }
@@ -117,9 +115,9 @@ public class BulletScript : MonoBehaviour
             FindObjectOfType<audiomanager>().Play("Impact");
             hit = true;
             move = false;
-            rig.constraints = RigidbodyConstraints.FreezeAll;
+            rig.constraints = RigidbodyConstraints.FreezeAll; 
 
-            Destroy(light);
+            Destroy(light); //destorys light that was active during the fly, once collided the particle system emits enough light
 
             Vector3 minus = Vector3.forward;
             
@@ -131,7 +129,7 @@ public class BulletScript : MonoBehaviour
 
             centerbeam.transform.position = transform.position;
             centerbeam.transform.rotation = transform.rotation;
-            centerbeam.startColor = Color.cyan; 
+            centerbeam.startColor = Color.cyan; //throughs log but is most efficient way
 
 
             burst.Play(true);
