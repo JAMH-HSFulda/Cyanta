@@ -21,7 +21,6 @@ public class menueffects : MonoBehaviour
     
     void Start()
     {
-        
         fade.a = 0;
         startb.color = fade; //individual colors in order to set them differently
         goalb.color = fade;
@@ -39,7 +38,7 @@ public class menueffects : MonoBehaviour
         if (fade.a < 1)
         {
             SetAlpha((Time.time - spawnTime) * .1f); //call function to slowly fade in the text of the buttons
-        }
+        }   
     }
 
     void SetAlpha(float alpha)
