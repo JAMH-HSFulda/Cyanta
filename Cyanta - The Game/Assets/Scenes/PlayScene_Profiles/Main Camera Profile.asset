@@ -21,13 +21,13 @@ MonoBehaviour:
     value: 3
   threshold:
     overrideState: 1
-    value: 0.4
+    value: 0.2
   softKnee:
     overrideState: 0
     value: 0
   clamp:
-    overrideState: 1
-    value: 10
+    overrideState: 0
+    value: 1
   diffusion:
     overrideState: 1
     value: 10
@@ -36,7 +36,7 @@ MonoBehaviour:
     value: 1
   color:
     overrideState: 0
-    value: {r: 1, g: 1, b: 1, a: 1}
+    value: {r: 0, g: 0.98944926, b: 1, a: 1}
   fastMode:
     overrideState: 1
     value: 1
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
@@ -68,13 +68,13 @@ MonoBehaviour:
     value: 3
   aperture:
     overrideState: 1
-    value: 6.2
+    value: 6.6
   focalLength:
     overrideState: 0
     value: 47
   kernelSize:
     overrideState: 1
-    value: 3
+    value: 2
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,16 +156,16 @@ MonoBehaviour:
     value: -29
   saturation:
     overrideState: 1
-    value: 40
+    value: 30
   brightness:
     overrideState: 0
     value: 0
   postExposure:
     overrideState: 1
-    value: 0.4
+    value: 0.5
   contrast:
     overrideState: 0
-    value: -2
+    value: -4
   mixerRedOutRedIn:
     overrideState: 0
     value: 4

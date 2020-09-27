@@ -16,19 +16,23 @@ public class IceSurface : MonoBehaviour
     public List<Vector2> uv = new List<Vector2>();
     public List<int> triangles = new List<int>();
 
-    GameObject ramp;
+    GameObject ramp, player;
 
     List<Vector3> positions = new List<Vector3>();
     List<Quaternion> rotation = new List<Quaternion>();
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+
         positions.Add(new Vector3(40.5f, 0.2f, 41.5f));
         positions.Add(new Vector3(50f, 0.2f, 60.5f));
         positions.Add(new Vector3(34.5f, .5f, 22.5f));
+        positions.Add(new Vector3(56, .5f, 7f));
        
         rotation.Add(new Quaternion(0, 0, 0, 1));
         rotation.Add(new Quaternion(0, 0, 0, 1));
+        rotation.Add(new Quaternion(0, 90, 0, 1));
         rotation.Add(new Quaternion(0, 90, 0, 1));
 
         ramp = new GameObject(); //new gameobject so error of "Meshrenderer already attatched" with instantiate doesn't appear
@@ -110,7 +114,7 @@ public class IceSurface : MonoBehaviour
         for (int i = 0; i < positions.Count; i++)
         {
             GameObject tmp = Instantiate(ramp, positions[i], rotation[i]);
-            tmp.transform.localScale = new Vector3(2, 1, 2);
+            tmp.transform.localScale = new Vector3(2.5f, 1, 2.5f);
             tmp.name = "IceRamp" + i;
             tmp.isStatic = true;
         }
