@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class CubeMeshData
 {
+    //Vertices für einen Würfel
     public static Vector3[] vertices = {
         new Vector3( 1,  1,  1),
         new Vector3(-1,  1,  1),
@@ -15,6 +16,7 @@ public static class CubeMeshData
         new Vector3(-1, -1, -1)
     };
 
+    //Faces für einen Würfel
     public static int[][] faceTriangles = {
         new int[] {0, 1, 2, 3},
         new int[] {5, 0, 3, 6},

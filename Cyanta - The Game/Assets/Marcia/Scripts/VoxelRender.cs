@@ -10,9 +10,10 @@ public class VoxelRender : MonoBehaviour
     Mesh mesh;
     List<Vector3> vertices;
     List<int> triangles;
+    Vector2[] uvs;
     public float scale = 1f;
     float adjScale;
-    public Material material;
+    //public Material material;
     
 
     void Awake()
@@ -46,6 +47,11 @@ public class VoxelRender : MonoBehaviour
                 MakeCube(adjScale, new Vector3((float) x * scale, 0, (float) z * scale), x, z, data);
             }
         }
+
+        uvs = new Vector2[vertices.Count];
+        for(int i = 0; i < uvs.Length; i++) {                   
+                    uvs[i] = new Vector2(vertices[i].x, vertices[i].z);                                     
+        }
     }
 
     void MakeCube(float cubeScale, Vector3 cubePos, int x, int z, VoxelData data) {
@@ -75,5 +81,6 @@ public class VoxelRender : MonoBehaviour
         mesh.vertices = vertices.ToArray();
         mesh.triangles = triangles.ToArray();
         mesh.RecalculateNormals();
+        mesh.uv = uvs;
     }
 }

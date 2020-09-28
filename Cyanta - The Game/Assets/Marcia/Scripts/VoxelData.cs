@@ -74,6 +74,7 @@ public class VoxelData {
         return data[x, z];
     }
 
+    //Nachbar vorhanden? Ja --> kein Face auf dieser Seite
     public int GetNeighbor (int x, int z, Direction dir) {
         DataCoordinate offsetToCheck = offsets[(int) dir];
         DataCoordinate neighborCoord = new DataCoordinate(x + offsetToCheck.x, 0 + offsetToCheck.y, z + offsetToCheck.z);
