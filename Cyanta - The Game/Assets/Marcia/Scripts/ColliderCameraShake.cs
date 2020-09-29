@@ -24,7 +24,7 @@ public class ColliderCameraShake : MonoBehaviour
     }
 
     void OnTriggerEnter (Collider colInfo) {
-        if(colInfo.name == "Erdbebentrigger") {
+        if(colInfo.name == "Gewittertrigger") {
             StartCoroutine(blitz.visibility());
             
             shakeCamera.isShaking = true;
