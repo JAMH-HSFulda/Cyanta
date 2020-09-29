@@ -27,8 +27,8 @@ public class GlowOrbs : MonoBehaviour {
             clone.transform.position = new Vector3 (xOrb[z], 1.25f, zOrb[z]);
             var sc = clone.GetComponent<SphereCollider> ();
             sc.isTrigger = true;
-            //Hinzufügen des Scripts für's Floaten
-            clone.AddComponent<Floater> ();
+            //Hinzufügen des Scripts für's drehen
+            clone.AddComponent<Spin_Around> ();
             //Hinzufügen eines Partikel systems, welches accessible ist via main
             clone.AddComponent<ParticleSystem> ();
             var ps = clone.GetComponent<ParticleSystem> ();
