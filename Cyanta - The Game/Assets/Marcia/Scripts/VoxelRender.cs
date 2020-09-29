@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Rendern des Mesh-Labyrinth
 
 [RequireComponent (typeof(MeshFilter), typeof(MeshRenderer))]
 public class VoxelRender : MonoBehaviour
@@ -15,7 +16,6 @@ public class VoxelRender : MonoBehaviour
     float adjScale;
     //public Material material;
     
-
     void Awake()
     {
         mesh = GetComponent<MeshFilter>().mesh;
@@ -24,18 +24,15 @@ public class VoxelRender : MonoBehaviour
         adjScale = scale * 0.5f;
     }
 
-    
     void Start()
-    {
-        
+    { 
         GenerateVoxelMesh(new VoxelData());
         UpdateMesh();
         gameObject.AddComponent<MeshCollider>();
-
     }
 
     void GenerateVoxelMesh(VoxelData data) {
-        //data.fillData();
+        //data.fillData(); --> bei zufälligem Füllen des Arrays
         vertices = new List<Vector3> ();
         triangles = new List<int> ();
 

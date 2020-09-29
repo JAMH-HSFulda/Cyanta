@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Daten um einen Würfel herzustellen
+
 public static class CubeMeshData
 {
     //Vertices für einen Würfel

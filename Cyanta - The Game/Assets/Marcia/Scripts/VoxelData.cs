@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Daten für das Herstellen des Labyrinths
 
 public class VoxelData {
-    
-
     public int forward = 10;
     public int sideways = 10;
 
-    //int[,] dataLevel1 = new int[,] { {0, 1, 1}, {1, 1, 1}, {1, 1, 0}};
+    //Bei einer 1 im Array wird an der Stelle ein Würfel hinzugefügt
     int[,] data = new int[,] {{0,0,0,1,1,1,1,1,1,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,0,1,1,1,0}, 
                               {0,1,0,0,0,0,0,0,1,0,1,0,1,0,1,1,1,0,1,0,0,0,0,1,0,1,1,0,1,0}, 
                               {0,1,1,1,1,1,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,0,0,0,0,0,1,1,1,0}, 
@@ -42,9 +41,8 @@ public class VoxelData {
                               {0,1,1,1,0,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0}};
         
         
-    /*int[,] data = new int[50, 50];
-    
-
+    /* Array random mit Einsen und Nullen füllen
+    int[,] data = new int[50, 50];
     public void fillData() {
         //data = dataLevel1; 
         //Random.seed = 42;
@@ -58,9 +56,6 @@ public class VoxelData {
         }
     }*/
 
-    
-
-
     public int Width {
         get {return data.GetLength (0); }
     }
@@ -68,7 +63,6 @@ public class VoxelData {
     public int Depth {
         get {return data.GetLength (1); }
     }
-
 
     public int GetCell  (int x, int z) {
         return data[x, z];
@@ -106,8 +100,6 @@ public class VoxelData {
         new DataCoordinate (0, 1, 0),
         new DataCoordinate (0, -1, 0)
     };
-
-
 }
 
 public enum Direction {
