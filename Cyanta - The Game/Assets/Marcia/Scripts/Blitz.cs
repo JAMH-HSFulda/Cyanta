@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Blitz : MonoBehaviour
 {
-
     public Mesh mesh;
     public GameObject blitz;
     public List<Vector3> vertices;
@@ -18,36 +17,27 @@ public class Blitz : MonoBehaviour
     //public int counter = 0;
     public GameObject BlitzEmpty;
 
-    // Start is called before the first frame update
     void Start()
     {
-  
         blitz = new GameObject("Blitz");
         rend = blitz.AddComponent<MeshRenderer>();
         rend.material = material;
         blitz.AddComponent<MeshFilter>();
-
         //Mesh den Blitz zuweisen
         mesh = blitz.GetComponent<MeshFilter>().mesh;
         //rend.enabled = visible;
         Debug.Log("visib" + visible);
-
-        //blitz.transform.localPosition = new Vector3(-2, 10, 5);
         blitz.transform.localRotation = Quaternion.Euler(0, 180, 0);
-
         makeBlitz(0.5f, 1.2f, 0.5f);
-
         blitz.transform.parent = BlitzEmpty.transform;
         blitz.transform.position = BlitzEmpty.transform.position + new Vector3(-2, 5, 10);
-        
     }
-
-    // Update is called once per frame
     void Update()
     {
+        //Blitz sichtbar stellen
         rend.enabled = visible;
     }
-
+    //Vertices & Faces für Mesh 
     public void makeBlitz (float x, float y, float z) {
         //Vertices
         Vector3 a = new Vector3(- 1 * x, + 1 * y, 0 * z);
@@ -101,22 +91,17 @@ public class Blitz : MonoBehaviour
         mesh.triangles = faces.ToArray();
         mesh.normals = normals.ToArray();
         mesh.uv = uvs.ToArray();
-
     }
-
     public Vector3 getNormals(Vector3 a, Vector3 b, Vector3 c) {
         Vector3 eins = c-a;
         Vector3 zwei = b-a;
-        
         Vector3 kreuzprodukt;
         kreuzprodukt.x = eins.y * zwei.z - eins.z * zwei.y;
         kreuzprodukt.y = eins.z * zwei.x - eins.x * zwei.z;
-        kreuzprodukt.z = eins.x * zwei.y - eins.y * zwei.y;
-        
+        kreuzprodukt.z = eins.x * zwei.y - eins.y * zwei.y; 
         return kreuzprodukt;
-
     }
-
+    //Blitz für x Sekunden sichtbar
     public IEnumerator visibility () {
         visible = true;
         Debug.Log("visib" + visible);

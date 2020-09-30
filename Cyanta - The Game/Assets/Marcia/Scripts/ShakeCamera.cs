@@ -11,13 +11,10 @@ public class ShakeCamera : MonoBehaviour
     public float shakeSpeed = 1.5f;
     public bool isShaking = false;
     public Transform cameraTrans;
-    
-
     public void Start () {
         shakeTimer = shakeLength;
-        
     }
-
+    //Kamera Wackeln für x Sekunden
     public void shake() {
         originalPos = cameraTrans.localPosition;
         

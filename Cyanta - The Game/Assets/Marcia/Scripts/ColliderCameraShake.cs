@@ -4,35 +4,27 @@ using UnityEngine;
 
 public class ColliderCameraShake : MonoBehaviour
 {
-  public Blitz blitz;
+    public Blitz blitz;
     public ShakeCamera shakeCamera;
-    public GameObject erdbebentrigger;
+    public GameObject gewittertrigger;
     public float staerke = 1f;
-
-    // Start is called before the first frame update
     void Start()
     {
-        erdbebentrigger.GetComponent<Renderer>().enabled = false;
+        //Gewittertrigger unsichtbar machen
+        gewittertrigger.GetComponent<Renderer>().enabled = false;
     }
-
-    // Update is called once per frame
     void Update()
     {
         if(shakeCamera.isShaking == true) {
             shakeCamera.shake();
         }
     }
-
     void OnTriggerEnter (Collider colInfo) {
         if(colInfo.name == "Gewittertrigger") {
-            StartCoroutine(blitz.visibility());
-            
-            shakeCamera.isShaking = true;
-
+            StartCoroutine(blitz.visibility()); //Blitz sichtbar
+            shakeCamera.isShaking = true; //KameraShaken
             FindObjectOfType<audiomanager>().Play("Erdbeben");
-            
-            Destroy(erdbebentrigger);
-
+            Destroy(gewittertrigger); //--> nur einmal
             //StartCoroutine(shakeMaze.shake(0.5f, staerke));
             
         }

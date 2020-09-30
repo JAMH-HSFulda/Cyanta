@@ -25,18 +25,15 @@ public class DamageNheal : MonoBehaviour
         
         //Kollision mit Fallen, Name muss angepasst werden
         if(collisionInfo.gameObject.tag == "Trap" || collisionInfo.gameObject.tag == "enemy" ) {
-            
             healthSystem.Damage(1);
             Vector3 pushDirection = collisionInfo.transform.position - transform.position;
             pushDirection =- pushDirection.normalized;
             GetComponent<Rigidbody>().AddForce(pushDirection * force * 100);
-            
+            //Coroutine ist überflüssig wegen Knockback
             //if(!damageOn) {
                 //StartCoroutine("CoolDown");
             //}
-            
         }
-
         //Kollision mit Gegner, Name muss angepasst werden
         if(collisionInfo.name == "Gegner") {
             healthSystem.Damage(1);
@@ -61,18 +58,12 @@ public class DamageNheal : MonoBehaviour
         //HealthBar gleich maximale Health
         healthBar.SetMaxHealth(3);
 
-        //Skript zuweisen
-        //movementScript = GameObject.Find("Player").GetComponent<Movement>();
-
         //Empty für den Respawnpunkt
         respawnPoint = new GameObject("respawn");
         respawnPoint.transform.position = setRespawnPoint.transform.position;
-        
-
     }
 
     void FixedUpdate() {
-
         //Health gleich 0 --> Spieler stirbt
         if (healthSystem.GetHealth() <= 0) {
             Respawn();
@@ -85,22 +76,12 @@ public class DamageNheal : MonoBehaviour
             gameCounter++;
             FirePoint.destroyBuellets(); //destroying all bullets once fallen
         }
-
-        //if(gameCounter >= 3) {
-        //    FindObjectOfType<GameManager>().EndGame();
-        //}
-
         healthBar.SetHealth(healthSystem.GetHealth());
-
     }
 
     //Respawn, was passiert, wenn Player stirbt
     public void Respawn() {
-        
         gameObject.transform.position = respawnPoint.transform.position;
-        //movementScript.targetRotation = respawnPoint.transform.rotation;
-        //transform.rotation = movementScript.targetRotation;
-
         healthSystem.SetHealth(3);        
         gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
