@@ -3275,7 +3275,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: 1
-  material: {fileID: 2100000, guid: 0cad55eff7b8300488ad3a277a5f2f81, type: 2}
 --- !u!23 &1555688515
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3700,7 +3699,12 @@ PrefabInstance:
         type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 4279826367813035928, guid: cc1781ce258f9eb4795a0772a15cc3b3,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1934459319}
     - target: {fileID: 4279826367813035932, guid: cc1781ce258f9eb4795a0772a15cc3b3,
         type: 3}
       propertyPath: erdbebentrigger
@@ -4062,8 +4066,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51ae150d728c1345b186710d7ae4ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material_particles: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 3}
-  glow: {fileID: 988775546157383906, guid: 0bbf330bf0c18c14badf9871a007c7d9, type: 3}
 --- !u!82 &1904690005
 AudioSource:
   m_ObjectHideFlags: 0

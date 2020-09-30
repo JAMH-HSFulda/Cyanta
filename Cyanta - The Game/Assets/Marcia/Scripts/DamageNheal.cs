@@ -81,7 +81,15 @@ public class DamageNheal : MonoBehaviour
 
     //Respawn, was passiert, wenn Player stirbt
     public void Respawn() {
+<<<<<<< Updated upstream
         gameObject.transform.position = respawnPoint.transform.position;
+=======
+        
+        gameObject.transform.position = setRespawnPoint.transform.position;
+        //movementScript.targetRotation = respawnPoint.transform.rotation;
+        //transform.rotation = movementScript.targetRotation;
+
+>>>>>>> Stashed changes
         healthSystem.SetHealth(3);        
         gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
