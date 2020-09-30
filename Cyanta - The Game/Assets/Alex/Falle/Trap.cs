@@ -16,7 +16,7 @@ public class Trap : MonoBehaviour
     public GameObject copy;
 
     int i = 0, j = 0;
-    public float amplitude = 0.01f, frequency = 0.2f, placeX = 30f, placeY = -5f, placeZ = 10f;
+    // public float amplitude = 0.01f, frequency = 0.2f, placeX = 30f, placeY = -5f, placeZ = 10f;
  
     Rigidbody rb;
     void Start()

@@ -3643,7 +3643,7 @@ PrefabInstance:
     - target: {fileID: 3123456237485382060, guid: cc1781ce258f9eb4795a0772a15cc3b3,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3190612878070996893, guid: cc1781ce258f9eb4795a0772a15cc3b3,
         type: 3}
@@ -4304,7 +4304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blitz: {fileID: 1562455821}
   shakeCamera: {fileID: 0}
-  erdbebentrigger: {fileID: 0}
+  gewittertrigger: {fileID: 0}
   staerke: 1
 --- !u!4 &1934459327 stripped
 Transform:

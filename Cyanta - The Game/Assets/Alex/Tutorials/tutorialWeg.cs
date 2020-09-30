@@ -7,12 +7,13 @@ public class tutorialWeg : MonoBehaviour
     // Start is called before the first frame update
     Mesh mesh;
     Rigidbody rb;
+    public Material mat;
     public Vector3 x0, x1, x2, x3, x4, x5, x6, x7;
     public float length = 10, width = 2;
     void Start()
     {
         MeshRenderer meshRender = gameObject.AddComponent<MeshRenderer>();
-        GetComponent<MeshRenderer>().material = new Material(Shader.Find("Diffuse"));
+        GetComponent<MeshRenderer>().material = mat;
         MeshFilter meshFilter = gameObject.AddComponent<MeshFilter>();
         mesh = new Mesh();
         rb = gameObject.AddComponent<Rigidbody>();
