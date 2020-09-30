@@ -22,8 +22,6 @@ public class Object_Collider : MonoBehaviour {
         Ammo.counter = StartMunition;
         bazooka.value = Ammo.counter;
 
-        
-
     }
 
     void OnTriggerEnter (Collider other) {
@@ -38,8 +36,11 @@ public class Object_Collider : MonoBehaviour {
 
             Destroy (other.gameObject);
             //Bei Kontakt mit nem Glow - Orb erhöht sich die Anzahl von Munition
-            if (Ammo.counter < maxMunition) {
+            if (Ammo.counter < 13) {
                 Ammo.counter += muniProGloworb;
+            }
+            if (Ammo.counter > 12) {
+                Ammo.counter = maxMunition;
             }
         }
         if (other.gameObject.name == "Fish") {
