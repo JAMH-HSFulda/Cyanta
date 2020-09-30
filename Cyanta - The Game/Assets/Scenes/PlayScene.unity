@@ -2721,7 +2721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blitz: {fileID: 1891843244}
   shakeCamera: {fileID: 963194232}
-  erdbebentrigger: {fileID: 238513820}
+  gewittertrigger: {fileID: 238513820}
   staerke: 1
 --- !u!4 &1224760577 stripped
 Transform:
@@ -4315,7 +4315,7 @@ PrefabInstance:
     - target: {fileID: 3268632105819133435, guid: c6fc76fd246885340abf12787b5b6c2a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3268632105819133439, guid: c6fc76fd246885340abf12787b5b6c2a,
         type: 3}

@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScene.unity
     guid: b467ce982744e2c40be0dcfc7feceb04
   - enabled: 1
-    path: Assets/Scenes/Turorial 1.unity
+    path: Assets/Scenes/Tutorial 1.unity
     guid: 6362605f89dd9ec4fb00129917f649ed
   - enabled: 1
     path: Assets/Scenes/Turorial 2.unity
