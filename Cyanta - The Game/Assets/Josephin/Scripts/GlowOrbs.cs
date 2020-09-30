@@ -1,8 +1,12 @@
-﻿using System.Collections;
+﻿//Dieses Skript war die erste Version der Munition
+//Sie wurde zusammen mit dem Skript "okateder" zu dem Skript "Munition" zusammengefused.
+
+/* using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GlowOrbs : MonoBehaviour {
+
 
     //Koordinaten der Orbs
     int[] xOrb = { 6, 0, 4, 18, 35, 18, 66, 87, 78, 63, 42, 15, 0, 6, 3, 9, 27, 6, 18, 15, 25, 27, 29, 30, 36, 45, 45, 39, 54, 60, 54, 72, 80, 84, 78, 87, 69, 75, 69, 63, 54 };
@@ -71,4 +75,4 @@ public class GlowOrbs : MonoBehaviour {
         //Zerstören der OG sphere
         Destroy (sphere);
     }
-}
+} */

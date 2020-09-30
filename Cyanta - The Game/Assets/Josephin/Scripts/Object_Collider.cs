@@ -16,7 +16,7 @@ public class Object_Collider : MonoBehaviour {
     public ParticleSystem confetti;
 
     void Start () {
-        //Death Counter und Anzahl werden am Anfang nicht angezeigt, est wenn man runtergefallen ist!
+        //Death Counter und Anzahl werden am Anfang nicht angezeigt, erst wenn man runtergefallen ist!
         skull.enabled = false;
         deathText.enabled = false;
         Ammo.counter = StartMunition;
@@ -27,9 +27,8 @@ public class Object_Collider : MonoBehaviour {
     }
 
     void OnTriggerEnter (Collider other) {
-        /*Es muss im statement dann bezug auf die GUI/Munitionsanzeige genommen werden und ggf. die Animation gestartet werden*/
         if (other.gameObject.name == "Glow Orb") {
-            Debug.Log (this.name + " löscht " + other.gameObject.name);
+            //Debug.Log (this.name + " löscht " + other.gameObject.name);
 
             /* bazooka.value++; */
 
@@ -38,7 +37,7 @@ public class Object_Collider : MonoBehaviour {
             //
 
             Destroy (other.gameObject);
-            //Bei Kontakt mit nem Glow - Orb erhöht sich die Anzahl von X-en bzw. die Schussanzahl verringert sich
+            //Bei Kontakt mit nem Glow - Orb erhöht sich die Anzahl von Munition
             if (Ammo.counter < maxMunition) {
                 Ammo.counter += muniProGloworb;
             }
@@ -49,6 +48,12 @@ public class Object_Collider : MonoBehaviour {
 
         if (other.gameObject.name == "Tut1") {
             SceneManager.LoadScene (2);
+        }
+        if (other.gameObject.name == "Tut2") {
+            SceneManager.LoadScene (3);
+        }
+        if (other.gameObject.name == "Tut3") {
+            SceneManager.LoadScene (4);
         }
         if (other.gameObject.name == "Zieltor") {
             SceneManager.LoadScene (5);
@@ -70,7 +75,7 @@ public class Object_Collider : MonoBehaviour {
             }
 
             if (deaths == 3) {
-                SceneManager.LoadScene (2);
+                SceneManager.LoadScene ("GameOver");
             }
 
             //Vielleicht noch nen kleinen "Schrei" abspielen, wenn der Pinguin fällt?

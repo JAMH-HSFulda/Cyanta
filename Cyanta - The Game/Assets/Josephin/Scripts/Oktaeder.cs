@@ -1,4 +1,5 @@
-﻿//This Script was fused with the "GlowOrbs" Script and is not in use anymore
+﻿//Dieses Skript war die erste Version der Oktaeder
+//Sie wurde zusammen mit dem Skript "GlowOrb" zu dem Skript "Munition" zusammengefused.
 
 /* using System.Collections;
 using System.Collections.Generic;

@@ -1047,7 +1047,7 @@ GameObject:
   - component: {fileID: 221041762}
   - component: {fileID: 221041763}
   m_Layer: 0
-  m_Name: Tut2
+  m_Name: Tut3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2856,7 +2856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 117179316}
-  Player: {fileID: 8296172668768274158}
+  player: {fileID: 0}
   setRespawnPoint: {fileID: 1916499336}
   cam: {fileID: 963194227}
   gameCounter: 0
@@ -2905,6 +2905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxMunition: 15
   muniProGloworb: 3
+  StartMunition: 3
   bazooka: {fileID: 0}
   display_counterAmmo: {fileID: 0}
   deaths: 0
@@ -3495,7 +3496,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: 1
-  material: {fileID: 2100000, guid: 0cad55eff7b8300488ad3a277a5f2f81, type: 2}
 --- !u!23 &1555688515
 MeshRenderer:
   m_ObjectHideFlags: 0

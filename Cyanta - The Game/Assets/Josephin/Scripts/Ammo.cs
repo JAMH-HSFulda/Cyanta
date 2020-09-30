@@ -7,6 +7,7 @@ public class Ammo : MonoBehaviour {
     //Man hat am Anfang 5 Schuss
     public static int counter = 0;
 
+    //Das nachfolgende Script diente der ersten Version der Munitionsanzeige, welche dann zu einem Slider geändert wurde.
     /* public int numOfHearts;
     public Image[] hearts;
     public Sprite fullAmmo;

@@ -1,4 +1,4 @@
-﻿//Erstellt mithilfe von dem youtube Video Tutorial von Brackeys
+﻿//Erstellt mithilfe von dem Youtube Video Tutorial von Brackeys
 //https://www.youtube.com/watch?v=64NblGkAabk
 
 using System.Collections;
@@ -33,10 +33,10 @@ public class MeshGenerator : MonoBehaviour {
     }
 
     void CreateShape () {
-
+        //Array anlegen, welches der gewünschten Größe entspricht
         vertices = new Vector3[(xSize + 1) * (zSize + 1)];
-        //landhoehe = new float[xSize * zSize];
-
+        
+        //Die Vertices des Mesh werden festgelegt, hierbei wird durch PerlinNoise die Höhe bzw. Y-Wert manipuliert um eine realistische Landschaft zu erzeugen
         for (int i = 0, z = 0; z <= zSize; z++) {
             for (int x = 0; x <= xSize; x++) {
                 float y = Mathf.PerlinNoise (x * .3f, z * .3f) * 2f;
@@ -73,6 +73,7 @@ public class MeshGenerator : MonoBehaviour {
             vert++;
         }
 
+        //Zuordnen der GradientMap
         colours = new Color[vertices.Length];
 
         for (int i = 0, z = 0; z <= zSize; z++) {

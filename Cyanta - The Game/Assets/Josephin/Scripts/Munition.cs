@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Munition : MonoBehaviour {
+    //Besteht aus dem Skript "GlowOrbs" und "okateder".
+
     int[] xOrb = { 6, 0, 4, 18, 35, 18, 66, 87, 78, 63, 42, 15, 0, 6, 3, 9, 27, 6, 18, 15, 25, 27, 29, 30, 36, 45, 45, 39, 54, 60, 54, 72, 80, 84, 78, 87, 69, 75, 69, 63, 54 };
     int[] zOrb = { 3, 9, 24, 9, 3, 23, 3, 3, 14, 17, 21, 36, 33, 48, 69, 60, 59, 78, 83, 51, 48, 30, 18, 75, 60, 69, 41, 42, 27, 39, 54, 21, 33, 57, 66, 81, 83, 45, 60, 84, 73 };
 
@@ -58,7 +60,9 @@ public class Munition : MonoBehaviour {
         var randomColors = new ParticleSystem.MinMaxGradient(colour_particles);
         randomColors.mode = ParticleSystemGradientMode.RandomColor;
         main.startColor = randomColors;
+
         /* //random Nummer auswählen für zufällige Farbe
+           //Wird nicht mehr genutzt aufgrund der Nutzung einer GradientMap
         int random_colour = Random.Range (1, 4);
         if (random_colour == 1) {
             //Die Anzahl an Farben und auch die Farben selbst können geändert werden
@@ -74,6 +78,7 @@ public class Munition : MonoBehaviour {
             main.startColor = new Color (135, 209, 222, 87);
             //main.startColor = Color.blue;
         } */
+        
         //Generelle Einstellungen am Partikel System um den Glühwürmchen-Effekt zu erzielen
         main.startLifetime = 10.0f;
         main.startSpeed = 0.2f;
