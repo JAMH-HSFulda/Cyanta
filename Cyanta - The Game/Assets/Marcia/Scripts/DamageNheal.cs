@@ -69,6 +69,7 @@ public class DamageNheal : MonoBehaviour
     void FixedUpdate() {
         //Health gleich 0 --> Spieler stirbt
         if (healthSystem.GetHealth() <= 0) {
+            gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             Respawn();
             gameCounter++;
         }
@@ -85,6 +86,8 @@ public class DamageNheal : MonoBehaviour
     //Respawn, was passiert, wenn Player stirbt
     public void Respawn() {
         FindObjectOfType<audiomanager>().Play("death");
+        gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        gameObject.GetComponent<Rigidbody>().Sleep();
         gameObject.transform.position = respawnPoint.transform.position;
 
         
@@ -94,6 +97,6 @@ public class DamageNheal : MonoBehaviour
 
         healthSystem.SetHealth(3);        
         gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
-        gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        
     }
 }
