@@ -139,8 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62cdd94de3d37944b00ba6c70336483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  augaug: {fileID: 0}
-  audioSource: {fileID: 0}
   player: {fileID: 1224760577}
   enemySpeed: 1
   enemyRadius: 10
@@ -578,8 +576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62cdd94de3d37944b00ba6c70336483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  augaug: {fileID: 0}
-  audioSource: {fileID: 0}
   player: {fileID: 0}
   enemySpeed: 2.5
   enemyRadius: 10
@@ -1679,6 +1675,30 @@ MonoBehaviour:
   - name: emptyg
     clip: {fileID: 8300000, guid: a62b74a4d9a60b047b5b6f2fea940592, type: 3}
     volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: sealDeath
+    clip: {fileID: 8300000, guid: 91baf4614b200234c972ca4254bf0ecc, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: playerHit
+    clip: {fileID: 8300000, guid: 03ef39aff27081d4ba444b68109e59fc, type: 3}
+    volume: 0.32
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: splash
+    clip: {fileID: 8300000, guid: 96e7a5e8abe0b2645ab26cce76d12ed6, type: 3}
+    volume: 0.202
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: death
+    clip: {fileID: 8300000, guid: df8f684efaf2fdd4dba229b243d927eb, type: 3}
+    volume: 0.285
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -2894,8 +2914,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62cdd94de3d37944b00ba6c70336483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  augaug: {fileID: 0}
-  audioSource: {fileID: 0}
   player: {fileID: 1224760577}
   enemySpeed: 1
   enemyRadius: 10
@@ -3827,8 +3845,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62cdd94de3d37944b00ba6c70336483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  augaug: {fileID: 0}
-  audioSource: {fileID: 0}
   player: {fileID: 1224760577}
   enemySpeed: 1
   enemyRadius: 10
@@ -4074,8 +4090,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62cdd94de3d37944b00ba6c70336483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  augaug: {fileID: 0}
-  audioSource: {fileID: 0}
   player: {fileID: 1224760577}
   enemySpeed: 1
   enemyRadius: 10
@@ -4169,8 +4183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62cdd94de3d37944b00ba6c70336483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  augaug: {fileID: 8300000, guid: 91baf4614b200234c972ca4254bf0ecc, type: 3}
-  audioSource: {fileID: 0}
   player: {fileID: 1224760577}
   enemySpeed: 0.9
   enemyRadius: 10
@@ -5526,8 +5538,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62cdd94de3d37944b00ba6c70336483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  augaug: {fileID: 0}
-  audioSource: {fileID: 0}
   player: {fileID: 1224760577}
   enemySpeed: 1
   enemyRadius: 10
@@ -5609,8 +5619,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62cdd94de3d37944b00ba6c70336483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  augaug: {fileID: 0}
-  audioSource: {fileID: 0}
   player: {fileID: 1224760577}
   enemySpeed: 1
   enemyRadius: 10

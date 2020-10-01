@@ -29,6 +29,7 @@ public class DamageNheal : MonoBehaviour
             Vector3 pushDirection = collisionInfo.transform.position - transform.position;
             pushDirection =- pushDirection.normalized;
             GetComponent<Rigidbody>().AddForce(pushDirection * force * 100);
+            FindObjectOfType<audiomanager>().Play("playerHit");
             //Coroutine ist überflüssig wegen Knockback
             //if(!damageOn) {
                 //StartCoroutine("CoolDown");
@@ -37,10 +38,12 @@ public class DamageNheal : MonoBehaviour
         //Kollision mit Gegner, Name muss angepasst werden
         if(collisionInfo.name == "Gegner") {
             healthSystem.Damage(1);
+            FindObjectOfType<audiomanager>().Play("playerHit");
         }
         //Kollision mit Munition, Name muss angepasst werden
         if(collisionInfo.name == "Fish") {
             healthSystem.Heal(1);
+            FindObjectOfType<audiomanager>().Play("splash");
         }      
     }
 
@@ -81,7 +84,7 @@ public class DamageNheal : MonoBehaviour
 
     //Respawn, was passiert, wenn Player stirbt
     public void Respawn() {
-
+        FindObjectOfType<audiomanager>().Play("death");
         gameObject.transform.position = respawnPoint.transform.position;
 
         
