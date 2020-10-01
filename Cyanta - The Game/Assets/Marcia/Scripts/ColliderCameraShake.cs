@@ -24,7 +24,8 @@ public class ColliderCameraShake : MonoBehaviour
             StartCoroutine(blitz.visibility()); //Blitz sichtbar
             shakeCamera.isShaking = true; //KameraShaken
             FindObjectOfType<audiomanager>().Play("Erdbeben");
-            Destroy(gewittertrigger); //--> nur einmal
+            gewittertrigger.SetActive(false);
+            //Destroy(gewittertrigger); //--> nur einmal
             //StartCoroutine(shakeMaze.shake(0.5f, staerke));
             
         }

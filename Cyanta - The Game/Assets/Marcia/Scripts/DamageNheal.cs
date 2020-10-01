@@ -8,6 +8,7 @@ public class DamageNheal : MonoBehaviour
 {
     public HealthSystem healthSystem = new HealthSystem(3);
     public HealthBar healthBar;
+    public ColliderCameraShake shakeSkript;
     public GameObject player;
     private GameObject respawnPoint;
     public GameObject setRespawnPoint;
@@ -98,5 +99,6 @@ public class DamageNheal : MonoBehaviour
         healthSystem.SetHealth(3);        
         gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         
+        shakeSkript.gewittertrigger.SetActive(true);
     }
 }
