@@ -16,7 +16,6 @@ public class MunitionEinzeln : MonoBehaviour {
     Mesh mesh;
     Vector3[] vertices;
     int[] triangles;
-
     public GameObject player;
     int speed = 15;
     Vector3 m_Center;

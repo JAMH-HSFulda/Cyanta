@@ -6,6 +6,8 @@ public class enemyBrain : MonoBehaviour
 {
   // Start is called before the first frame update
 
+    public AudioClip augaug;
+    public AudioSource audioSource;
     Rigidbody rb;
     public Transform player;
     private Vector3 movement;
@@ -18,6 +20,8 @@ public class enemyBrain : MonoBehaviour
         // gameObject.AddComponent<Rigidbody>();
         rb = this.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotation;
+        gameObject.AddComponent<AudioSource>();
+        audioSource = gameObject.GetComponent<AudioSource>();
         rb.useGravity = false;
     }
 
@@ -40,6 +44,7 @@ public class enemyBrain : MonoBehaviour
         if (other.gameObject.tag == "Bullet") {
             Destroy(other.gameObject);
             Destroy(gameObject);
+            audioSource.PlayOneShot(augaug,0.4f);
         }
     }
 }

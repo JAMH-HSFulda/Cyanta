@@ -584,6 +584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62cdd94de3d37944b00ba6c70336483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  augaug: {fileID: 0}
+  audioSource: {fileID: 0}
   player: {fileID: 0}
   enemySpeed: 2.5
   enemyRadius: 10
@@ -1839,11 +1841,6 @@ MonoBehaviour:
   pfeilList: []
   mesh: {fileID: 0}
   copy: {fileID: 0}
-  amplitude: 0.01
-  frequency: 0.8
-  placeX: 40
-  placeY: -3
-  placeZ: 16
 --- !u!4 &558754014
 Transform:
   m_ObjectHideFlags: 0
@@ -2146,6 +2143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80be3907967c3ce4fbd9a8d2b575cdc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mat: {fileID: 2100000, guid: da66f5665b2b13a41811ef230805f34f, type: 2}
   x0: {x: 0, y: 0, z: 0}
   x1: {x: 0, y: 0, z: 0}
   x2: {x: 0, y: 0, z: 0}
@@ -2771,12 +2769,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d7ea433a26928a42b0e1a21790f5973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icicle: {fileID: 558754012}
   player: {fileID: 0}
+  icicle: {fileID: 558754012}
   ListIcicle: []
+  actualPos: []
   startHeight: 4
   distanceToPlayer: 4
-  time: 0
+  x: 0
+  z: 0
+  upTime: 0
+  rotate: 0
+  mesh: {fileID: 0}
   boolArray: 
 --- !u!4 &1315199140
 Transform:
@@ -2810,6 +2813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62cdd94de3d37944b00ba6c70336483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  augaug: {fileID: 0}
+  audioSource: {fileID: 0}
   player: {fileID: 0}
   enemySpeed: 2
   enemyRadius: 10
