@@ -189,6 +189,7 @@ MonoBehaviour:
   burst: {fileID: 1452574468636569655}
   muzzle: {fileID: 780271856617361589}
   centerbeam: {fileID: 2434125646838731552}
+  materialM: {fileID: 2100000, guid: 58aa0f8410ff6f84baef3fad90f0f9f0, type: 2}
 --- !u!65 &-8575269329816268667
 BoxCollider:
   m_ObjectHideFlags: 0
