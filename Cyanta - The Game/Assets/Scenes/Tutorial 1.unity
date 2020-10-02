@@ -584,8 +584,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62cdd94de3d37944b00ba6c70336483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  augaug: {fileID: 0}
-  audioSource: {fileID: 0}
   player: {fileID: 0}
   enemySpeed: 2.5
   enemyRadius: 10
@@ -2813,8 +2811,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62cdd94de3d37944b00ba6c70336483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  augaug: {fileID: 0}
-  audioSource: {fileID: 0}
   player: {fileID: 0}
   enemySpeed: 2
   enemyRadius: 10
@@ -3298,7 +3294,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0cad55eff7b8300488ad3a277a5f2f81, type: 2}
+  - {fileID: 2100000, guid: 99828cceed0bc334da36939eef282811, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
