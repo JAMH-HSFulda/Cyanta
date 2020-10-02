@@ -76,6 +76,17 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""ae371ec5-0ebb-4f23-8b92-059947e4ef64"",
+                    ""path"": ""<Touchscreen>/touch1/tap"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""3f76bbd1-c784-48a9-b9a0-1cbec2fc8c9f"",
                     ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",

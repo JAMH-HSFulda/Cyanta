@@ -2394,7 +2394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 5006512735763707133}
-  enemySpeed: 0.7
+  enemySpeed: 2
   enemyRadius: 10
   rotSpeed: 3
 --- !u!111 &1028686652
@@ -3015,7 +3015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 5006512735763707133}
-  enemySpeed: 0.7
+  enemySpeed: 2
   enemyRadius: 10
   rotSpeed: 3
 --- !u!111 &1416611422
@@ -4625,7 +4625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 5006512735763707133}
-  enemySpeed: 0.7
+  enemySpeed: 2
   enemyRadius: 10
   rotSpeed: 3
 --- !u!111 &2095226745
