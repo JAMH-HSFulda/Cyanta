@@ -53,10 +53,4 @@ public class Trap : MonoBehaviour
         mesh.Optimize();
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

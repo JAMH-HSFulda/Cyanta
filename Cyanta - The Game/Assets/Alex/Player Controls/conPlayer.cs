@@ -52,6 +52,7 @@ public class conPlayer : MonoBehaviour
         direction.y = 0f;
 
         if (Mathf.Abs(move.x) < Mathf.Abs(move.y)) {
+            // gameObject.GetComponent<Animation>().Play();
             padSpeed = Mathf.Abs(move.y);
         } else if( Mathf.Abs(move.x) < Mathf.Abs(move.y)) {
             padSpeed = 1;
@@ -83,6 +84,8 @@ public class conPlayer : MonoBehaviour
         } else if (rb.velocity.y <= 0) {
               rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
+
+        
 
         
     }
