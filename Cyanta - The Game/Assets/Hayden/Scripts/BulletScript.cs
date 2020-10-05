@@ -119,7 +119,6 @@ public class BulletScript : MonoBehaviour
             centerbeam.transform.rotation = transform.rotation;
             centerbeam.startColor = Color.cyan; //throughs log but is most efficient way
 
-
             burst.Play(true);
             muzzle.Play(true);
             centerbeam.Play(true);

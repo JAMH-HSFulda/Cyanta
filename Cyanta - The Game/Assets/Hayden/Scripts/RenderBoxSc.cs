@@ -5,8 +5,8 @@ using UnityEngine;
 public class RenderBoxSc : MonoBehaviour
 {
 	public GameObject player;
-    // Start is called before the first frame update
-    void Start()
+	// Base: https://pastebin.com/AedSHhyH
+	void Start()
     {
 		MeshFilter filter = GetComponent(typeof(MeshFilter)) as MeshFilter;
 		if (filter != null)

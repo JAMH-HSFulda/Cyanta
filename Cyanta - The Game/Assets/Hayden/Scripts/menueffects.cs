@@ -35,13 +35,13 @@ public class menueffects : MonoBehaviour
 
     void Update()
     {
-        if (fade.a < 1)
+        if (fade.a < 1) 
         {
             SetAlpha((Time.time - spawnTime) * .1f); //call function to slowly fade in the text of the buttons
         }   
     }
 
-    void SetAlpha(float alpha)
+    void SetAlpha(float alpha) 
     {        
         fade.a = Mathf.Clamp(alpha, 0, 1);
         fade2.a = Mathf.Clamp(alpha*.7f, 0, 1); //alpha*x is different so they appear one after the other
