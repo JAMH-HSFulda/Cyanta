@@ -3091,7 +3091,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433323312}
-  m_Text: "Shoot the enemys! \nOr they will kill YOU!"
+  m_Text: "Shoot the enemies! \nOr they will kill YOU!"
   m_OffsetZ: 1
   m_CharacterSize: 1
   m_LineSpacing: 1

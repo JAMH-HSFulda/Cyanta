@@ -1980,7 +1980,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Make your way to the end of the maze.\nBut be aware of the hangry seals,
-    they'll haunt you if you get to close.\n\nUse your shots wisely or collect some
+    they'll haunt you if you get too close.\n\nUse your shots wisely or collect some
     more ammo on the go. \n"
 --- !u!222 &1736419244
 CanvasRenderer:
