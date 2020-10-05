@@ -459,6 +459,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1921706033891607410, guid: 7579bb553a128204aa15d9c51fd80158, type: 3}
+  startb: {fileID: 0}
+  goalb: {fileID: 0}
+  exitb: {fileID: 0}
+  spawnTime: 0
 --- !u!1 &430397033
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,14 +789,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f93c4f3a86499bf41af45be47833f95f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationBazooka: {x: 0, y: 0, z: 0, w: 0}
   y: 0
   firePoint: {fileID: 898904930}
   bullet: {fileID: 1921706033891607410, guid: 7579bb553a128204aa15d9c51fd80158, type: 3}
   burst: {fileID: 5891420711925741755, guid: 1be502c8c4b6aa24c8bb39db8f31d785, type: 3}
   muzzle: {fileID: 7402224245964438259, guid: 6e517bd162b5009429b1502d0d192e32, type: 3}
   player: {fileID: 0}
-  pitch: 0
-  yaw: 0
 --- !u!1 &914068986
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,8 +1554,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  Player: {fileID: 1061917309}
-  respawnPoint: {fileID: 0}
+  shakeSkript: {fileID: 0}
+  player: {fileID: 0}
+  setRespawnPoint: {fileID: 0}
   cam: {fileID: 0}
   gameCounter: 0
   force: 1
@@ -1598,6 +1602,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa3017c9a8c8914ba380bea5826839f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxMunition: 15
+  muniProGloworb: 3
+  StartMunition: 3
+  bazooka: {fileID: 0}
+  display_counterAmmo: {fileID: 0}
+  deaths: 0
+  deathText: {fileID: 0}
+  skull: {fileID: 0}
   confetti: {fileID: 0}
 --- !u!1 &1099944049
 GameObject:
@@ -1842,6 +1854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb9ae4fa70815f40b9e1aca96de81a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  position: {x: 0, y: 0, z: 0}
   gradient:
     serializedVersion: 2
     key0: {r: 0.39684942, g: 0.5421778, b: 0.9245283, a: 1}
