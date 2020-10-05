@@ -114,7 +114,7 @@ public class IceSurface : MonoBehaviour
         for (int i = 0; i < positions.Count; i++)
         {
             GameObject tmp = Instantiate(ramp, positions[i], rotation[i]);
-            tmp.transform.localScale = new Vector3(2.5f, 1, 2.5f);
+            tmp.transform.localScale = new Vector3(2.5f, 1.5f, 2.5f);
             tmp.name = "IceRamp" + i;
             tmp.isStatic = true;
         }
