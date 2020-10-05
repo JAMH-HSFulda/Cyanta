@@ -66,13 +66,11 @@ public class FirePoint : MonoBehaviour
             burst.Play(true);
             muzzle.Play(true); // playing particlesystems for effects
             GameObject bulletObject = Instantiate(bullet, firePoint.transform.position, Quaternion.identity);
-            //bulletObject.transform.parent = gameObject.transform;
             bulletObject.transform.position = transform.position - transform.forward * 0.2f;
             bulletObject.transform.forward = (firePoint.transform.forward * -1);
-            //bulletObject.transform.parent = null;
             shootCount++;
             bulletList.Add(bulletObject);
-            Ammo.counter--; //für Testzwecke ausgeschaltet
+            Ammo.counter--; //comment out for unlimited ammo
         }
         else
         {

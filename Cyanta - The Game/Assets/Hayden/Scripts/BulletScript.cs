@@ -36,22 +36,14 @@ public class BulletScript : MonoBehaviour
         scale = 0.7f;
         transform.localScale *= scale;
 
-        //Vector3 p0 = new Vector3(-.25f, 0, -.25f); //0,0,0 zentriert //Nach obenschauend
-        //Vector3 p1 = new Vector3(.25f, 0, -.25f);
-        //Vector3 p2 = new Vector3(0, 0, .25f);
-        //Vector3 p3 = new Vector3(0, Mathf.Sqrt(0.5f), 0);
-
         Vector3 p0 = new Vector3(-.125f, .1f, 0); 
         Vector3 p1 = new Vector3(.125f, .1f, 0);
         Vector3 p2 = new Vector3(0, -.1f, 0);
         Vector3 p3 = new Vector3(0, 0, .25f);
 
         Mesh mesh = meshFilter.sharedMesh;
-        if (mesh == null)
-        {
-            meshFilter.mesh = new Mesh();
-            mesh = meshFilter.sharedMesh;
-        }
+        meshFilter.mesh = new Mesh();
+        mesh = meshFilter.sharedMesh;
         mesh.Clear();
         mesh.vertices = new Vector3[] { p0, p1, p2, p3 };
         mesh.triangles = new int[]{
@@ -80,14 +72,10 @@ public class BulletScript : MonoBehaviour
         {
             rig.velocity = transform.forward * 15;
             rig.AddForce(new Vector3(0, -20, 0)); //as gravity alternative
-            //transform.rotation = Quaternion.LookRotation(rig.velocity, Vector3.down*1); //changing rotation to look at floor but not working too well
-            //var downrotation = Quaternion.LookRotation(Vector3.down);
-            //transform.rotation = Quaternion.Slerp(transform.rotation, downrotation, Time.deltaTime*.5f);
             if (calledRot)
             {
                 rotate();
             }
-            //transform.position += transform.forward * .3f;
         }
 
         timer += Time.deltaTime; 
