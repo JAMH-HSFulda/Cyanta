@@ -5749,7 +5749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1224760577}
-  enemySpeed: 3
+  enemySpeed: 1
   enemyRadius: 10
   rotSpeed: 3
 --- !u!65 &1326353901
@@ -9515,7 +9515,7 @@ PrefabInstance:
     - target: {fileID: 5495754570335952233, guid: fcf37d7e04a167d47899e1e4e93d35e5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5495754570335952234, guid: fcf37d7e04a167d47899e1e4e93d35e5,
         type: 3}

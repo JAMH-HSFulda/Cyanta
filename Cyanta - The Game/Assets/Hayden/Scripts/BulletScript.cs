@@ -109,7 +109,7 @@ public class BulletScript : MonoBehaviour
 
             Vector3 minus = Vector3.forward;
             
-            burst.transform.position = transform.position - minus;
+            burst.transform.position = transform.position - minus; //- minus so that the ParticleSys is visible when hitting the ground
             burst.transform.rotation = transform.rotation;
 
             muzzle.transform.position = transform.position;

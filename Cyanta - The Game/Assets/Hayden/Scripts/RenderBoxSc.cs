@@ -5,12 +5,9 @@ using UnityEngine;
 public class RenderBoxSc : MonoBehaviour
 {
 	public GameObject player;
-	GameObject[] all;
     // Start is called before the first frame update
     void Start()
     {
-		all = FindObjectsOfType<GameObject>();
-
 		MeshFilter filter = GetComponent(typeof(MeshFilter)) as MeshFilter;
 		if (filter != null)
 		{
@@ -18,7 +15,9 @@ public class RenderBoxSc : MonoBehaviour
 
 			Vector3[] normals = mesh.normals;
 			for (int i = 0; i < normals.Length; i++)
+			{
 				normals[i] = -normals[i];
+			}
 			mesh.normals = normals;
 
 			for (int m = 0; m < mesh.subMeshCount; m++)
@@ -36,7 +35,6 @@ public class RenderBoxSc : MonoBehaviour
 
 
 	}
-
 
     private void Update()
     {
